@@ -1,0 +1,386 @@
+[
+    {
+        "path": "airbnb_intro.html",
+        "name": "Airbnb app intro"
+    },
+    {
+        "path": "jsfiddle.html",
+        "name": "Jsfiddle"
+    },
+    {
+        "path": "airbnb_intro2.html",
+        "name": "Airbnb app loading"
+    },
+    {
+        "path": "justorbit.gif",
+        "name": "JustOrbit"
+    },
+    {
+        "path": "airbnb_logo.html",
+        "name": "Airbnb logo"
+    },
+    {
+        "path": "khan_academy.html",
+        "name": "Khan Academy"
+    },
+    {
+        "path": "airbnb_old.gif",
+        "name": "Airbnb Concept"
+    },
+    {
+        "path": "lazyeyesdotcool.gif",
+        "name": "Lazy Eyes"
+    },
+    {
+        "path": "android_marshmallow.mp4",
+        "name": "Android Marshmallow Boot"
+    },
+    {
+        "path": "letemps.html",
+        "name": "Le Temps dossier"
+    },
+    {
+        "path": "arena.html",
+        "name": "Are.na"
+    },
+    {
+        "path": "linux_fedora.html",
+        "name": "Linux fedora animation"
+    },
+    {
+        "path": "ascii_1.html",
+        "name": "Ascii concept 1"
+    },
+    {
+        "path": "mac_beach_ball.html",
+        "name": "Spinning pinwheel wait cursor, Mac OS X El Capitan"
+    },
+    {
+        "path": "ascii_2.html",
+        "name": "Ascii concept 2"
+    },
+    {
+        "path": "mac_boot.html",
+        "name": "Boot screen, Mac OS X El Capitan"
+    },
+    {
+        "path": "ascii_3.html",
+        "name": "Ascii concept 3"
+    },
+    {
+        "path": "mac_hand.html",
+        "name": "Hand cursor, Mac OS X El Capitan"
+    },
+    {
+        "path": "ascii_4.html",
+        "name": "Ascii concept 4"
+    },
+    {
+        "path": "mac_wait.html",
+        "name": "Wait cursor, Mac OS X El Capitan"
+    },
+    {
+        "path": "ascii_5.html",
+        "name": "Ascii concept 5"
+    },
+    {
+        "path": "mobility.gif",
+        "name": "Mobility.ch app"
+    },
+    {
+        "path": "bandcamp.gif",
+        "name": "Bandcamp"
+    },
+    {
+        "path": "msn_1.gif",
+        "name": "MSN 1"
+    },
+    {
+        "path": "bike.html",
+        "name": "Bike"
+    },
+    {
+        "path": "msn_2.gif",
+        "name": "MSN 2"
+    },
+    {
+        "path": "bird_loader.gif",
+        "name": "Bird Loader, by Roy Veldkamp",
+        "href": "https://dribbble.com/shots/2030551-Bird-Loader"
+    },
+    {
+        "path": "msn_3.gif",
+        "name": "MSN 3"
+    },
+    {
+        "path": "bleep.html",
+        "name": "Bleep"
+    },
+    {
+        "path": "netscape.html",
+        "name": "Netscape 4.04"
+    },
+    {
+        "path": "nextstep.gif",
+        "name": "Boot screen, NextStep 0.8"
+    },
+    {
+        "path": "cff.html",
+        "name": "CFF App"
+    },
+    {
+        "path": "github.gif",
+        "name": "Github Octocat Spinner"
+    },
+    {
+        "path": "checketry.gif",
+        "name": "Checketry"
+    },
+    {
+        "path": "octopus.gif",
+        "name": "\"Octopus-ish-guy Swim Cycle\", by Joshua Schaeffer",
+        "href": "https://dribbble.com/shots/1808172-Octopus-ish-guy-Swim-Cycle"
+    },
+    {
+        "path": "circling_head_reddit.gif",
+        "name": "\"Circling Big Head\", by RoseTylerI-",
+        "href": "https://www.reddit.com/r/loadingicon/comments/3e5drb/circling_big_head/"
+    },
+    {
+        "path": "open_processing.html",
+        "name": "Open Processing"
+    },
+    {
+        "path": "filling_water.html",
+        "name": "CSS Text filling with water, by Lucas Bebber",
+        "href":"https://codepen.io/lbebber/pen/xrwja"
+    },
+    {
+        "path": "openload.html",
+        "name": "Video buffering, Openload"
+    },
+    {
+        "path": "creativecruise.html",
+        "name": "Creative Cruise",
+        "href": "http://creativecruise.nl/"
+    },
+    {
+        "path": "openloadchat.html",
+        "name": "Chat loader, Openload"
+    },
+    {
+        "path": "detroit_become_human.gif",
+        "name": "Detroit: Become Human"
+    },
+    {
+        "path": "pitchfork.html",
+        "name": "Pitchfork"
+    },
+    {
+        "path": "digitaldesigner.html",
+        "name": "Digital Designer",
+        "href":"digitaldesigner.cool/"
+    },
+    {
+        "path": "progress_tag.html",
+        "name": "Default progress bar"
+    },
+    {
+        "path": "djeco.html",
+        "name": "Djeco"
+    },
+    {
+        "path": "quantic_dream.html",
+        "name": "Quantic Dream"
+    },
+    {
+        "path": "do_you_speak_human.gif",
+        "name": ""
+    },
+    {
+        "path": "reddit_skeleton.html",
+        "name": "Reddit skeleton"
+    },
+    {
+        "path": "dock.html",
+        "name": "Dock launching animation, Mac OS X El Capitan"
+    },
+    {
+        "path": "reddit_app.gif",
+        "name": "Reddit app refresh"
+    },
+    {
+        "path": "dribbble.html",
+        "name": "Dribbble"
+    },
+    {
+        "path": "reddit_login.html",
+        "name": "Reddit login"
+    },
+    {
+        "path": "ezgif.gif",
+        "name": "ezGIF"
+    },
+    {
+        "path": "reddit_video.gif",
+        "name": "Reddit video player buffering"
+    },
+    {
+        "path": "facebook.html",
+        "name": "Facebook"
+    },
+    {
+        "path": "reddit_app_alt.html",
+        "name": "Reddit app"
+    },
+    {
+        "path": "romsmania.gif",
+        "name": "Romsmania"
+    },
+    {
+        "path": "firebase.html",
+        "name": "Firebase"
+    },
+    {
+        "path": "skype.html",
+        "name": "Skype"
+    },
+    {
+        "path": "flickr.html",
+        "name": "Flickr"
+    },
+    {
+        "path": "slack.html",
+        "name": "Slack"
+    },
+    {
+        "path": "giphy.html",
+        "name": "Giphy (old)"
+    },
+    {
+        "path": "swiss.html",
+        "name": "Swiss"
+    },
+    {
+        "path": "giphy_2.html",
+        "name": "Giphy"
+    },
+    {
+        "path": "tick_tock.gif",
+        "name": "Tick Tock, by nakilon",
+        "href": "https://www.reddit.com/r/loadingicon/comments/79p54f/tick_tock_tick_tock_xpost_rperfectloops/"
+    },
+    {
+        "path": "gmail.html",
+        "name": "Gmail"
+    },
+    {
+        "path": "trello.html",
+        "name": "Trello"
+    },
+    {
+        "path": "google_images.gif",
+        "name": "Google Images"
+    },
+    {
+        "path": "ufl.gif",
+        "name": "University of Florida"
+    },
+    {
+        "path": "google_docs.html",
+        "name": "Google docs"
+    },
+    {
+        "path": "vimeo.html",
+        "name": "Vimeo"
+    },
+    {
+        "path": "google_drive.html",
+        "name": "Google drive"
+    },
+    {
+        "path": "warp.html",
+        "name": "Warp"
+    },
+    {
+        "path": "google_home_loader.html",
+        "name": "Loader, Google Home"
+    },
+    {
+        "path": "windows10update.html",
+        "name": "Update screen, Windows 10"
+    },
+    {
+        "path": "google_home_wifi.html",
+        "name": "Home Wifi, Google Home"
+    },
+    {
+        "path": "windows_10_file_transfer.html",
+        "name": "File transfer, Windows 10"
+    },
+    {
+        "path": "gt_america.gif",
+        "name": "GT America",
+        "href":"http://www.gt-america.com/"
+    },
+    {
+        "path": "windows_98_bar.html",
+        "name": "Loading bar, Windows 98"
+    },
+    {
+        "path": "imgur.gif",
+        "name": ""
+    },
+    {
+        "path": "windows_98_file_transfer.gif",
+        "name": "File transfer, Windows 98"
+    },
+    {
+        "path": "instagram_bar.html",
+        "name": "Loading bar, Instagram"
+    },
+    {
+        "path": "windows_xp_bar.html",
+        "name": "Loading bar, Windows XP"
+    },
+    {
+        "path": "instagram_post.html",
+        "name": "Post loading, Instagram"
+    },
+    {
+        "path": "xerox_star.html",
+        "name": "First loading spinner ever, Xerox Star, 1981"
+    },
+    {
+        "path": "instagram_search_small.html",
+        "name": "Search loading (small), Instagram"
+    },
+    {
+        "path": "yahoo_submit.html",
+        "name": "Submit button, Yahoo!"
+    },
+    {
+        "path": "instagram_search_medium.html",
+        "name": "Search loading (medium), Instagram"
+    },
+    {
+        "path": "youtube_spinner.html",
+        "name": "Video buffering icon, YouTube"
+    },
+    {
+        "path": "instagram_search_large.html",
+        "name": "Search loading (large), Instagram"
+    },
+    {
+        "path": "youtube_navbar.html",
+        "name": "Video navigation bar, YouTube"
+    },
+    {
+        "path": "instagram_storyring.html",
+        "name": "Storyring, Instagram"
+    },
+    {
+        "path": "youtube_bar.html",
+        "name": "Loading bar, YouTube"
+    }
+]
