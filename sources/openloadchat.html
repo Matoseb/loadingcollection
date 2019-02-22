@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- https://openloadmovies.net/movies -->
+    <title>OPENLOAD CHAT</title>
+    <style>
+
+    html, body {
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	width: 100%;
+    	height: 100%;
+    }
+
+    #a {
+        height: 52px;
+        width: 54px;
+        overflow: hidden;
+        position: relative;
+        background: url(../resources/openload_chat/l.png) no-repeat;
+        box-sizing: border-box;
+    }
+
+    #b {
+        box-sizing: border-box;
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 13px;
+        left: 15px;
+        border-width: 3px;
+        border-style: solid;
+        border-color: rgba(51, 54, 58, .4) transparent;
+        border-radius: 13px;
+        animation: r 700ms infinite linear;
+    }
+
+    @keyframes r {
+    	100% {
+    		transform: rotateZ(1turn);
+    	}
+    }
+
+    </style>
+</head>
+
+<body>
+    <div id="a">
+        <div id="b">
+        </div>
+    </div>
+</body>
+
+</html>

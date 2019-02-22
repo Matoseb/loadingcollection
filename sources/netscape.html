@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Netscape</title>
+    <style type="text/css">
+    html,
+    body {
+        margin: 0;
+        background: #C0C0C0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .container {
+        transform: scale(2);
+        width: 40vmin;
+        height: 40vmin;
+        max-height: 44px;
+        max-width: 44px;
+        position: relative;
+        cursor: pointer;
+
+        box-shadow:
+            inset -1px -1px var(--b, #808080),
+            inset 1px 1px var(--a, #fff);
+        padding: 2px;
+        box-sizing: border-box;
+        outline: 1px solid black;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        overflow: hidden;
+    }
+
+    .container:active {
+        --b: #fff;
+        --a: #808080;
+    }
+
+    .container input {
+        display: none;
+    }
+
+    .container div {
+        width: 100%;
+        height: 100%;
+        background: url(../resources/netscape/netscape.gif) no-repeat;
+        background-size: 100%;
+    }
+
+    .container input:checked+* {
+        background-image: url(../resources/netscape/s.png);
+    }
+    </style>
+</head>
+
+<body>
+    <label class="container">
+        <input type="checkbox">
+        <div></div>
+    </label>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{
+  "layout": [
+    {
+      "type": "header",
+      "state": "waiting_for_payment"
+    },
+    {
+      "type": "action_instructions",
+      "state": "inquiry"
+    },
+    {
+      "type": "guest_info"
+    },
+    {
+      "type": "most_recent_review"
+    },
+    {
+      "type": "message"
+    },
+    {
+      "type": "contact_buttons",
+      "state": "contact_guest"
+    },
+    {
+      "type": "logistics",
+      "state": "unconfirmed"
+    },
+    {
+      "type": "link_actions",
+      "state": "unconfirmed"
+    },
+    {
+      "type": "review",
+      "state": "both_have_written"
+    },
+    {
+      "type": "notes"
+    },
+    {
+      "type": "faq",
+      "state": "alteration_by_host"
+    }
+  ]
+}

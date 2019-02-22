@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skype Loading Animation (CSS)</title>
+    <style>
+    html,
+    body {
+    	align-items: center;
+    	background-color: #00aff0;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        margin: 0;
+        overflow: hidden;
+        width: 100%
+    }
+
+    svg {
+        display: none
+    }
+
+    .l {
+    	align-items: center;
+    	display: flex;
+        filter: url("#g");
+        height: 50vmin;
+        justify-content: center;
+        width: 50vmin
+    }
+
+    .l>* {
+    	align-items: flex-start;
+    	animation: r 2.5s infinite cubic-bezier(0.74, 0.23, 0.1, 0.95);
+    	display: flex;
+        height: 100%;
+        justify-content: center;
+        position: absolute;
+        width: 16%
+    }
+
+    .l>*::after {
+    	background-color: #fff;
+        border-radius: 100%;
+        content: '';
+        margin-bottom: 50%;
+        padding-top: 100%;
+        position: absolute;
+        width: 100%
+    }
+
+    .b {
+        animation-delay: 0.1s
+    }
+
+    .c {
+        animation-delay: 0.2s
+    }
+
+    .d {
+        animation-delay: 0.3s
+    }
+
+    .e {
+        animation-delay: 0.4s
+    }
+
+    .f {
+        animation-delay: 0.5s
+    }
+
+    @keyframes r {
+        0% {
+
+            transform: rotateZ(0deg)
+        }
+
+        50% {
+            width: 8%
+        }
+
+        100% {
+            transform: rotateZ(360deg)
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="l">
+        <div></div>
+        <div class="b"></div>
+        <div class="c"></div>
+        <div class="d"></div>
+        <div class="e"></div>
+        <div class="f"></div>
+    </div>
+    <svg>
+        <defs>
+            <filter id="g">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -8" result="g" />
+                <feBlend in="SourceGraphic" in2="g" />
+            </filter>
+        </defs>
+    </svg>
+</body>
+
+</html>

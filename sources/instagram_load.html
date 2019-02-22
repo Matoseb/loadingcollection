@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>INSTAGRAM LOAD</title>
+    <style>
+    @keyframes p {
+        0% {
+            background-position: 0 0
+        }
+
+        to {
+            background-position: 125% 0
+        }
+    }
+
+    @keyframes e {  
+
+        0% {
+            transform: scaleX(0)
+        }
+
+        16% {
+            transform: scaleX(1)
+        }
+
+        70% {
+            opacity: 1
+        }
+
+        90%, 100% {
+            opacity: 0;
+            transform: scaleX(1)
+        }
+    }
+
+    * {
+        overflow: hidden
+    }
+
+    #l {
+        animation: 2s linear infinite p, 3.125s ease-out e infinite;
+        background: #27c4f5 linear-gradient(to right, #27c4f5, #a307ba, #fd8d32, #70c050, #27c4f5);
+        background-size: 500%;
+        height: 3px;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform-origin: left;
+        width: 100%
+    }
+
+    </style>
+</head>
+
+<body>
+    <span id="l"></span>
+</body>
+
+</html>

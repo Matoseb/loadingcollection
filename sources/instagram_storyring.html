@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>INSTAGRAM STORY</title>
+    <style>
+    html,
+    body {
+        background: #FBFBFB;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    video {
+        position: absolute;
+        width: 91px;
+        max-width: 80vmin
+    }
+
+    #b {
+        width: 168px
+    }
+
+    div {
+        font-size: 3em;
+        position: absolute;
+        z-index: 1000
+    }
+
+    @media (max-width : 735px) {
+        #b {
+            display: none
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted src="../resources/instagram_storyring/r_s2.mp4"></video>
+    <video id="b" autoplay loop muted src="../resources/instagram_storyring/r_b2.mp4"></video>
+</body>
+
+</html>

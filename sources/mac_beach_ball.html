@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hand Mac</title>
+    <style type="text/css">
+    html,
+    body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    svg {
+        width: 40px;
+        overflow: visible;
+    }
+
+    .u {
+        mix-blend-mode: overlay;
+    }
+    </style>
+</head>
+
+<body>
+    <svg viewBox="0 0 28 40">
+        <defs>
+            <path id="p" d="M22.81,18.15c-2.33,4.4-6.36,4.03-8.81,1.85
+    c3.11-1.02,5.44-4.32,2.81-8.54C19.83,12.44,22.15,14.99,22.81,18.15z" />
+        </defs>
+        <g style="isolation: isolate;" filter="url(#A)">
+            <g class="u" filter="url(#n)">
+                <use href="#p" fill="#FFD400"></use>
+                <use href="#p" fill="#FFA300" transform="rotate(60 14 20)"></use>
+                <use href="#p" fill="#FF4B41" transform="rotate(120 14 20)"></use>
+                <use href="#p" fill="#D45CD6" transform="rotate(180 14 20)"></use>
+                <use href="#p" fill="#009AF8" transform="rotate(240 14 20)"></use>
+                <use href="#p" fill="#00C100" transform="rotate(300 14 20)"></use>
+                <animateTransform attributeName="transform" calcMode="paced" type="rotate" from="0 14 20" to="360 14 20" dur="1s" repeatCount="indefinite" />
+            </g>
+            <circle class="u" cx="14" cy="20" r="9" opacity=".4" fill="url(#g)" />
+        </g>
+        <defs>
+            <filter id="A">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="0.6" />
+                <feOffset dy="0.5" result="A" />
+                <feFlood flood-color="rgba(0,0,0,.6)" />
+                <feComposite in2="A" operator="in" />
+                <feMerge>
+                    <feMergeNode />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+            <filter id="n">
+                <feBlend mode="normal" in="SourceGraphic" />
+            </filter>
+            <linearGradient id="g" gradientUnits="userSpaceOnUse" gradientTransform="rotate(90)">
+                <stop offset="30%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#000" />
+            </linearGradient>
+        </defs>
+    </svg>
+</body>
+
+</html>

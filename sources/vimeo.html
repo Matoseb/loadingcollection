@@ -1,0 +1,90 @@
+<html>
+
+<head lang="en">
+	<meta charset="utf-8">
+    <title>Vimeo</title>
+    <style>
+
+    html, body {
+    	background: black;
+    	overflow: hidden;
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0
+        }
+
+        50% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -35px
+        }
+
+        to {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -124px
+        }
+    }
+
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg)
+        }
+    }
+
+    .vp-spin {
+        width: 18%;
+        max-width: 140px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: opacity .1s, transform .25s cubic-bezier(.17, .88, .32, 1.28)
+    }
+
+    .vp-spin-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        fill: none;
+        stroke-width: 3%;
+        stroke: #fcfcfc;
+        stroke-opacity: 1;
+        stroke-linecap: round;
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+        animation: rotate 2s linear .25s infinite, dash 1.5s ease-in-out .25s infinite
+    }
+
+    @media all and (-ms-high-contrast:none) {
+        .vp-spin-circle {
+            stroke-dasharray: 50 200;
+            stroke-dashoffset: 0
+        }
+    }
+
+    .vp-spin-trace {
+        fill: none;
+        stroke-width: 3%;
+        stroke: rgba(23, 35, 34, .75);
+        stroke-opacity: .6;
+        fill: none;
+        stroke-width: 3%;
+        stroke: rgba(23, 35, 34, .75);
+        stroke-opacity: .6
+    }
+    </style>
+</head>
+
+<body>
+    <div class="vp-spin"><svg class="vp-spin-trace" viewBox="0 0 50 50">
+            <circle cx="50%" cy="50%" r="20"></circle>
+        </svg><svg class="vp-spin-circle" viewBox="0 0 50 50">
+            <circle cx="50%" cy="50%" r="20"></circle>
+        </svg></div>
+</body>
+
+</html>

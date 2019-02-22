@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://www.digitaldesigner.cool/ -->
+<html>
+
+<head>
+    <title>digitaldesigner.</title>
+    <style type="text/css">
+    :root {
+        --orange: #ed796c;
+        --black: #191919;
+    }
+
+
+    html {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+
+        font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+        margin: 0;
+        color: white;
+        position: fixed;
+        background-color: white;
+
+        perspective: 800px;
+        -webkit-overflow-scrolling: touch;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .main {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 2;
+        perspective: 800px;
+    }
+
+
+    .bkg_black {
+        background-color: var(--black);
+        overflow: hidden;
+    }
+
+
+    .barre {
+        width: 236px;
+        height: 45px;
+        background-color: var(--black);
+        font-size: 26px;
+        letter-spacing: 0px;
+        margin-top: 4px;
+        line-height: 26px;
+        font-weight: 400;
+        text-align: center;
+        overflow: hidden;
+        z-index: 10;
+        transform: translateZ(20px);
+    }
+
+    .ldg .barre {
+        height: 50px;
+    }
+
+
+    .loading {
+        font-size: 224px;
+        color: white;
+        text-align: left;
+        letter-spacing: -10px;
+        font-weight: 700;
+        width: 500px;
+        height: 500px;
+    }
+
+    .center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+        position: absolute;
+    }
+
+    .chiffre {
+        margin-left: 113px;
+        margin-top: 116px;
+    }
+
+    .chiffre span {
+        position: relative;
+    }
+
+
+    .ldg {
+        z-index: 1981;
+    }
+
+    .rtt {
+        z-index: 3;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .alpha_ldg {
+        line-height: 50px;
+    }
+
+    .alpha_ldg span {
+        display: block;
+    }
+
+    :-ms-input-placeholder {
+
+        color: #eee;
+    }
+
+    ::-ms-input-placeholder {
+
+        color: #eee;
+    }
+    </style>
+</head>
+
+<body class="bkg_black">
+    <div class="main bkg_black ldg">
+        <div class="rtt">
+            <div class="loading center">
+                <div class="barre center">
+                    <div class="alpha_ldg"><span>Loading...</span></div>
+                </div>
+                <div class="chiffre"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    window.onload = () => {
+
+        let per, run;
+        let speed = 1;
+
+        const unit = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirsteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+        const digit = ["twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+        const animation = [
+            { top: window.innerHeight / 3 * 2 + 'px' },
+            { top: '0' }
+        ];
+
+        const options = {
+            easing: 'ease-out',
+            duration: 500,
+            fill: 'forwards',
+        };
+
+        const txt = document.querySelector('.alpha_ldg');
+        const chiffre = document.querySelector('.chiffre');
+        const ldg = document.querySelector('.ldg');
+
+        for (var i = 1; i < 100; i++) {
+            if (i < 20) {
+                txt.innerHTML += "<span>" + unit[i] + "</span>";
+            } else {
+                nd = Math.floor(i / 10) - 2;
+
+                if (i % 10 == 0)
+                    txt.innerHTML += "<span>" + digit[nd] + "</span>";
+                else
+                    txt.innerHTML += "<span>" + digit[nd] + "-" + unit[i % 10] + "</span>";
+            }
+        }
+
+        init();
+
+        function init() {
+
+            chiffre.innerHTML = '<span class="c1" style="top: 512px;">0</span><span class="c2" style="top: 512px;">0</span>';
+
+            per = 0;
+
+            document.querySelector(".c2").animate(animation, { delay: 170, ...options });
+            document.querySelector(".c1").animate(animation, options).onfinish = _ => { run = setInterval(percent, 100) };
+        };
+
+        function percent() {
+            per += Math.random() * speed;
+            let n = Math.floor(per);
+
+            let margin = window.getComputedStyle(txt).getPropertyValue('margin-top');
+
+            const _options = { ...options };
+            _options.duration = 300;
+
+            const _animation = [
+                { marginTop: margin },
+                { marginTop: -n * 50 + 'px' }
+            ];
+
+            txt.animate(_animation, _options);
+
+            chiffre.innerText = (n < 10 ? '0' : '') + n;
+
+            if (n >= 99) {
+                clearInterval(run);
+                per = 0;
+
+                txt.animate(_animation, _options).onfinish = moveUp;
+            }
+        }
+
+        function moveUp() {
+            document.body.classList.remove('bkg_black');
+            ldg.animate([
+                { height: '120%', top: '-10%' },
+                { height: '120%', top: '-120%' }
+            ], {
+                easing: 'cubic-bezier(.98,-0.32,.31,1.32)',
+                duration: 1000,
+                fill: 'forwards',
+            }).onfinish = end;
+        }
+
+        function end() {
+            chiffre.innerText = '';
+            txt.animate([{ marginTop: '0px' }, { marginTop: '0px' }], { duration: 0, fill: 'forwards' });
+
+            ldg.animate([
+                { top: '120%' },
+                { top: '-10%' }
+            ], {
+                easing: 'cubic-bezier(.98,-0.32,.31,1.32)',
+                duration: 1000,
+                fill: 'forwards',
+            }).onfinish = _ => {
+                document.body.classList.add('bkg_black');
+                init();
+            };
+        }
+
+
+
+        document.addEventListener("mousemove", e => {
+            const a_iks = (e.pageX - window.innerWidth / 2) / 100;
+            const a_igrek = -(e.pageY - window.innerHeight / 2) / 100;
+            document.querySelector(".rtt").style.cssText =
+                `transform: rotateY(${a_iks}deg) rotateX(${a_igrek}deg);
+            margin-left: ${-a_iks}px`;
+        });
+    }
+    </script>
+</body>
+
+</html>

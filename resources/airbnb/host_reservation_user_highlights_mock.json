@@ -1,0 +1,24 @@
+{
+  "user_highlights": [
+    {
+      "airmoji": "extras_star",
+      "action_link": null,
+      "localized_title": "ID Verified"
+    },
+    {
+      "airmoji": "core_star_full",
+      "action_link": "reviews",
+      "localized_title": "16 reviews"
+    },
+    {
+      "airmoji": "core_belo",
+      "action_link": null,
+      "localized_title": "Joined in September 2016"
+    },
+    {
+      "airmoji": "accomodation_home",
+      "action_link": null,
+      "localized_title": "Lives in Brussels, Belgium"
+    }
+  ]
+}

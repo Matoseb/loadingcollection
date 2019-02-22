@@ -1,0 +1,2893 @@
+{
+  "walle2_flow": {
+    "client_support": {
+      "fallback_url": "fake.fallback/url",
+      "is_supported": true
+    },
+    "components": [
+      {
+        "id": "rating_intro",
+        "phrase_id_primary": "primary_rating_intro",
+        "phrase_id_secondary": "secondary_rating_intro",
+        "type": "DOCUMENT_MARQUEE"
+      },
+      {
+        "id": "rating_star_description",
+        "phrase_id_primary": "rating_phrase_switch",
+        "type": "MICRO_SECTION_HEADER"
+      },
+      {
+        "id": "rating_star_row",
+        "phrase_id_a11y": "primary_rating_intro",
+        "question_id": "overall_rating",
+        "type": "STAR_ROW"
+      },
+      {
+        "id": "report_link",
+        "phrase_id_primary": "report_link_phrase",
+        "primary_link": {
+          "web_href": "/"
+        },
+        "type": "SMALL_LINK_ROW"
+      },
+      {
+        "icon": {
+          "fallback_url": "https://a0.muscache.com/airbnb/static/review_flow/outstanding_hospitality_selected@3x-42542f0df93ee256d60cf4545308397e.png",
+          "name": ""
+        },
+        "id": "appreciation_hospitality",
+        "phrase_id_primary": "appreciation_hospitality_phrase",
+        "question_id": "appreciation_hospitality",
+        "type": "APPRECIATION_TOGGLE"
+      },
+      {
+        "icon": {
+          "fallback_url": "https://a0.muscache.com/airbnb/static/review_flow/amazing_amenities_selected@3x-4f1084620137ec1ad4db4475189c1ab9.png",
+          "name": "IconIndicatorCup"
+        },
+        "id": "appreciation_amenities",
+        "phrase_id_primary": "appreciation_amenities_phrase",
+        "question_id": "appreciation_amenities",
+        "type": "APPRECIATION_TOGGLE"
+      },
+      {
+        "icon": {
+          "fallback_url": "https://a0.muscache.com/airbnb/static/review_flow/quick_responses_selected@3x-11df1a02bf149ea292f26f4237b6fdcc.png",
+          "name": "IconIndicatorChatBubble"
+        },
+        "id": "appreciation_responses",
+        "phrase_id_primary": "appreciation_responses_phrase",
+        "question_id": "appreciation_responses",
+        "type": "APPRECIATION_TOGGLE"
+      },
+      {
+        "icon": {
+          "fallback_url": "https://a0.muscache.com/airbnb/static/review_flow/thoughtful_touches_selected@3x-c7fdaf754889344f147fbe56a7db617e.png",
+          "name": ""
+        },
+        "id": "appreciation_thoughtful",
+        "phrase_id_primary": "appreciation_thoughtful_phrase",
+        "question_id": "appreciation_thoughtful",
+        "type": "APPRECIATION_TOGGLE"
+      },
+      {
+        "icon": {
+          "fallback_url": "https://a0.muscache.com/airbnb/static/review_flow/stylish_space_selected@3x-6c1d11a45c48341bc853fefd376bf5a3.png",
+          "name": ""
+        },
+        "id": "appreciation_space",
+        "phrase_id_primary": "appreciation_space_phrase",
+        "question_id": "appreciation_space",
+        "type": "APPRECIATION_TOGGLE"
+      },
+      {
+        "icon": {
+          "fallback_url": "https://a0.muscache.com/airbnb/static/review_flow/sparkling_clean_selected@3x-586f7db791bc423eed654503b788e86e.png",
+          "name": "IconIndicatorTub"
+        },
+        "id": "appreciation_clean",
+        "phrase_id_primary": "appreciation_clean_phrase",
+        "question_id": "appreciation_clean",
+        "type": "APPRECIATION_TOGGLE"
+      },
+      {
+        "icon": {
+          "fallback_url": "https://a0.muscache.com/airbnb/static/review_flow/local_tips_selected@3x-8e48e68dbcaf15f1cb1768e520a90ead.png",
+          "name": ""
+        },
+        "id": "appreciation_tips",
+        "phrase_id_primary": "appreciation_tips_phrase",
+        "question_id": "appreciation_tips",
+        "type": "APPRECIATION_TOGGLE"
+      },
+      {
+        "id": "appreciations_intro",
+        "phrase_id_primary": "primary_appreciations_intro",
+        "phrase_id_secondary": "secondary_appreciations_intro",
+        "type": "DOCUMENT_MARQUEE"
+      },
+      {
+        "component_ids": [
+          "appreciation_hospitality",
+          "appreciation_amenities",
+          "appreciation_responses",
+          "appreciation_thoughtful",
+          "appreciation_space",
+          "appreciation_clean",
+          "appreciation_tips"
+        ],
+        "id": "appreciations_toggle_group",
+        "phrase_id_a11y": "primary_appreciations_intro",
+        "type": "APPRECIATION_TOGGLE_GROUP"
+      },
+      {
+        "id": "trip_expectations_5",
+        "phrase_id_primary": "trip_expectations_5",
+        "question_value": "5",
+        "type": "RADIO_BUTTON_ROW_OPTION"
+      },
+      {
+        "id": "trip_expectations_4",
+        "phrase_id_primary": "trip_expectations_4",
+        "question_value": "4",
+        "type": "RADIO_BUTTON_ROW_OPTION"
+      },
+      {
+        "id": "trip_expectations_3",
+        "phrase_id_primary": "trip_expectations_3",
+        "question_value": "3",
+        "type": "RADIO_BUTTON_ROW_OPTION"
+      },
+      {
+        "id": "trip_expectations_2",
+        "phrase_id_primary": "trip_expectations_2",
+        "question_value": "2",
+        "type": "RADIO_BUTTON_ROW_OPTION"
+      },
+      {
+        "id": "trip_expectations_1",
+        "phrase_id_primary": "trip_expectations_1",
+        "question_value": "1",
+        "type": "RADIO_BUTTON_ROW_OPTION"
+      },
+      {
+        "id": "describe_trip_intro",
+        "phrase_id_primary": "primary_describe_trip_intro",
+        "phrase_id_secondary": "secondary_describe_trip_intro",
+        "type": "DOCUMENT_MARQUEE"
+      },
+      {
+        "component_ids": [
+          "trip_expectations_5",
+          "trip_expectations_4",
+          "trip_expectations_3",
+          "trip_expectations_2",
+          "trip_expectations_1"
+        ],
+        "id": "trip_expectations",
+        "phrase_id_primary": "trip_expectations_question",
+        "question_id": "trip_expectations",
+        "type": "RADIO_BUTTON_GROUP"
+      },
+      {
+        "id": "category_cleanliness_toggle_button_0",
+        "phrase_id_primary": "category_cleanliness_toggle_button_0_phrase",
+        "question_id": "cleanliness_toggle_bedroom",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_cleanliness_toggle_button_1",
+        "phrase_id_primary": "category_cleanliness_toggle_button_1_phrase",
+        "question_id": "cleanliness_toggle_bathroom",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_cleanliness_toggle_button_2",
+        "phrase_id_primary": "category_cleanliness_toggle_button_2_phrase",
+        "question_id": "cleanliness_toggle_kitchen",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_cleanliness_toggle_button_3",
+        "phrase_id_primary": "category_cleanliness_toggle_button_3_phrase",
+        "question_id": "cleanliness_toggle_common_areas",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_cleanliness_toggle_button_4",
+        "phrase_id_primary": "category_cleanliness_toggle_button_4_phrase",
+        "question_id": "cleanliness_toggle_entire_place",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_accuracy_toggle_button_0",
+        "phrase_id_primary": "category_accuracy_toggle_button_0_phrase",
+        "question_id": "accuracy_toggle_description",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_accuracy_toggle_button_1",
+        "phrase_id_primary": "category_accuracy_toggle_button_1_phrase",
+        "question_id": "accuracy_toggle_photos",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_accuracy_toggle_button_2",
+        "phrase_id_primary": "category_accuracy_toggle_button_2_phrase",
+        "question_id": "accuracy_toggle_messages_from_host",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_accuracy_toggle_button_3",
+        "phrase_id_primary": "category_accuracy_toggle_button_3_phrase",
+        "question_id": "accuracy_toggle_amenities",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_accuracy_toggle_button_4",
+        "phrase_id_primary": "category_accuracy_toggle_button_4_phrase",
+        "question_id": "accuracy_toggle_address",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_checkin_toggle_button_0",
+        "phrase_id_primary": "category_checkin_toggle_button_0_phrase",
+        "question_id": "checkin_toggle_difficult_to_find",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_checkin_toggle_button_1",
+        "phrase_id_primary": "category_checkin_toggle_button_1_phrase",
+        "question_id": "checkin_toggle_incorrect_information",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_checkin_toggle_button_2",
+        "phrase_id_primary": "category_checkin_toggle_button_2_phrase",
+        "question_id": "checkin_toggle_unclear_instructions",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_checkin_toggle_button_3",
+        "phrase_id_primary": "category_checkin_toggle_button_3_phrase",
+        "question_id": "checkin_toggle_late_host",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_checkin_toggle_button_4",
+        "phrase_id_primary": "category_checkin_toggle_button_4_phrase",
+        "question_id": "checkin_toggle_host_didn___t_respond",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_communication_toggle_button_0",
+        "phrase_id_primary": "category_communication_toggle_button_0_phrase",
+        "question_id": "communication_toggle_slow_responses",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_communication_toggle_button_1",
+        "phrase_id_primary": "category_communication_toggle_button_1_phrase",
+        "question_id": "communication_toggle_unresponsive_host",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_rating_intro",
+        "phrase_id_primary": "primary_category_rating_intro",
+        "phrase_id_secondary": "secondary_category_rating_intro",
+        "type": "DOCUMENT_MARQUEE"
+      },
+      {
+        "id": "category_cleanliness_section_header",
+        "phrase_id_primary": "category_cleanliness_section_header_phrase",
+        "type": "SECTION_HEADER"
+      },
+      {
+        "id": "category_cleanliness_small_star_row",
+        "phrase_id_a11y": "category_cleanliness_rating_description",
+        "question_id": "cleanliness_rating",
+        "type": "SMALL_STAR_ROW",
+        "hide_divider": {
+          "conditions": [
+            {
+              "question_id": "cleanliness_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "cleanliness_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "component_ids": [
+          "category_cleanliness_toggle_button_0",
+          "category_cleanliness_toggle_button_1",
+          "category_cleanliness_toggle_button_2",
+          "category_cleanliness_toggle_button_3",
+          "category_cleanliness_toggle_button_4"
+        ],
+        "id": "category_cleanliness_toggle_button_row",
+        "phrase_id_a11y": "category_cleanliness_section_header_phrase",
+        "phrase_id_primary": "category_cleanliness_toggle_button_row_description",
+        "type": "TOGGLE_BUTTON_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "cleanliness_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "cleanliness_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "category_cleanliness_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "cleanliness_comments",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "cleanliness_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "cleanliness_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "category_accuracy_section_header",
+        "phrase_id_primary": "category_accuracy_section_header_phrase",
+        "type": "SECTION_HEADER"
+      },
+      {
+        "id": "category_accuracy_small_star_row",
+        "phrase_id_a11y": "category_accuracy_rating_description",
+        "question_id": "accuracy_rating",
+        "type": "SMALL_STAR_ROW"
+      },
+      {
+        "component_ids": [
+          "category_accuracy_toggle_button_0",
+          "category_accuracy_toggle_button_1",
+          "category_accuracy_toggle_button_2",
+          "category_accuracy_toggle_button_3",
+          "category_accuracy_toggle_button_4"
+        ],
+        "id": "category_accuracy_toggle_button_row",
+        "phrase_id_a11y": "category_accuracy_section_header_phrase",
+        "phrase_id_primary": "category_accuracy_toggle_button_row_description",
+        "type": "TOGGLE_BUTTON_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "accuracy_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "accuracy_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "category_accuracy_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "accuracy_comments",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "accuracy_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "accuracy_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "category_checkin_section_header",
+        "phrase_id_primary": "category_checkin_section_header_phrase",
+        "type": "SECTION_HEADER"
+      },
+      {
+        "id": "category_checkin_small_star_row",
+        "phrase_id_a11y": "category_checkin_rating_description",
+        "question_id": "checkin_rating",
+        "type": "SMALL_STAR_ROW"
+      },
+      {
+        "component_ids": [
+          "category_checkin_toggle_button_0",
+          "category_checkin_toggle_button_1",
+          "category_checkin_toggle_button_2",
+          "category_checkin_toggle_button_3",
+          "category_checkin_toggle_button_4"
+        ],
+        "id": "category_checkin_toggle_button_row",
+        "phrase_id_a11y": "category_checkin_section_header_phrase",
+        "phrase_id_primary": "category_checkin_toggle_button_row_description",
+        "type": "TOGGLE_BUTTON_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "checkin_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "checkin_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "category_checkin_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "checkin_comments",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "checkin_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "checkin_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "category_communication_section_header",
+        "phrase_id_primary": "category_communication_section_header_phrase",
+        "type": "SECTION_HEADER"
+      },
+      {
+        "id": "category_communication_small_star_row",
+        "phrase_id_a11y": "category_communication_rating_description",
+        "question_id": "communication_rating",
+        "type": "SMALL_STAR_ROW"
+      },
+      {
+        "component_ids": [
+          "category_communication_toggle_button_0",
+          "category_communication_toggle_button_1"
+        ],
+        "id": "category_communication_toggle_button_row",
+        "phrase_id_a11y": "category_communication_section_header_phrase",
+        "phrase_id_primary": "category_communication_toggle_button_row_description",
+        "type": "TOGGLE_BUTTON_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "communication_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "communication_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "category_communication_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "communication_comments",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "communication_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "communication_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "category_location_section_header",
+        "phrase_id_primary": "category_location_section_header_phrase",
+        "type": "SECTION_HEADER"
+      },
+      {
+        "id": "category_location_small_star_row",
+        "phrase_id_a11y": "category_location_rating_description",
+        "question_id": "location_rating",
+        "type": "SMALL_STAR_ROW"
+      },
+      {
+        "id": "category_location_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "location_comments",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "location_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "location_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "category_value_section_header",
+        "phrase_id_primary": "category_value_section_header_phrase",
+        "type": "SECTION_HEADER"
+      },
+      {
+        "id": "category_value_small_star_row",
+        "phrase_id_a11y": "category_value_rating_description",
+        "question_id": "value_rating",
+        "type": "SMALL_STAR_ROW"
+      },
+      {
+        "id": "category_value_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "value_comments",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "value_rating",
+              "type": "ANSWER_GREATER_THAN",
+              "value": "0"
+            },
+            {
+              "question_id": "value_rating",
+              "type": "ANSWER_LESS_THAN",
+              "value": "5"
+            }
+          ],
+          "type": "AND"
+        }
+      },
+      {
+        "id": "standard_items_intro",
+        "phrase_id_primary": "primary_standard_items_intro",
+        "phrase_id_secondary": "secondary_standard_items_intro",
+        "type": "DOCUMENT_MARQUEE"
+      },
+      {
+        "id": "standard_items_header",
+        "phrase_id_primary": "standard_items_header_phrase",
+        "type": "SECTION_HEADER"
+      },
+      {
+        "id": "standard_items_linens",
+        "phrase_id_false": "standard_item_no",
+        "phrase_id_primary": "standard_items_linens_phrase",
+        "phrase_id_true": "standard_item_yes",
+        "question_id": "standard_items_linens",
+        "type": "ATTRIBUTE_TOGGLE_ROW"
+      },
+      {
+        "id": "standard_items_pillow",
+        "phrase_id_false": "standard_item_no",
+        "phrase_id_primary": "standard_items_pillow_phrase",
+        "phrase_id_true": "standard_item_yes",
+        "question_id": "standard_items_pillow",
+        "type": "ATTRIBUTE_TOGGLE_ROW"
+      },
+      {
+        "id": "standard_items_soap",
+        "phrase_id_false": "standard_item_no",
+        "phrase_id_primary": "standard_items_soap_phrase",
+        "phrase_id_true": "standard_item_yes",
+        "question_id": "standard_items_soap",
+        "type": "ATTRIBUTE_TOGGLE_ROW"
+      },
+      {
+        "id": "standard_items_toilet_paper",
+        "phrase_id_false": "standard_item_no",
+        "phrase_id_primary": "standard_items_toilet_paper_phrase",
+        "phrase_id_true": "standard_item_yes",
+        "question_id": "standard_items_toilet_paper",
+        "type": "ATTRIBUTE_TOGGLE_ROW"
+      },
+      {
+        "id": "standard_items_towel",
+        "phrase_id_false": "standard_item_no",
+        "phrase_id_primary": "standard_items_towel_phrase",
+        "phrase_id_true": "standard_item_yes",
+        "question_id": "standard_items_towel",
+        "type": "ATTRIBUTE_TOGGLE_ROW"
+      },
+      {
+        "id": "details_bedroom_toggle_button_0",
+        "phrase_id_primary": "details_bedroom_toggle_button_0_phrase",
+        "question_id": "bedroom_toggle_bed_not_made",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bedroom_toggle_button_1",
+        "phrase_id_primary": "details_bedroom_toggle_button_1_phrase",
+        "question_id": "bedroom_toggle_linens",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bedroom_toggle_button_2",
+        "phrase_id_primary": "details_bedroom_toggle_button_2_phrase",
+        "question_id": "bedroom_toggle_pillows",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bedroom_toggle_button_3",
+        "phrase_id_primary": "details_bedroom_toggle_button_3_phrase",
+        "question_id": "bedroom_toggle_floor",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bedroom_toggle_button_4",
+        "phrase_id_primary": "details_bedroom_toggle_button_4_phrase",
+        "question_id": "bedroom_toggle_trash",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bedroom_toggle_button_5",
+        "phrase_id_primary": "details_bedroom_toggle_button_5_phrase",
+        "question_id": "bedroom_toggle_dust",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bedroom_toggle_button_6",
+        "phrase_id_primary": "details_bedroom_toggle_button_6_phrase",
+        "question_id": "bedroom_toggle_mold",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bedroom_toggle_button_7",
+        "phrase_id_primary": "details_bedroom_toggle_button_7_phrase",
+        "question_id": "bedroom_toggle_pet_hair_or_debris",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bedroom_toggle_button_8",
+        "phrase_id_primary": "details_bedroom_toggle_button_8_phrase",
+        "question_id": "bedroom_toggle_odor",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bedroom_toggle_button_9",
+        "phrase_id_primary": "details_bedroom_toggle_button_9_phrase",
+        "question_id": "bedroom_toggle_other",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_0",
+        "phrase_id_primary": "details_bathroom_toggle_button_0_phrase",
+        "question_id": "bathroom_toggle_counters",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_1",
+        "phrase_id_primary": "details_bathroom_toggle_button_1_phrase",
+        "question_id": "bathroom_toggle_toilet",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_2",
+        "phrase_id_primary": "details_bathroom_toggle_button_2_phrase",
+        "question_id": "bathroom_toggle_shower",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_3",
+        "phrase_id_primary": "details_bathroom_toggle_button_3_phrase",
+        "question_id": "bathroom_toggle_sink",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_4",
+        "phrase_id_primary": "details_bathroom_toggle_button_4_phrase",
+        "question_id": "bathroom_toggle_trash",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_5",
+        "phrase_id_primary": "details_bathroom_toggle_button_5_phrase",
+        "question_id": "bathroom_toggle_towels",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_6",
+        "phrase_id_primary": "details_bathroom_toggle_button_6_phrase",
+        "question_id": "bathroom_toggle_hair",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_7",
+        "phrase_id_primary": "details_bathroom_toggle_button_7_phrase",
+        "question_id": "bathroom_toggle_dust",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_8",
+        "phrase_id_primary": "details_bathroom_toggle_button_8_phrase",
+        "question_id": "bathroom_toggle_mold",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_9",
+        "phrase_id_primary": "details_bathroom_toggle_button_9_phrase",
+        "question_id": "bathroom_toggle_grime",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_10",
+        "phrase_id_primary": "details_bathroom_toggle_button_10_phrase",
+        "question_id": "bathroom_toggle_stains",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_11",
+        "phrase_id_primary": "details_bathroom_toggle_button_11_phrase",
+        "question_id": "bathroom_toggle_odor",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_bathroom_toggle_button_12",
+        "phrase_id_primary": "details_bathroom_toggle_button_12_phrase",
+        "question_id": "bathroom_toggle_other",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_0",
+        "phrase_id_primary": "details_kitchen_toggle_button_0_phrase",
+        "question_id": "kitchen_toggle_kitchenware",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_1",
+        "phrase_id_primary": "details_kitchen_toggle_button_1_phrase",
+        "question_id": "kitchen_toggle_table",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_2",
+        "phrase_id_primary": "details_kitchen_toggle_button_2_phrase",
+        "question_id": "kitchen_toggle_counter",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_3",
+        "phrase_id_primary": "details_kitchen_toggle_button_3_phrase",
+        "question_id": "kitchen_toggle_rotten_food",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_4",
+        "phrase_id_primary": "details_kitchen_toggle_button_4_phrase",
+        "question_id": "kitchen_toggle_dust",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_5",
+        "phrase_id_primary": "details_kitchen_toggle_button_5_phrase",
+        "question_id": "kitchen_toggle_spills",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_6",
+        "phrase_id_primary": "details_kitchen_toggle_button_6_phrase",
+        "question_id": "kitchen_toggle_stains",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_7",
+        "phrase_id_primary": "details_kitchen_toggle_button_7_phrase",
+        "question_id": "kitchen_toggle_odor",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_8",
+        "phrase_id_primary": "details_kitchen_toggle_button_8_phrase",
+        "question_id": "kitchen_toggle_trash",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_kitchen_toggle_button_9",
+        "phrase_id_primary": "details_kitchen_toggle_button_9_phrase",
+        "question_id": "kitchen_toggle_other",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_description_toggle_button_0",
+        "phrase_id_primary": "details_description_toggle_button_0_phrase",
+        "question_id": "description_toggle_sleeping_arrangements",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_description_toggle_button_1",
+        "phrase_id_primary": "details_description_toggle_button_1_phrase",
+        "question_id": "description_toggle_house_rules",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_description_toggle_button_2",
+        "phrase_id_primary": "details_description_toggle_button_2_phrase",
+        "question_id": "description_toggle_smaller_than_expected",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_description_toggle_button_3",
+        "phrase_id_primary": "details_description_toggle_button_3_phrase",
+        "question_id": "description_toggle_missing_details",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_description_toggle_button_4",
+        "phrase_id_primary": "details_description_toggle_button_4_phrase",
+        "question_id": "description_toggle_home_layout",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_description_toggle_button_5",
+        "phrase_id_primary": "details_description_toggle_button_5_phrase",
+        "question_id": "description_toggle_outdated_representation",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "details_description_toggle_button_6",
+        "phrase_id_primary": "details_description_toggle_button_6_phrase",
+        "question_id": "description_toggle_other",
+        "type": "TOGGLE_BUTTON"
+      },
+      {
+        "id": "category_details_intro",
+        "phrase_id_primary": "primary_category_details_intro",
+        "phrase_id_secondary": "secondary_category_details_intro",
+        "type": "DOCUMENT_MARQUEE"
+      },
+      {
+        "component_ids": [
+          "details_bedroom_toggle_button_0",
+          "details_bedroom_toggle_button_1",
+          "details_bedroom_toggle_button_2",
+          "details_bedroom_toggle_button_3",
+          "details_bedroom_toggle_button_4",
+          "details_bedroom_toggle_button_5",
+          "details_bedroom_toggle_button_6",
+          "details_bedroom_toggle_button_7",
+          "details_bedroom_toggle_button_8",
+          "details_bedroom_toggle_button_9"
+        ],
+        "id": "details_bedroom_toggle_button_row",
+        "phrase_id_primary": "details_bedroom_toggle_button_row_description",
+        "type": "TOGGLE_BUTTON_ROW",
+        "visible": {
+          "question_id": "cleanliness_toggle_bedroom",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "details_bedroom_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "details_bedroom_text_area",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "question_id": "cleanliness_toggle_bedroom",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "component_ids": [
+          "details_bathroom_toggle_button_0",
+          "details_bathroom_toggle_button_1",
+          "details_bathroom_toggle_button_2",
+          "details_bathroom_toggle_button_3",
+          "details_bathroom_toggle_button_4",
+          "details_bathroom_toggle_button_5",
+          "details_bathroom_toggle_button_6",
+          "details_bathroom_toggle_button_7",
+          "details_bathroom_toggle_button_8",
+          "details_bathroom_toggle_button_9",
+          "details_bathroom_toggle_button_10",
+          "details_bathroom_toggle_button_11",
+          "details_bathroom_toggle_button_12"
+        ],
+        "id": "details_bathroom_toggle_button_row",
+        "phrase_id_primary": "details_bathroom_toggle_button_row_description",
+        "type": "TOGGLE_BUTTON_ROW",
+        "visible": {
+          "question_id": "cleanliness_toggle_bathroom",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "details_bathroom_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "details_bathroom_text_area",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "question_id": "cleanliness_toggle_bathroom",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "component_ids": [
+          "details_kitchen_toggle_button_0",
+          "details_kitchen_toggle_button_1",
+          "details_kitchen_toggle_button_2",
+          "details_kitchen_toggle_button_3",
+          "details_kitchen_toggle_button_4",
+          "details_kitchen_toggle_button_5",
+          "details_kitchen_toggle_button_6",
+          "details_kitchen_toggle_button_7",
+          "details_kitchen_toggle_button_8",
+          "details_kitchen_toggle_button_9"
+        ],
+        "id": "details_kitchen_toggle_button_row",
+        "phrase_id_primary": "details_kitchen_toggle_button_row_description",
+        "type": "TOGGLE_BUTTON_ROW",
+        "visible": {
+          "question_id": "cleanliness_toggle_kitchen",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "details_kitchen_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "details_kitchen_text_area",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "question_id": "cleanliness_toggle_kitchen",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_header",
+        "phrase_id_primary": "category_missing_header_phrase",
+        "type": "MICRO_SECTION_HEADER",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_cooking",
+        "phrase_id_primary": "category_missing_cooking_phrase",
+        "question_id": "category_missing_cooking",
+        "type": "CHECK_BOX_ROW",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_wifi",
+        "phrase_id_primary": "category_missing_wifi_phrase",
+        "question_id": "category_missing_wifi",
+        "type": "CHECK_BOX_ROW",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_toilet_paper",
+        "phrase_id_primary": "category_missing_toilet_paper_phrase",
+        "question_id": "category_missing_toilet_paper",
+        "type": "CHECK_BOX_ROW",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_towels",
+        "phrase_id_primary": "category_missing_towels_phrase",
+        "question_id": "category_missing_towels",
+        "type": "CHECK_BOX_ROW",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_soap",
+        "phrase_id_primary": "category_missing_soap_phrase",
+        "question_id": "category_missing_soap",
+        "type": "CHECK_BOX_ROW",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_linens",
+        "phrase_id_primary": "category_missing_linens_phrase",
+        "question_id": "category_missing_linens",
+        "type": "CHECK_BOX_ROW",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_pillows",
+        "phrase_id_primary": "category_missing_pillows_phrase",
+        "question_id": "category_missing_pillows",
+        "type": "CHECK_BOX_ROW",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_heating",
+        "phrase_id_primary": "category_missing_heating_phrase",
+        "question_id": "category_missing_heating",
+        "type": "CHECK_BOX_ROW",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "id": "category_missing_ac",
+        "phrase_id_primary": "category_missing_ac_phrase",
+        "question_id": "category_missing_ac",
+        "type": "CHECK_BOX_ROW",
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "true"
+        }
+      },
+      {
+        "component_ids": [
+          "details_description_toggle_button_0",
+          "details_description_toggle_button_1",
+          "details_description_toggle_button_2",
+          "details_description_toggle_button_3",
+          "details_description_toggle_button_4",
+          "details_description_toggle_button_5",
+          "details_description_toggle_button_6"
+        ],
+        "id": "details_description_toggle_button_row",
+        "phrase_id_primary": "details_description_toggle_button_row_description",
+        "type": "TOGGLE_BUTTON_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "accuracy_toggle_description",
+              "type": "ANSWER_EQUALS",
+              "value": "true"
+            },
+            {
+              "question_id": "accuracy_toggle_photos",
+              "type": "ANSWER_EQUALS",
+              "value": "true"
+            }
+          ],
+          "type": "OR"
+        }
+      },
+      {
+        "id": "details_description_text_area",
+        "phrase_id_a11y": "details_text_area_placeholder",
+        "phrase_id_placeholder": "details_text_area_placeholder",
+        "question_id": "details_description_text_area",
+        "type": "TEXT_AREA_ROW",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "accuracy_toggle_description",
+              "type": "ANSWER_EQUALS",
+              "value": "true"
+            },
+            {
+              "question_id": "accuracy_toggle_photos",
+              "type": "ANSWER_EQUALS",
+              "value": "true"
+            }
+          ],
+          "type": "OR"
+        }
+      },
+      {
+        "id": "private_feedback_intro",
+        "phrase_id_primary": "primary_private_feedback_intro",
+        "phrase_id_secondary": "secondary_private_feedback_intro",
+        "type": "DOCUMENT_MARQUEE"
+      },
+      {
+        "id": "private_feedback_textarea",
+        "phrase_id_a11y": "private_feedback_placeholder",
+        "phrase_id_placeholder": "private_feedback_placeholder",
+        "question_id": "private_feedback",
+        "type": "TEXT_AREA_ROW"
+      },
+      {
+        "id": "public_feedback_intro",
+        "phrase_id_primary": "primary_public_feedback_intro",
+        "phrase_id_secondary": "secondary_public_feedback_intro",
+        "type": "DOCUMENT_MARQUEE"
+      },
+      {
+        "id": "public_feedback_textarea",
+        "phrase_id_a11y": "primary_public_feedback_intro",
+        "phrase_id_placeholder": "primary_public_feedback_intro",
+        "question_id": "public_feedback",
+        "type": "TEXT_AREA_ROW"
+      },
+      {
+        "component_ids": [
+          "component_smoke_detector_radio_group_option_yes",
+          "component_smoke_detector_radio_group_option_no",
+          "component_smoke_detector_radio_group_option_not_sure"
+        ],
+        "id": "component_smoke_detector",
+        "phrase_id_primary": "component_smoke_detector_title",
+        "question_id": "smoke_detector_question",
+        "type": "RADIO_TOGGLE_BUTTON_GROUP"
+      },
+      {
+        "id": "component_smoke_detector_radio_group_option_yes",
+        "phrase_id_primary": "radio_option_yes_label",
+        "question_value": "yes",
+        "type": "RADIO_TOGGLE_BUTTON"
+      },
+      {
+        "id": "component_smoke_detector_radio_group_option_no",
+        "phrase_id_primary": "radio_option_no_label",
+        "question_value": "no",
+        "type": "RADIO_TOGGLE_BUTTON"
+      },
+      {
+        "id": "component_smoke_detector_radio_group_option_not_sure",
+        "phrase_id_primary": "radio_option_not_sure_label",
+        "question_value": "not_sure",
+        "type": "RADIO_TOGGLE_BUTTON"
+      }
+    ],
+    "phrases": [
+      {
+        "id": "first_name_token",
+        "localized": "Brian",
+        "type": "STATIC"
+      },
+      {
+        "description": "Text area placeholder for adding details about star ratings",
+        "id": "details_text_area_placeholder",
+        "localized": "Add details",
+        "type": "STATIC"
+      },
+      {
+        "description": "Rating screen title",
+        "id": "primary_rating_intro_phrase",
+        "localized": "How was your stay at %{first_name}’s place?",
+        "type": "STATIC"
+      },
+      {
+        "id": "primary_rating_intro",
+        "phrase_id": "primary_rating_intro_phrase",
+        "phrase_id_token": "first_name_token",
+        "token": "first_name",
+        "type": "TOKEN"
+      },
+      {
+        "description": "Rating screen subtitle",
+        "id": "secondary_rating_intro",
+        "localized": "We won’t share your responses until after your host writes a review too.",
+        "type": "STATIC"
+      },
+      {
+        "description": "Star rating description for 1 star out of 5",
+        "id": "rating_phrase_terrible",
+        "localized": "Terrible",
+        "type": "STATIC"
+      },
+      {
+        "description": "Star rating description for 2 stars out of 5",
+        "id": "rating_phrase_bad",
+        "localized": "Bad",
+        "type": "STATIC"
+      },
+      {
+        "description": "Star rating description for 3 stars out of 5",
+        "id": "rating_phrase_okay",
+        "localized": "Okay",
+        "type": "STATIC"
+      },
+      {
+        "description": "Star rating description for 4 stars out of 5",
+        "id": "rating_phrase_good",
+        "localized": "Good",
+        "type": "STATIC"
+      },
+      {
+        "description": "Star rating description for 5 stars out of 5",
+        "id": "rating_phrase_great",
+        "localized": "Great",
+        "type": "STATIC"
+      },
+      {
+        "description": "Unselected star rating description",
+        "id": "rating_phrase_default",
+        "localized": " ",
+        "type": "STATIC"
+      },
+      {
+        "cases": [
+          {
+            "condition": {
+              "question_id": "overall_rating",
+              "type": "ANSWER_EQUALS",
+              "value": "1"
+            },
+            "phrase_id": "rating_phrase_terrible"
+          },
+          {
+            "condition": {
+              "question_id": "overall_rating",
+              "type": "ANSWER_EQUALS",
+              "value": "2"
+            },
+            "phrase_id": "rating_phrase_bad"
+          },
+          {
+            "condition": {
+              "question_id": "overall_rating",
+              "type": "ANSWER_EQUALS",
+              "value": "3"
+            },
+            "phrase_id": "rating_phrase_okay"
+          },
+          {
+            "condition": {
+              "question_id": "overall_rating",
+              "type": "ANSWER_EQUALS",
+              "value": "4"
+            },
+            "phrase_id": "rating_phrase_good"
+          },
+          {
+            "condition": {
+              "question_id": "overall_rating",
+              "type": "ANSWER_EQUALS",
+              "value": "5"
+            },
+            "phrase_id": "rating_phrase_great"
+          }
+        ],
+        "id": "rating_phrase_switch",
+        "phrase_id_default": "rating_phrase_default",
+        "type": "SWITCH"
+      },
+      {
+        "description": "Text for link to trip issues reporting page",
+        "id": "report_link_phrase",
+        "localized": "Report unsafe behavior",
+        "type": "STATIC"
+      },
+      {
+        "description": "Appreciations screen title",
+        "id": "primary_appreciations_intro",
+        "localized": "Was anything extra special?",
+        "type": "STATIC"
+      },
+      {
+        "description": "Appreciations screen subtitle",
+        "id": "secondary_appreciations_intro",
+        "localized": "Choose what you loved the most.",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for hospitality appreciation toggle",
+        "id": "appreciation_hospitality_phrase",
+        "localized": "Outstanding hospitality",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for amenities appreciation toggle",
+        "id": "appreciation_amenities_phrase",
+        "localized": "Amazing amenities",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for responses appreciation toggle",
+        "id": "appreciation_responses_phrase",
+        "localized": "Quick responses",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for thoughtful appreciation toggle",
+        "id": "appreciation_thoughtful_phrase",
+        "localized": "Thoughtful touches",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for space appreciation toggle",
+        "id": "appreciation_space_phrase",
+        "localized": "Stylish space",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for clean appreciation toggle",
+        "id": "appreciation_clean_phrase",
+        "localized": "Sparkling clean",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for tips appreciation toggle",
+        "id": "appreciation_tips_phrase",
+        "localized": "Local tips",
+        "type": "STATIC"
+      },
+      {
+        "description": "Skip button label",
+        "id": "button_skip_label",
+        "localized": "Skip",
+        "type": "STATIC"
+      },
+      {
+        "cases": [
+          {
+            "condition": {
+              "conditions": [
+                {
+                  "question_id": "appreciation_hospitality",
+                  "type": "ANSWER_EQUALS",
+                  "value": "true"
+                },
+                {
+                  "question_id": "appreciation_amenities",
+                  "type": "ANSWER_EQUALS",
+                  "value": "true"
+                },
+                {
+                  "question_id": "appreciation_responses",
+                  "type": "ANSWER_EQUALS",
+                  "value": "true"
+                },
+                {
+                  "question_id": "appreciation_thoughtful",
+                  "type": "ANSWER_EQUALS",
+                  "value": "true"
+                },
+                {
+                  "question_id": "appreciation_space",
+                  "type": "ANSWER_EQUALS",
+                  "value": "true"
+                },
+                {
+                  "question_id": "appreciation_clean",
+                  "type": "ANSWER_EQUALS",
+                  "value": "true"
+                },
+                {
+                  "question_id": "appreciation_tips",
+                  "type": "ANSWER_EQUALS",
+                  "value": "true"
+                }
+              ],
+              "type": "OR"
+            },
+            "phrase_id": "button_next_label"
+          }
+        ],
+        "id": "appreciations_next_button",
+        "phrase_id_default": "button_skip_label",
+        "type": "SWITCH"
+      },
+      {
+        "description": "Describe trip screen title",
+        "id": "primary_describe_trip_intro",
+        "localized": "Describe your trip",
+        "type": "STATIC"
+      },
+      {
+        "description": "Describe trip screen subtitle",
+        "id": "secondary_describe_trip_intro",
+        "localized": "Help other guests find the right place for their trip. Your host will only see answers that multiple guests have picked.",
+        "type": "STATIC"
+      },
+      {
+        "description": "Radio button description for trip expectation 5 out of 5",
+        "id": "trip_expectations_5",
+        "localized": "Much better than I expected",
+        "type": "STATIC"
+      },
+      {
+        "description": "Radio button description for trip expectation 4 out of 5",
+        "id": "trip_expectations_4",
+        "localized": "A bit better than I expected",
+        "type": "STATIC"
+      },
+      {
+        "description": "Radio button description for trip expectation 3 out of 5",
+        "id": "trip_expectations_3",
+        "localized": "About the same as I expected",
+        "type": "STATIC"
+      },
+      {
+        "description": "Radio button description for trip expectation 2 out of 5",
+        "id": "trip_expectations_2",
+        "localized": "A bit worse than I expected",
+        "type": "STATIC"
+      },
+      {
+        "description": "Radio button description for trip expectation 1 out of 5",
+        "id": "trip_expectations_1",
+        "localized": "Much worse than I expected",
+        "type": "STATIC"
+      },
+      {
+        "description": "Trip expectations question title",
+        "id": "trip_expectations_question_phrase",
+        "localized": "How did your stay at %{first_name}’s place compare to your expectations?",
+        "type": "STATIC"
+      },
+      {
+        "id": "trip_expectations_question",
+        "phrase_id": "trip_expectations_question_phrase",
+        "phrase_id_token": "first_name_token",
+        "token": "first_name",
+        "type": "TOKEN"
+      },
+      {
+        "description": "Category rating screen title",
+        "id": "primary_category_rating_intro_phrase",
+        "localized": "Let %{first_name} know about your experience in these areas",
+        "type": "STATIC"
+      },
+      {
+        "id": "primary_category_rating_intro",
+        "phrase_id": "primary_category_rating_intro_phrase",
+        "phrase_id_token": "first_name_token",
+        "token": "first_name",
+        "type": "TOKEN"
+      },
+      {
+        "description": "Category rating screen subtitle",
+        "id": "secondary_category_rating_intro",
+        "localized": "This is private between you and your host.",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Cleanliness' category rating title",
+        "id": "category_cleanliness_section_header_phrase",
+        "localized": "Cleanliness",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Cleanliness' category star rating description",
+        "id": "category_cleanliness_rating_description",
+        "localized": "Cleanliness rating",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Bedroom' toggle button in 'Cleanliness' category",
+        "id": "category_cleanliness_toggle_button_0_phrase",
+        "localized": "Bedroom",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Bathroom' toggle button in 'Cleanliness' category",
+        "id": "category_cleanliness_toggle_button_1_phrase",
+        "localized": "Bathroom",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Kitchen' toggle button in 'Cleanliness' category",
+        "id": "category_cleanliness_toggle_button_2_phrase",
+        "localized": "Kitchen",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Common Areas' toggle button in 'Cleanliness' category",
+        "id": "category_cleanliness_toggle_button_3_phrase",
+        "localized": "Common Areas",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Entire place' toggle button in 'Cleanliness' category",
+        "id": "category_cleanliness_toggle_button_4_phrase",
+        "localized": "Entire place",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Cleanliness' category toggle button group description",
+        "id": "category_cleanliness_toggle_button_row_description",
+        "localized": "Which spaces had cleanliness issues?",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Accuracy' category rating title",
+        "id": "category_accuracy_section_header_phrase",
+        "localized": "Accuracy",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Accuracy' category star rating description",
+        "id": "category_accuracy_rating_description",
+        "localized": "Accuracy rating",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Description' toggle button in 'Accuracy' category",
+        "id": "category_accuracy_toggle_button_0_phrase",
+        "localized": "Description",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Photos' toggle button in 'Accuracy' category",
+        "id": "category_accuracy_toggle_button_1_phrase",
+        "localized": "Photos",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Messages from host' toggle button in 'Accuracy' category",
+        "id": "category_accuracy_toggle_button_2_phrase",
+        "localized": "Messages from host",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Amenities' toggle button in 'Accuracy' category",
+        "id": "category_accuracy_toggle_button_3_phrase",
+        "localized": "Amenities",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Address' toggle button in 'Accuracy' category",
+        "id": "category_accuracy_toggle_button_4_phrase",
+        "localized": "Address",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Accuracy' category toggle button group description",
+        "id": "category_accuracy_toggle_button_row_description",
+        "localized": "What was inaccurate about the listing?",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Check-in' category rating title",
+        "id": "category_checkin_section_header_phrase",
+        "localized": "Check-in",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Check-in' category star rating description",
+        "id": "category_checkin_rating_description",
+        "localized": "Check-in rating",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Difficult to find' toggle button in 'Check-in' category",
+        "id": "category_checkin_toggle_button_0_phrase",
+        "localized": "Difficult to find",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Incorrect information' toggle button in 'Check-in' category",
+        "id": "category_checkin_toggle_button_1_phrase",
+        "localized": "Incorrect information",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Unclear instructions' toggle button in 'Check-in' category",
+        "id": "category_checkin_toggle_button_2_phrase",
+        "localized": "Unclear instructions",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Late host' toggle button in 'Check-in' category",
+        "id": "category_checkin_toggle_button_3_phrase",
+        "localized": "Late host",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Host didn’t respond' toggle button in 'Check-in' category",
+        "id": "category_checkin_toggle_button_4_phrase",
+        "localized": "Host didn’t respond",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Check-in' category toggle button group description",
+        "id": "category_checkin_toggle_button_row_description",
+        "localized": "What issues did you experience?",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Communication' category rating title",
+        "id": "category_communication_section_header_phrase",
+        "localized": "Communication",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Communication' category star rating description",
+        "id": "category_communication_rating_description",
+        "localized": "Communication rating",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Slow responses' toggle button in 'Communication' category",
+        "id": "category_communication_toggle_button_0_phrase",
+        "localized": "Slow responses",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Unresponsive host' toggle button in 'Communication' category",
+        "id": "category_communication_toggle_button_1_phrase",
+        "localized": "Unresponsive host",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Communication' category toggle button group description",
+        "id": "category_communication_toggle_button_row_description",
+        "localized": "What issues did you experience?",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Location' category rating title",
+        "id": "category_location_section_header_phrase",
+        "localized": "Location",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Location' category star rating description",
+        "id": "category_location_rating_description",
+        "localized": "Location rating",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Value' category rating title",
+        "id": "category_value_section_header_phrase",
+        "localized": "Value",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Value' category star rating description",
+        "id": "category_value_rating_description",
+        "localized": "Value rating",
+        "type": "STATIC"
+      },
+      {
+        "description": "Standard items screen title",
+        "id": "primary_standard_items_intro_phrase",
+        "localized": "Help %{first_name} prepare for future guests",
+        "type": "STATIC"
+      },
+      {
+        "id": "primary_standard_items_intro",
+        "phrase_id": "primary_standard_items_intro_phrase",
+        "phrase_id_token": "first_name_token",
+        "token": "first_name",
+        "type": "TOKEN"
+      },
+      {
+        "description": "Standard items screen subtitle",
+        "id": "secondary_standard_items_intro",
+        "localized": "This is private between you and your host",
+        "type": "STATIC"
+      },
+      {
+        "description": "Header for standard items questions",
+        "id": "standard_items_header_phrase",
+        "localized": "Were these standard items available?",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for linens toggle",
+        "id": "standard_items_linens_phrase",
+        "localized": "Bed linens on every bed",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Yes' label for standard items question",
+        "id": "standard_item_yes",
+        "localized": "Yes",
+        "type": "STATIC"
+      },
+      {
+        "description": "'No' label for standard items question",
+        "id": "standard_item_no",
+        "localized": "No",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for pillow toggle",
+        "id": "standard_items_pillow_phrase",
+        "localized": "1 pillow per guest",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for soap toggle",
+        "id": "standard_items_soap_phrase",
+        "localized": "Soap",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for toilet paper toggle",
+        "id": "standard_items_toilet_paper_phrase",
+        "localized": "Toilet paper",
+        "type": "STATIC"
+      },
+      {
+        "description": "Label for towel toggle",
+        "id": "standard_items_towel_phrase",
+        "localized": "1 towel per guest",
+        "type": "STATIC"
+      },
+      {
+        "description": "Category details screen title",
+        "id": "primary_category_details_intro_phrase",
+        "localized": "Help %{first_name} prepare for future guests",
+        "type": "STATIC"
+      },
+      {
+        "id": "primary_category_details_intro",
+        "phrase_id": "primary_category_details_intro_phrase",
+        "phrase_id_token": "first_name_token",
+        "token": "first_name",
+        "type": "TOKEN"
+      },
+      {
+        "description": "Category details screen subtitle",
+        "id": "secondary_category_details_intro",
+        "localized": "This is private between you and your host",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Bed not made' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_0_phrase",
+        "localized": "Bed not made",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Linens' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_1_phrase",
+        "localized": "Linens",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Pillows' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_2_phrase",
+        "localized": "Pillows",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Floor' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_3_phrase",
+        "localized": "Floor",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Trash' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_4_phrase",
+        "localized": "Trash",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Dust' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_5_phrase",
+        "localized": "Dust",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Mold' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_6_phrase",
+        "localized": "Mold",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Pet hair or debris' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_7_phrase",
+        "localized": "Pet hair or debris",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Odor' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_8_phrase",
+        "localized": "Odor",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Other' toggle button in 'What wasn’t clean in the bedroom?' category",
+        "id": "details_bedroom_toggle_button_9_phrase",
+        "localized": "Other",
+        "type": "STATIC"
+      },
+      {
+        "description": "'bedroom' category toggle button group description",
+        "id": "details_bedroom_toggle_button_row_description",
+        "localized": "What wasn’t clean in the bedroom?",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Counters' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_0_phrase",
+        "localized": "Counters",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Toilet' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_1_phrase",
+        "localized": "Toilet",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Shower' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_2_phrase",
+        "localized": "Shower",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Sink' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_3_phrase",
+        "localized": "Sink",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Trash' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_4_phrase",
+        "localized": "Trash",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Towels' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_5_phrase",
+        "localized": "Towels",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Hair' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_6_phrase",
+        "localized": "Hair",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Dust' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_7_phrase",
+        "localized": "Dust",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Mold' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_8_phrase",
+        "localized": "Mold",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Grime' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_9_phrase",
+        "localized": "Grime",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Stains' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_10_phrase",
+        "localized": "Stains",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Odor' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_11_phrase",
+        "localized": "Odor",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Other' toggle button in 'What wasn’t clean in the bathroom?' category",
+        "id": "details_bathroom_toggle_button_12_phrase",
+        "localized": "Other",
+        "type": "STATIC"
+      },
+      {
+        "description": "'bathroom' category toggle button group description",
+        "id": "details_bathroom_toggle_button_row_description",
+        "localized": "What wasn’t clean in the bathroom?",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Kitchenware' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_0_phrase",
+        "localized": "Kitchenware",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Table' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_1_phrase",
+        "localized": "Table",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Counter' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_2_phrase",
+        "localized": "Counter",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Rotten food' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_3_phrase",
+        "localized": "Rotten food",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Dust' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_4_phrase",
+        "localized": "Dust",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Spills' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_5_phrase",
+        "localized": "Spills",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Stains' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_6_phrase",
+        "localized": "Stains",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Odor' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_7_phrase",
+        "localized": "Odor",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Trash' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_8_phrase",
+        "localized": "Trash",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Other' toggle button in 'What wasn’t clean in the kitchen?' category",
+        "id": "details_kitchen_toggle_button_9_phrase",
+        "localized": "Other",
+        "type": "STATIC"
+      },
+      {
+        "description": "'kitchen' category toggle button group description",
+        "id": "details_kitchen_toggle_button_row_description",
+        "localized": "What wasn’t clean in the kitchen?",
+        "type": "STATIC"
+      },
+      {
+        "description": "Header for missing items question",
+        "id": "category_missing_header_phrase",
+        "localized": "Were any of these missing or in poor condition?",
+        "type": "STATIC"
+      },
+      {
+        "description": "Check box description for missing cooking basics",
+        "id": "category_missing_cooking_phrase",
+        "localized": "Cooking basics (pots and pans, oil, salt and pepper)",
+        "type": "STATIC"
+      },
+      {
+        "description": "Check box description for missing Wifi",
+        "id": "category_missing_wifi_phrase",
+        "localized": "Wifi",
+        "type": "STATIC"
+      },
+      {
+        "description": "Check box description for missing toilet paper",
+        "id": "category_missing_toilet_paper_phrase",
+        "localized": "Toilet paper",
+        "type": "STATIC"
+      },
+      {
+        "description": "Check box description for missing towels",
+        "id": "category_missing_towels_phrase",
+        "localized": "Towels",
+        "type": "STATIC"
+      },
+      {
+        "description": "Check box description for missing soap",
+        "id": "category_missing_soap_phrase",
+        "localized": "Soap",
+        "type": "STATIC"
+      },
+      {
+        "description": "Check box description for missing linens",
+        "id": "category_missing_linens_phrase",
+        "localized": "Bedding and linens",
+        "type": "STATIC"
+      },
+      {
+        "description": "Check box description for missing pillows",
+        "id": "category_missing_pillows_phrase",
+        "localized": "Pillows",
+        "type": "STATIC"
+      },
+      {
+        "description": "Check box description for missing heating",
+        "id": "category_missing_heating_phrase",
+        "localized": "Heating",
+        "type": "STATIC"
+      },
+      {
+        "description": "Check box description for missing air conditioning",
+        "id": "category_missing_ac_phrase",
+        "localized": "Air conditioning",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Sleeping arrangements' toggle button in 'How were the listing’s description or photos different than as advertised?' category",
+        "id": "details_description_toggle_button_0_phrase",
+        "localized": "Sleeping arrangements",
+        "type": "STATIC"
+      },
+      {
+        "description": "'House rules' toggle button in 'How were the listing’s description or photos different than as advertised?' category",
+        "id": "details_description_toggle_button_1_phrase",
+        "localized": "House rules",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Smaller than expected' toggle button in 'How were the listing’s description or photos different than as advertised?' category",
+        "id": "details_description_toggle_button_2_phrase",
+        "localized": "Smaller than expected",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Missing details' toggle button in 'How were the listing’s description or photos different than as advertised?' category",
+        "id": "details_description_toggle_button_3_phrase",
+        "localized": "Missing details",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Home layout' toggle button in 'How were the listing’s description or photos different than as advertised?' category",
+        "id": "details_description_toggle_button_4_phrase",
+        "localized": "Home layout",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Outdated representation' toggle button in 'How were the listing’s description or photos different than as advertised?' category",
+        "id": "details_description_toggle_button_5_phrase",
+        "localized": "Outdated representation",
+        "type": "STATIC"
+      },
+      {
+        "description": "'Other' toggle button in 'How were the listing’s description or photos different than as advertised?' category",
+        "id": "details_description_toggle_button_6_phrase",
+        "localized": "Other",
+        "type": "STATIC"
+      },
+      {
+        "description": "'description' category toggle button group description",
+        "id": "details_description_toggle_button_row_description",
+        "localized": "How were the listing’s description or photos different than as advertised?",
+        "type": "STATIC"
+      },
+      {
+        "description": "Private feedback screen title",
+        "id": "primary_private_feedback_intro_phrase",
+        "localized": "Add a private note to %{first_name}",
+        "type": "STATIC"
+      },
+      {
+        "id": "primary_private_feedback_intro",
+        "phrase_id": "primary_private_feedback_intro_phrase",
+        "phrase_id_token": "first_name_token",
+        "token": "first_name",
+        "type": "TOKEN"
+      },
+      {
+        "description": "Private feedback screen subtitle",
+        "id": "secondary_private_feedback_intro",
+        "localized": "Offer suggestions or say thanks for being a great host.",
+        "type": "STATIC"
+      },
+      {
+        "description": "Text area placeholder text",
+        "id": "private_feedback_placeholder",
+        "localized": "Add a private note",
+        "type": "STATIC"
+      },
+      {
+        "cases": [
+          {
+            "condition": {
+              "question_id": "private_feedback",
+              "type": "ANSWER_NOT_EMPTY"
+            },
+            "phrase_id": "button_next_label"
+          }
+        ],
+        "id": "private_feedback_next_button",
+        "phrase_id_default": "button_skip_label",
+        "type": "SWITCH"
+      },
+      {
+        "description": "Public feedback screen title",
+        "id": "primary_public_feedback_intro",
+        "localized": "Write a public review",
+        "type": "STATIC"
+      },
+      {
+        "description": "Public feedback screen subtitle",
+        "id": "secondary_public_feedback_intro_phrase",
+        "localized": "Tell future travels about what they can expect at %{first_name}’s place.",
+        "type": "STATIC"
+      },
+      {
+        "id": "secondary_public_feedback_intro",
+        "phrase_id": "secondary_public_feedback_intro_phrase",
+        "phrase_id_token": "first_name_token",
+        "token": "first_name",
+        "type": "TOKEN"
+      },
+      {
+        "description": "Next button label",
+        "id": "button_next_label",
+        "localized": "Next",
+        "type": "STATIC"
+      },
+      {
+        "description": "Done button label",
+        "id": "button_done_label",
+        "localized": "Done",
+        "type": "STATIC"
+      },
+      {
+        "localized": "Smoke detector",
+        "id": "component_smoke_detector_title",
+        "type": "STATIC"
+      },
+      {
+        "localized": "Yes",
+        "id": "radio_option_yes_label",
+        "type": "STATIC"
+      },
+      {
+        "localized": "No",
+        "id": "radio_option_no_label",
+        "type": "STATIC"
+      },
+      {
+        "localized": "Not sure",
+        "id": "radio_option_not_sure_label",
+        "type": "STATIC"
+      }
+    ],
+    "questions": [
+      {
+        "id": "overall_rating",
+        "max_value": 5,
+        "min_value": 0,
+        "type": "INT"
+      },
+      {
+        "id": "appreciation_hospitality",
+        "type": "BOOL"
+      },
+      {
+        "id": "appreciation_amenities",
+        "type": "BOOL"
+      },
+      {
+        "id": "appreciation_responses",
+        "type": "BOOL"
+      },
+      {
+        "id": "appreciation_thoughtful",
+        "type": "BOOL"
+      },
+      {
+        "id": "appreciation_space",
+        "type": "BOOL"
+      },
+      {
+        "id": "appreciation_clean",
+        "type": "BOOL"
+      },
+      {
+        "id": "appreciation_tips",
+        "type": "BOOL"
+      },
+      {
+        "id": "trip_expectations",
+        "max_value": 5,
+        "min_value": 0,
+        "type": "INT"
+      },
+      {
+        "id": "cleanliness_rating",
+        "max_value": 5,
+        "min_value": 0,
+        "type": "INT"
+      },
+      {
+        "id": "cleanliness_toggle_bedroom",
+        "type": "BOOL"
+      },
+      {
+        "id": "cleanliness_toggle_bathroom",
+        "type": "BOOL"
+      },
+      {
+        "id": "cleanliness_toggle_kitchen",
+        "type": "BOOL"
+      },
+      {
+        "id": "cleanliness_toggle_common_areas",
+        "type": "BOOL"
+      },
+      {
+        "id": "cleanliness_toggle_entire_place",
+        "type": "BOOL"
+      },
+      {
+        "id": "cleanliness_comments",
+        "type": "STRING"
+      },
+      {
+        "id": "accuracy_rating",
+        "max_value": 5,
+        "min_value": 0,
+        "type": "INT"
+      },
+      {
+        "id": "accuracy_toggle_description",
+        "type": "BOOL"
+      },
+      {
+        "id": "accuracy_toggle_photos",
+        "type": "BOOL"
+      },
+      {
+        "id": "accuracy_toggle_messages_from_host",
+        "type": "BOOL"
+      },
+      {
+        "id": "accuracy_toggle_amenities",
+        "type": "BOOL"
+      },
+      {
+        "id": "accuracy_toggle_address",
+        "type": "BOOL"
+      },
+      {
+        "id": "accuracy_comments",
+        "type": "STRING"
+      },
+      {
+        "id": "checkin_rating",
+        "max_value": 5,
+        "min_value": 0,
+        "type": "INT"
+      },
+      {
+        "id": "checkin_toggle_difficult_to_find",
+        "type": "BOOL"
+      },
+      {
+        "id": "checkin_toggle_incorrect_information",
+        "type": "BOOL"
+      },
+      {
+        "id": "checkin_toggle_unclear_instructions",
+        "type": "BOOL"
+      },
+      {
+        "id": "checkin_toggle_late_host",
+        "type": "BOOL"
+      },
+      {
+        "id": "checkin_toggle_host_didn___t_respond",
+        "type": "BOOL"
+      },
+      {
+        "id": "checkin_comments",
+        "type": "STRING"
+      },
+      {
+        "id": "communication_rating",
+        "max_value": 5,
+        "min_value": 0,
+        "type": "INT"
+      },
+      {
+        "id": "communication_toggle_slow_responses",
+        "type": "BOOL"
+      },
+      {
+        "id": "communication_toggle_unresponsive_host",
+        "type": "BOOL"
+      },
+      {
+        "id": "communication_comments",
+        "type": "STRING"
+      },
+      {
+        "id": "location_rating",
+        "max_value": 5,
+        "min_value": 0,
+        "type": "INT"
+      },
+      {
+        "id": "location_comments",
+        "type": "STRING"
+      },
+      {
+        "id": "value_rating",
+        "max_value": 5,
+        "min_value": 0,
+        "type": "INT"
+      },
+      {
+        "id": "value_comments",
+        "type": "STRING"
+      },
+      {
+        "id": "standard_items_linens",
+        "type": "NOOL"
+      },
+      {
+        "id": "standard_items_pillow",
+        "type": "NOOL"
+      },
+      {
+        "id": "standard_items_soap",
+        "type": "NOOL"
+      },
+      {
+        "id": "standard_items_toilet_paper",
+        "type": "NOOL"
+      },
+      {
+        "id": "standard_items_towel",
+        "type": "NOOL"
+      },
+      {
+        "id": "bedroom_toggle_bed_not_made",
+        "type": "BOOL"
+      },
+      {
+        "id": "bedroom_toggle_linens",
+        "type": "BOOL"
+      },
+      {
+        "id": "bedroom_toggle_pillows",
+        "type": "BOOL"
+      },
+      {
+        "id": "bedroom_toggle_floor",
+        "type": "BOOL"
+      },
+      {
+        "id": "bedroom_toggle_trash",
+        "type": "BOOL"
+      },
+      {
+        "id": "bedroom_toggle_dust",
+        "type": "BOOL"
+      },
+      {
+        "id": "bedroom_toggle_mold",
+        "type": "BOOL"
+      },
+      {
+        "id": "bedroom_toggle_pet_hair_or_debris",
+        "type": "BOOL"
+      },
+      {
+        "id": "bedroom_toggle_odor",
+        "type": "BOOL"
+      },
+      {
+        "id": "bedroom_toggle_other",
+        "type": "BOOL"
+      },
+      {
+        "id": "details_bedroom_text_area",
+        "type": "STRING"
+      },
+      {
+        "id": "bathroom_toggle_counters",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_toilet",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_shower",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_sink",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_trash",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_towels",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_hair",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_dust",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_mold",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_grime",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_stains",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_odor",
+        "type": "BOOL"
+      },
+      {
+        "id": "bathroom_toggle_other",
+        "type": "BOOL"
+      },
+      {
+        "id": "details_bathroom_text_area",
+        "type": "STRING"
+      },
+      {
+        "id": "kitchen_toggle_kitchenware",
+        "type": "BOOL"
+      },
+      {
+        "id": "kitchen_toggle_table",
+        "type": "BOOL"
+      },
+      {
+        "id": "kitchen_toggle_counter",
+        "type": "BOOL"
+      },
+      {
+        "id": "kitchen_toggle_rotten_food",
+        "type": "BOOL"
+      },
+      {
+        "id": "kitchen_toggle_dust",
+        "type": "BOOL"
+      },
+      {
+        "id": "kitchen_toggle_spills",
+        "type": "BOOL"
+      },
+      {
+        "id": "kitchen_toggle_stains",
+        "type": "BOOL"
+      },
+      {
+        "id": "kitchen_toggle_odor",
+        "type": "BOOL"
+      },
+      {
+        "id": "kitchen_toggle_trash",
+        "type": "BOOL"
+      },
+      {
+        "id": "kitchen_toggle_other",
+        "type": "BOOL"
+      },
+      {
+        "id": "details_kitchen_text_area",
+        "type": "STRING"
+      },
+      {
+        "id": "category_missing_cooking",
+        "type": "BOOL"
+      },
+      {
+        "id": "category_missing_wifi",
+        "type": "BOOL"
+      },
+      {
+        "id": "category_missing_toilet_paper",
+        "type": "BOOL"
+      },
+      {
+        "id": "category_missing_towels",
+        "type": "BOOL"
+      },
+      {
+        "id": "category_missing_soap",
+        "type": "BOOL"
+      },
+      {
+        "id": "category_missing_linens",
+        "type": "BOOL"
+      },
+      {
+        "id": "category_missing_pillows",
+        "type": "BOOL"
+      },
+      {
+        "id": "category_missing_heating",
+        "type": "BOOL"
+      },
+      {
+        "id": "category_missing_ac",
+        "type": "BOOL"
+      },
+      {
+        "id": "description_toggle_sleeping_arrangements",
+        "type": "BOOL"
+      },
+      {
+        "id": "description_toggle_house_rules",
+        "type": "BOOL"
+      },
+      {
+        "id": "description_toggle_smaller_than_expected",
+        "type": "BOOL"
+      },
+      {
+        "id": "description_toggle_missing_details",
+        "type": "BOOL"
+      },
+      {
+        "id": "description_toggle_home_layout",
+        "type": "BOOL"
+      },
+      {
+        "id": "description_toggle_outdated_representation",
+        "type": "BOOL"
+      },
+      {
+        "id": "description_toggle_other",
+        "type": "BOOL"
+      },
+      {
+        "id": "details_description_text_area",
+        "type": "STRING"
+      },
+      {
+        "id": "private_feedback",
+        "type": "STRING"
+      },
+      {
+        "id": "public_feedback",
+        "type": "STRING"
+      },
+      {
+        "id": "smoke_detector_question",
+        "type": "STRING"
+      }
+    ],
+    "settings": {
+      "navigation": {
+        "finish_button": {
+          "phrase_id": "button_done_label"
+        },
+        "next_button": {
+          "phrase_id": "button_next_label"
+        }
+      },
+      "theme": "GUEST"
+    },
+    "steps": [
+      {
+        "component_ids": [
+          "rating_intro",
+          "rating_star_description",
+          "rating_star_row",
+          "report_link",
+          "component_smoke_detector"
+        ],
+        "id": "overall_rating",
+        "next_button": {
+          "disabled": {
+            "question_id": "overall_rating",
+            "type": "ANSWER_EQUALS",
+            "value": "0"
+          }
+        }
+      },
+      {
+        "component_ids": [
+          "appreciations_intro",
+          "appreciations_toggle_group"
+        ],
+        "id": "appreciations",
+        "next_button": {
+          "phrase_id": "appreciations_next_button"
+        },
+        "visible": {
+          "question_id": "overall_rating",
+          "type": "ANSWER_GREATER_THAN",
+          "value": "3"
+        }
+      },
+      {
+        "component_ids": [
+          "describe_trip_intro",
+          "trip_expectations"
+        ],
+        "id": "describe_trip",
+        "next_button": {
+          "disabled": {
+            "question_id": "trip_expectations",
+            "type": "ANSWER_EQUALS",
+            "value": "0"
+          }
+        }
+      },
+      {
+        "component_ids": [
+          "category_rating_intro",
+          "category_cleanliness_section_header",
+          "category_cleanliness_small_star_row",
+          "category_cleanliness_toggle_button_row",
+          "category_cleanliness_text_area",
+          "category_accuracy_section_header",
+          "category_accuracy_small_star_row",
+          "category_accuracy_toggle_button_row",
+          "category_accuracy_text_area",
+          "category_checkin_section_header",
+          "category_checkin_small_star_row",
+          "category_checkin_toggle_button_row",
+          "category_checkin_text_area",
+          "category_communication_section_header",
+          "category_communication_small_star_row",
+          "category_communication_toggle_button_row",
+          "category_communication_text_area",
+          "category_location_section_header",
+          "category_location_small_star_row",
+          "category_location_text_area",
+          "category_value_section_header",
+          "category_value_small_star_row",
+          "category_value_text_area"
+        ],
+        "id": "category_rating",
+        "next_button": {
+          "disabled": {
+            "conditions": [
+              {
+                "question_id": "cleanliness_rating",
+                "type": "ANSWER_EQUALS",
+                "value": "0"
+              },
+              {
+                "question_id": "accuracy_rating",
+                "type": "ANSWER_EQUALS",
+                "value": "0"
+              },
+              {
+                "question_id": "checkin_rating",
+                "type": "ANSWER_EQUALS",
+                "value": "0"
+              },
+              {
+                "question_id": "communication_rating",
+                "type": "ANSWER_EQUALS",
+                "value": "0"
+              },
+              {
+                "question_id": "location_rating",
+                "type": "ANSWER_EQUALS",
+                "value": "0"
+              },
+              {
+                "question_id": "value_rating",
+                "type": "ANSWER_EQUALS",
+                "value": "0"
+              }
+            ],
+            "type": "OR"
+          }
+        }
+      },
+      {
+        "component_ids": [
+          "standard_items_intro",
+          "standard_items_header",
+          "standard_items_linens",
+          "standard_items_pillow",
+          "standard_items_soap",
+          "standard_items_toilet_paper",
+          "standard_items_towel"
+        ],
+        "id": "standard_items",
+        "next_button": {
+          "disabled": {
+            "conditions": [
+              {
+                "question_id": "standard_items_linens",
+                "type": "ANSWER_EMPTY"
+              },
+              {
+                "question_id": "standard_items_pillow",
+                "type": "ANSWER_EMPTY"
+              },
+              {
+                "question_id": "standard_items_soap",
+                "type": "ANSWER_EMPTY"
+              },
+              {
+                "question_id": "standard_items_toilet_paper",
+                "type": "ANSWER_EMPTY"
+              },
+              {
+                "question_id": "standard_items_towel",
+                "type": "ANSWER_EMPTY"
+              }
+            ],
+            "type": "OR"
+          }
+        },
+        "visible": {
+          "question_id": "accuracy_toggle_amenities",
+          "type": "ANSWER_EQUALS",
+          "value": "false"
+        }
+      },
+      {
+        "component_ids": [
+          "category_details_intro",
+          "details_bedroom_toggle_button_row",
+          "details_bedroom_text_area",
+          "details_bathroom_toggle_button_row",
+          "details_bathroom_text_area",
+          "details_kitchen_toggle_button_row",
+          "details_kitchen_text_area",
+          "category_missing_header",
+          "category_missing_cooking",
+          "category_missing_wifi",
+          "category_missing_toilet_paper",
+          "category_missing_towels",
+          "category_missing_soap",
+          "category_missing_linens",
+          "category_missing_pillows",
+          "category_missing_heating",
+          "category_missing_ac",
+          "details_description_toggle_button_row",
+          "details_description_text_area"
+        ],
+        "id": "category_details",
+        "visible": {
+          "conditions": [
+            {
+              "question_id": "cleanliness_toggle_bedroom",
+              "type": "ANSWER_EQUALS",
+              "value": "true"
+            },
+            {
+              "question_id": "cleanliness_toggle_bathroom",
+              "type": "ANSWER_EQUALS",
+              "value": "true"
+            },
+            {
+              "question_id": "cleanliness_toggle_kitchen",
+              "type": "ANSWER_EQUALS",
+              "value": "true"
+            },
+            {
+              "question_id": "accuracy_toggle_amenities",
+              "type": "ANSWER_EQUALS",
+              "value": "true"
+            },
+            {
+              "conditions": [
+                {
+                  "question_id": "accuracy_toggle_description",
+                  "type": "ANSWER_EQUALS",
+                  "value": "true"
+                },
+                {
+                  "question_id": "accuracy_toggle_photos",
+                  "type": "ANSWER_EQUALS",
+                  "value": "true"
+                }
+              ],
+              "type": "OR"
+            }
+          ],
+          "type": "OR"
+        }
+      },
+      {
+        "component_ids": [
+          "private_feedback_intro",
+          "private_feedback_textarea"
+        ],
+        "id": "private_feedback",
+        "next_button": {
+          "phrase_id": "private_feedback_next_button"
+        }
+      },
+      {
+        "component_ids": [
+          "public_feedback_intro",
+          "public_feedback_textarea"
+        ],
+        "id": "public_feedback",
+        "next_button": {
+          "disabled": {
+            "question_id": "public_feedback",
+            "type": "ANSWER_EMPTY"
+          }
+        }
+      }
+    ]
+  }
+}

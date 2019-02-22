@@ -1,0 +1,409 @@
+{
+  "walle2_flow": {
+    "client_support": {
+      "fallback_url": "fake.fallback/url",
+      "is_supported": "true"
+    },
+    "questions": [
+      {
+        "id": "image_1",
+        "type": "MEDIA"
+      },
+      {
+        "id": "image_note_1",
+        "type": "STRING",
+        "max_length": 140
+      },
+      {
+        "id": "image_2",
+        "type": "MEDIA"
+      },
+      {
+        "id": "image_note_2",
+        "type": "STRING",
+        "max_length": 140
+      },
+      {
+        "id": "image_3",
+        "type": "MEDIA"
+      },
+      {
+        "id": "image_note_3",
+        "type": "STRING",
+        "max_length": 140
+      },
+      {
+        "id": "image_4",
+        "type": "MEDIA"
+      },
+      {
+        "id": "image_note_4",
+        "type": "STRING",
+        "max_length": 140
+      },
+      {
+        "id": "image_5",
+        "type": "MEDIA"
+      },
+      {
+        "id": "image_note_5",
+        "type": "STRING",
+        "max_length": 140
+      }
+    ],
+    "components": [
+      {
+        "id": "cid_feedback_intro",
+        "type": "DOCUMENT_MARQUEE",
+        "phrase_id_primary": "pid_feedback_intro_title",
+        "phrase_id_secondary": "pid_feedback_intro_subtitle",
+        "visible": {
+          "type": "ANSWER_EMPTY",
+          "question_id": "image_1"
+        }
+      },
+      {
+        "id": "cid_images_section_title",
+        "type": "SECTION_HEADER",
+        "phrase_id_primary": "pid_images_section_title",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_1"
+        }
+      },
+      {
+        "id": "cid_image_uploader_1",
+        "type": "IMAGE_UPLOADER",
+        "component_ids": [
+          "cid_image_upload_link_1",
+          "cid_image_upload_photo_1"
+        ],
+        "question_id": "image_1"
+      },
+      {
+        "id": "cid_image_upload_link_1",
+        "type": "LINK_ACTION_ROW",
+        "phrase_id_primary": "pid_get_started",
+        "visible": {
+          "type": "ANSWER_EMPTY",
+          "question_id": "image_1"
+        }
+      },
+      {
+        "id": "cid_image_upload_photo_1",
+        "type": "PHOTO_MODULE",
+        "phrase_id_primary": "pid_image_label_1",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_1"
+        }
+      },
+      {
+        "id": "cid_image_note_1",
+        "type": "TEXT_AREA_ROW",
+        "phrase_id_placeholder": "pid_image_note_placeholder",
+        "phrase_id_primary": "pid_image_note_label",
+        "question_id": "image_note_1",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_1"
+        }
+      },
+      {
+        "id": "cid_image_uploader_2",
+        "type": "IMAGE_UPLOADER",
+        "component_ids": [
+          "cid_image_upload_link_2",
+          "cid_image_upload_photo_2"
+        ],
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_1"
+        },
+        "question_id": "image_2"
+      },
+      {
+        "id": "cid_image_upload_link_2",
+        "type": "LINK_ACTION_ROW",
+        "phrase_id_primary": "pid_add_image",
+        "visible": {
+          "type": "ANSWER_EMPTY",
+          "question_id": "image_2"
+        }
+      },
+      {
+        "id": "cid_image_upload_photo_2",
+        "type": "PHOTO_MODULE",
+        "phrase_id_primary": "pid_image_label_2",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_2"
+        }
+      },
+      {
+        "id": "cid_image_note_2",
+        "type": "TEXT_AREA_ROW",
+        "phrase_id_placeholder": "pid_image_note_placeholder",
+        "phrase_id_primary": "pid_image_note_label",
+        "question_id": "image_note_2",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_2"
+        }
+      },
+      {
+        "id": "cid_image_uploader_3",
+        "type": "IMAGE_UPLOADER",
+        "component_ids": [
+          "cid_image_upload_link_3",
+          "cid_image_upload_photo_3"
+        ],
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_2"
+        },
+        "question_id": "image_3"
+      },
+      {
+        "id": "cid_image_upload_link_3",
+        "type": "LINK_ACTION_ROW",
+        "phrase_id_primary": "pid_add_image",
+        "visible": {
+          "type": "ANSWER_EMPTY",
+          "question_id": "image_3"
+        }
+      },
+      {
+        "id": "cid_image_upload_photo_3",
+        "type": "PHOTO_MODULE",
+        "phrase_id_primary": "pid_image_label_3",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_3"
+        }
+      },
+      {
+        "id": "cid_image_note_3",
+        "type": "TEXT_AREA_ROW",
+        "phrase_id_placeholder": "pid_image_note_placeholder",
+        "phrase_id_primary": "pid_image_note_label",
+        "question_id": "image_note_3",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_3"
+        }
+      },
+      {
+        "id": "cid_image_uploader_4",
+        "type": "IMAGE_UPLOADER",
+        "component_ids": [
+          "cid_image_upload_link_4",
+          "cid_image_upload_photo_4"
+        ],
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_3"
+        },
+        "question_id": "image_4"
+      },
+      {
+        "id": "cid_image_upload_link_4",
+        "type": "LINK_ACTION_ROW",
+        "phrase_id_primary": "pid_add_image",
+        "visible": {
+          "type": "ANSWER_EMPTY",
+          "question_id": "image_4"
+        }
+      },
+      {
+        "id": "cid_image_upload_photo_4",
+        "type": "PHOTO_MODULE",
+        "phrase_id_primary": "pid_image_label_4",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_4"
+        }
+      },
+      {
+        "id": "cid_image_note_4",
+        "type": "TEXT_AREA_ROW",
+        "phrase_id_placeholder": "pid_image_note_placeholder",
+        "phrase_id_primary": "pid_image_note_label",
+        "question_id": "image_note_4",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_4"
+        }
+      },
+      {
+        "id": "cid_image_uploader_5",
+        "type": "IMAGE_UPLOADER",
+        "component_ids": [
+          "cid_image_upload_link_5",
+          "cid_image_upload_photo_5"
+        ],
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_4"
+        },
+        "question_id": "image_5"
+      },
+      {
+        "id": "cid_image_upload_link_5",
+        "type": "LINK_ACTION_ROW",
+        "phrase_id_primary": "pid_add_image",
+        "visible": {
+          "type": "ANSWER_EMPTY",
+          "question_id": "image_5"
+        }
+      },
+      {
+        "id": "cid_image_upload_photo_5",
+        "type": "PHOTO_MODULE",
+        "phrase_id_primary": "pid_image_label_5",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_5"
+        }
+      },
+      {
+        "id": "cid_image_note_5",
+        "type": "TEXT_AREA_ROW",
+        "phrase_id_placeholder": "pid_image_note_placeholder",
+        "phrase_id_primary": "pid_image_note_label",
+        "question_id": "image_note_5",
+        "visible": {
+          "type": "ANSWER_NOT_EMPTY",
+          "question_id": "image_5"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "id": "feedback_step",
+        "component_ids": [
+          "cid_feedback_intro",
+          "cid_images_section_title",
+          "cid_image_uploader_1",
+          "cid_image_note_1",
+          "cid_image_uploader_2",
+          "cid_image_note_2",
+          "cid_image_uploader_3",
+          "cid_image_note_3",
+          "cid_image_uploader_4",
+          "cid_image_note_4",
+          "cid_image_uploader_5",
+          "cid_image_note_5"
+        ]
+      }
+    ],
+    "phrases": [
+      {
+        "id": "pid_feedback_intro_title",
+        "type": "STATIC",
+        "localized": "Now that you\u2019re settled in, show us how it\u2019s going."
+      },
+      {
+        "id": "pid_feedback_intro_subtitle",
+        "type": "STATIC",
+        "localized": "We care about your experience\u2028 with Airbnb Plus. Share photos and feedback on what stands out so far."
+      },
+      {
+        "id": "pid_images_section_title",
+        "type": "STATIC",
+        "localized": "Your feedback"
+      },
+      {
+        "id": "pid_image_label_1",
+        "type": "STATIC",
+        "localized": "Photo 1"
+      },
+      {
+        "id": "pid_image_label_2",
+        "type": "STATIC",
+        "localized": "Photo 2"
+      },
+      {
+        "id": "pid_image_label_3",
+        "type": "STATIC",
+        "localized": "Photo 3"
+      },
+      {
+        "id": "pid_image_label_4",
+        "type": "STATIC",
+        "localized": "Photo 4"
+      },
+      {
+        "id": "pid_image_label_5",
+        "type": "STATIC",
+        "localized": "Photo 5"
+      },
+      {
+        "id": "pid_image_note_label",
+        "type": "STATIC",
+        "localized": "Add a note (optional)"
+      },
+      {
+        "id": "pid_image_note_placeholder",
+        "type": "STATIC",
+        "localized": "E.g. The pillows are really comfortable, but I was expecting two per person."
+      },
+      {
+        "id": "pid_get_started",
+        "type": "STATIC",
+        "localized": "Get started"
+      },
+      {
+        "id": "pid_add_image",
+        "type": "STATIC",
+        "localized": "Add another photo"
+      },
+      {
+        "id": "pid_submit",
+        "type": "STATIC",
+        "localized": "Submit"
+      },
+      {
+        "id": "pid_after_submit_title",
+        "type": "STATIC",
+        "localized": "Thanks for sharing with Airbnb."
+      },
+      {
+        "id": "pid_after_submit_subtitle",
+        "type": "STATIC",
+        "localized": "We\u2019ll use your feedback to make Airbnb Plus even better for travelers like you. Enjoy the rest of your stay!"
+      },
+      {
+        "id": "pid_after_submit_primary_button",
+        "type": "STATIC",
+        "localized": "Call us"
+      },
+      {
+        "id": "pid_after_submit_secondary_button",
+        "type": "STATIC",
+        "localized": "Done"
+      }
+    ],
+    "settings": {
+      "theme": "SELECT",
+      "navigation": {
+        "finish_button": {
+          "phrase_id": "pid_submit"
+        }
+      },
+      "afterSubmitted": {
+        "phrase_id_subtitle": "pid_after_submit_subtitle",
+        "phrase_id_title": "pid_after_submit_title",
+        "primary_button": {
+          "web_href": "tel:+1-855-424-7262"
+        },
+        "phrase_id_primary_button": "pid_after_submit_primary_button",
+        "secondary_button": {
+          "web_href": "\/trips"
+        },
+        "phrase_id_secondary_button": "pid_after_submit_secondary_button"
+      }
+    },
+    "version": 1
+  }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<!-- https://pitchfork.com/reviews/albums/22086-ellis/ -->
+
+<head>
+    <title>PITCHFORK</title>
+    <style type="text/css">
+
+    html, body {
+    	margin: 0;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	width: 100%;
+    	height: 100%;
+    	overflow: hidden
+    }
+
+   
+    @keyframes c {
+        50% {
+            stroke-dashoffset: 622.017
+        }
+
+        to {
+            stroke-dashoffset: 311.0085
+        }
+    }
+
+    @keyframes s {
+        30% {
+            stroke-dashoffset: 320
+        }
+
+        50% {
+            stroke-dashoffset: 320
+        }
+
+        70% {
+            stroke-dashoffset: 160
+        }
+
+        to {
+            stroke-dashoffset: 160
+        }
+    }
+
+    @keyframes x {
+        30% {
+            stroke-dashoffset: 228
+        }
+
+        50% {
+            stroke-dashoffset: 228
+        }
+
+        70% {
+            stroke-dashoffset: 114
+        }
+
+        to {
+            stroke-dashoffset: 114
+        }
+    }
+
+    @keyframes a {
+        30% {
+            stroke-dashoffset: 81
+        }
+
+        50% {
+            stroke-dashoffset: 54
+        }
+
+        70% {
+            stroke-dashoffset: 54
+        }
+
+        to {
+            stroke-dashoffset: 27
+        }
+    }
+
+    .l path {
+        stroke: #1e1e1e;
+        stroke-width: 2;
+        fill: none;
+        stroke-linecap: round
+    }
+
+    .l.light path {
+        stroke: #bdbdbd
+    }
+
+    .l .s { 
+        transform: rotate(-45deg);
+        transform-origin: 100px 100px
+    }
+
+    .l .c {
+        stroke-dasharray: 311.0085;
+        stroke-dashoffset: 933.0255;
+        animation: c 2s ease forwards infinite
+    }
+
+    .l .s {
+        stroke-dasharray: 160;
+        stroke-dashoffset: 480;
+        animation: s 2s linear forwards infinite
+    }
+
+    .l .x {
+        stroke-dasharray: 114;
+        stroke-dashoffset: 342;
+        animation: x 2s linear forwards infinite
+    }
+
+    .l .a {
+        stroke-dasharray: 27;
+        stroke-dashoffset: 81;
+        animation: a 2s linear forwards infinite
+    }
+    </style>
+</head>
+
+<body>
+    <svg class="l" viewBox="0 0 200 200" width="100" height="100">
+        <g class="s">
+            <path d="M 1 100 A 99 99 0 0 1 199 100" class="c"></path>
+            <path d="M 1 100 A 99 99 0 0 0 199 100" class="c"></path>
+            <g>
+                <path d="M 10 100 L 170 100"></path>
+                <path d="M 170 100 L 152 82" class="a"></path>
+                <path d="M 170 100 L 152 118" class="a"></path>
+            </g>
+            <g>
+                <path d="M 24 56 L 138 56" class="x"></path>
+                <path d="M 138 56 L 120 38" class="a"></path>
+                <path d="M 138 56 L 120 74" class="a"></path>
+            </g>
+            <g>
+                <path d="M 24 144 L 138 144" class="x"></path>
+                <path d="M 138 144 L 120 126" class="a"></path>
+                <path d="M 138 144 L 120 162" class="a"></path>
+            </g>
+        </g>
+    </svg>
+</body>
+
+</html>

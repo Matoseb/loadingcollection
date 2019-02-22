@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Youtube Navigation Progress</title>
+    <style type="text/css">
+    yt-page-navigation-progress,
+    #progress.yt-page-navigation-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+    }
+
+    yt-page-navigation-progress {
+        background-color: #e0e0e0;
+    }
+
+    element.style {
+        transform: scaleX(0.8);
+    }
+
+    #progress.yt-page-navigation-progress {
+        background-color: hsl(3, 81.8%, 49.6%);
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+
+        animation: 5s process infinite;
+    }
+
+    #progress.yt-page-navigation-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: #FFF;
+        overflow: hidden;
+    }
+
+    @keyframes process {
+        0% {
+            transform: scaleX(0.0);
+        }
+
+        20% {
+            transform: scaleX(0.4);
+        }
+
+        70% {
+            transform: scaleX(0.7);
+        }
+
+        90%,
+        100% {
+            transform: scaleX(1.0);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <yt-page-navigation-progress aria-valuemin="0" aria-valuemax="100" id="" class="style-scope ytd-app" aria-valuenow="80">
+        <div id="progress" class="style-scope yt-page-navigation-progress"></div>
+    </yt-page-navigation-progress>
+</body>
+
+</html>

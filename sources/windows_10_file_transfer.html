@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FILE TRANSFER</title>
+    <style>
+    @font-face {
+        font-family: "Segoe UI Light";
+        src: url(../resources/fonts/segoeuil.ttf);
+    }
+
+    :root {
+    	--l: '100';
+    	--c: 0%;
+        font-family: "Segoe UI Light", Arial;
+    }
+
+    html,
+    body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+
+    #r::before {
+    	position: absolute;
+    	font-size: 3vw;
+    	top: -2em;
+    	content: var(--l) '% complete';
+    }
+
+    #r {
+    	position: relative;
+        width: 90vw;
+        max-width: calc(80vh * 5);
+        border: 1px solid #BCBCBC;
+    }
+
+    #p {
+        position: relative;
+        border: 1px solid #E6E6E6;
+        height: 0;
+        padding-top: 20%;
+        /*background: no-repeat;*/
+        background-size: calc(10% + 1px / 10) calc(20% + 1px / 5);
+        background-image: linear-gradient(to left, #CDEFD3 1px, transparent 1px), linear-gradient(to top, #CDEFD3 1px, transparent 1px);
+    }
+
+    #s {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(51, 197, 0, .43);
+
+        -webkit-clip-path: inset(0 calc(100% - var(--c)) 0 0);
+        clip-path: inset(0 calc(100% - var(--c)) 0 0);
+        
+    }
+
+    #t {
+    	font-size: 2vw;
+        position: absolute;
+        width: 100%;
+        bottom: 10%;
+        text-align: right;
+        box-sizing: border-box;
+        padding: 0 1% .5% 0;
+        border-bottom: 1px solid #000;
+    }
+
+    </style>
+    <script>
+    addEventListener('load', _ => {
+
+        let s = document.querySelector('#s'),
+            p = document.querySelector('path'),
+            l = p.getTotalLength(),
+            v = 0,
+            y = 0,
+            z = 0,
+            _y = 0.5,
+            d = 0,
+            f = _ => {
+                y = (20 - p.getPointAtLength(v).y) / 20;
+                v = (v + (.025 + y - _y) * 20) % l;
+                document.documentElement.style.cssText = `--l: '${Math.round(z = v*100/l)}';--c:${z}%;`;
+                t.style.bottom = y * 100 + '%';
+                t.innerText = `Speed: ${(y*20).toFixed(1)} MB/s`;
+                _y = y;
+                setTimeout(f, 100);
+            },
+            t = document.querySelector('#t');
+
+        p.setAttribute('d', p.getAttribute('d') + 'L 100 20L 0 20');
+
+        f();
+    }, {once: true});
+    </script>
+</head>
+
+<body>
+    <div id="r">
+        <div id="p">
+            <svg id="s" viewBox="0 0 100 20" shape-rendering="crispEdges">
+                <path fill="#06B025" d="M0,9.61c4-1,8-1,11,0s1-2,6-1s4.01-0.27,7,0c5.5,0.5,2.5,1.5,9.5,1.5
+	s10-2,14-2s2,2,5,2c8,0,10-1,13-1c4,0,1,1,5,1s3-1,7-1s2,1,7,1s5-2,8-2s3,2,5,2s2.5-3,2.5-3" />
+            </svg>
+            <div id="t">Speed: 50.0 MB/s</div>
+        </div>
+    </div>
+</body>
+
+</html>

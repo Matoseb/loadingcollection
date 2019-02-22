@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- http://jsdo.it/piayo/iWXR -->
+    <!-- https://docs.google.com/document/u/0/ -->
+    <meta charset="UTF-8" />
+    <title>GOOGLE DOCS</title>
+    <style type="text/css">
+    html,
+    body {
+        overflow: hidden;
+        margin: 0;
+        background: #EEEEEE;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #jfk {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+
+    #jfk>* {
+        position: absolute;
+        animation: var(--dur, 250ms) normal linear 1;
+    }
+
+    #jfk>#c0 {
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    #jfk>#c1 {
+        z-index: 3;
+    }
+
+    #jfk>#c2 {
+        z-index: 1;
+    }
+
+    #jfk[data-step="0"]>#c0 {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        animation-name: jfk_0;
+        background-color: #3C78F8;
+    }
+
+    #jfk[data-step="1"]>#c0 {
+        width: 100%;
+        height: 0;
+        top: 50%;
+        left: 0;
+        animation-name: jfk_1;
+        background-color: #9e1212;
+    }
+
+    #jfk[data-step="2"]>#c0 {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        animation-name: jfk_2;
+        background-color: #FA2424;
+    }
+
+    #jfk[data-step="3"]>#c0 {
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        animation-name: jfk_3;
+        background-color: #dea11a;
+    }
+
+    #jfk[data-step="4"]>#c0 {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        animation-name: jfk_4;
+        background-color: #FFD34B;
+    }
+
+    #jfk[data-step="5"]>#c0 {
+        width: 100%;
+        height: 0;
+        top: 50%;
+        left: 0;
+        animation-name: jfk_5;
+        background-color: #008948;
+    }
+
+    #jfk[data-step="6"]>#c0 {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        animation-name: jfk_6;
+        background-color: #00B15F;
+    }
+
+    #jfk[data-step="7"]>#c0 {
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        animation-name: jfk_7;
+        background-color: #2159bd;
+    }
+
+    @keyframes jfk_0 {
+        0% {
+            top: 0;
+        }
+
+        100% {
+            top: 50%;
+            height: 0;
+            background-color: #2159bd;
+        }
+    }
+
+    @keyframes jfk_1 {
+        0% {
+            height: 0;
+        }
+
+        100% {
+            top: 0;
+            height: 100%;
+            background-color: #FA2424;
+        }
+    }
+
+    @keyframes jfk_2 {
+        0% {
+            width: 100%;
+        }
+
+        100% {
+            width: 0;
+            left: 50%;
+            background-color: #9e1212;
+        }
+    }
+
+    @keyframes jfk_3 {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+            left: 0;
+            background-color: #FFD34B;
+        }
+    }
+
+    @keyframes jfk_4 {
+        0% {
+            height: 100%;
+        }
+
+        100% {
+            height: 0;
+            top: 50%;
+            background-color: #dea11a;
+        }
+    }
+
+    @keyframes jfk_5 {
+        0% {
+            height: 0;
+        }
+
+        100% {
+            height: 100%;
+            top: 0;
+            background-color: #00B15F;
+        }
+    }
+
+    @keyframes jfk_6 {
+        0% {
+            width: 100%;
+        }
+
+        100% {
+            width: 0;
+            left: 50%;
+            background-color: #008948;
+        }
+    }
+
+    @keyframes jfk_7 {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+            left: 0;
+            background-color: #3C78F8;
+        }
+    }
+
+    #jfk[data-step="0"]>#c1,
+    #jfk[data-step="1"]>#c2,
+    #jfk[data-step="6"]>#c2,
+    #jfk[data-step="7"]>#c1 {
+        background-color: #3C78F8;
+    }
+
+    #jfk[data-step="0"]>#c2,
+    #jfk[data-step="1"]>#c1,
+    #jfk[data-step="2"]>#c1,
+    #jfk[data-step="3"]>#c2 {
+        background-color: #FA2424;
+    }
+
+    #jfk[data-step="2"]>#c2,
+    #jfk[data-step="3"]>#c1,
+    #jfk[data-step="4"]>#c1,
+    #jfk[data-step="5"]>#c2 {
+        background-color: #FFD34B;
+    }
+
+    #jfk[data-step="4"]>#c2,
+    #jfk[data-step="5"]>#c1,
+    #jfk[data-step="6"]>#c1,
+    #jfk[data-step="7"]>#c2 {
+        background-color: #00B15F;
+    }
+
+    #jfk[data-step="0"]>#c2,
+    #jfk[data-step="1"]>#c1,
+    #jfk[data-step="4"]>#c1,
+    #jfk[data-step="5"]>#c2 {
+        top: 0;
+        width: 100%;
+        height: 50%;
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+    }
+
+    #jfk[data-step="0"]>#c1,
+    #jfk[data-step="1"]>#c2,
+    #jfk[data-step="4"]>#c2,
+    #jfk[data-step="5"]>#c1 {
+        top: 50%;
+        width: 100%;
+        height: 50%;
+        border-bottom-left-radius: 50% 100%;
+        border-bottom-right-radius: 50% 100%;
+    }
+
+    #jfk[data-step="2"]>#c2,
+    #jfk[data-step="3"]>#c1,
+    #jfk[data-step="6"]>#c1,
+    #jfk[data-step="7"]>#c2 {
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        border-top-right-radius: 100% 50%;
+        border-bottom-right-radius: 100% 50%;
+    }
+
+    #jfk[data-step="2"]>#c1,
+    #jfk[data-step="3"]>#c2,
+    #jfk[data-step="6"]>#c2,
+    #jfk[data-step="7"]>#c1 {
+        left: 0;
+        width: 50%;
+        height: 100%;
+        border-top-left-radius: 100% 50%;
+        border-bottom-left-radius: 100% 50%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="jfk">
+        <div id="c0"></div>
+        <div id="c1"></div>
+        <div id="c2"></div>
+    </div>
+    <script type="text/javascript">
+    addEventListener('load', _ => {
+
+        var t = 250,
+            jfk = document.querySelector('#jfk'),
+            s = jfk.dataset.step = 0;
+
+        jfk.style.setProperty('--dur', t + 'ms');
+        setInterval(_ => jfk.dataset.step = s = (s + 1) % 8, t);
+    });
+    </script>
+</body>
+
+</html>

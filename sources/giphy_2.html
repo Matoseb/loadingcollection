@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GIPHY 2</title>
+    <meta charset="utf-8">
+    <style>
+    html,
+    body {
+        background: #121212;
+        margin: 0;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
+    #l,
+    body {
+        align-items: center;
+        display: flex;
+        justify-content: center
+    }
+
+    #l {
+        flex-direction: row;
+        height: 5vmin;
+        max-height: 10px;
+        max-width: 10px;
+        width: 5vmin
+    }
+
+    #l>* {
+    	animation: b .75s cubic-bezier(.455, .03, .515, .955) infinite alternate;
+        flex: 1 0 auto;
+        height: 100%;
+        margin: 100%;
+        width: 100%
+    }
+
+    #l>*:first-child {
+        background: #0F9
+    }
+
+    #l>*:nth-child(2) {
+    	animation-delay: .1s;
+        background: #0CF
+    }
+
+    #l>*:nth-child(3) {
+        animation-delay: .2s;
+        background: #93F
+    }
+
+    #l>*:nth-child(4) {
+        animation-delay: .3s;
+        background: #F66
+    }
+
+    #l>*:last-child {
+        animation-delay: .4s;
+        background: #FFF35C
+    }
+
+    @keyframes b {
+        to {
+            transform: scale(1.75) translateY(-200%)
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="l">
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+    </div>
+</body>
+
+</html>

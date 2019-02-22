@@ -1,0 +1,325 @@
+{
+  "message_thread": {
+    "id": -999,
+    "subject": "Test lux thread",
+    "thread_type": "luxury_assisted_booking",
+    "status": "active",
+    "inline": {
+      "inline_messages": ["Looking for someone to take care of you", "still looking...", "you still there ?"],
+      "inline_messages_cycle_speed": 10
+    },
+    "presence": {
+      "indicator_message": "Jessie is online",
+      "indicator_state": "ONLINE"
+    },
+    "messages": [
+      {
+        "id": 101,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "intro_card",
+        "content": {
+          "body": "Sample body",
+          "title": "Hi! I'm Susan",
+          "subtitle": "Lorem ipsum dolor sin amet",
+          "profile_image_url": "https://eim1.muscache.com/im/users/81/profile_pic/1413837238/original.jpg?aki_policy=profile_x_medium"
+        },
+        "created_at_ts": 1111111111.000000,
+        "updated_at_ts": 1111111111.000000
+      },
+      {
+        "id": 1,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "text",
+        "content": {
+          "body": "Hi Robocop, I'm here to help you find the perfect villa. I see you are interested in Hollywood Zen, one of our most exicting properties in LA.\nCan you tell me more about your trip?!"
+        },
+        "created_at_ts": 1111111111.000000,
+        "updated_at_ts": 1111111111.000000
+      },
+      {
+        "id": 2,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "text",
+        "content": {
+          "body": "Let's try some links:\nHere is a phone number: 605–475–6968.\nHere is a an email: fakeemail@gmail.com\nHere is an address: 1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA.\nCan your phone open it ?"
+        },
+        "created_at_ts": 1111111111.000000,
+        "updated_at_ts": 1111111111.000000
+      },
+      {
+        "id": 3,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "reference_card",
+        "content": {
+          "body": "Reference card",
+          "image_url": "https://a0.muscache.com/im/pictures/2abeb172-5487-448f-8436-f11b47139848.jpg?aki_policy=large",
+          "title": "Amazing",
+          "primary_subtitle": "$9999-$10,000",
+          "secondary_subtitle_type": "text",
+          "secondary_subtitle_obj": {
+            "text": "East Coast"
+          },
+          "action": {
+            "type": "luxury_listing",
+            "id": "20524454",
+            "url": ""
+          }
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 4,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "inline_error",
+        "content": {
+          "body": "Failed to load this resource"
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 5,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "action_card",
+        "content": {
+          "body": "Tap on this action card",
+          "title": "Sugadeze",
+          "primary_subtitle": "August 7 - 11, 2017",
+          "secondary_subtitle": "$2,000 USD for 5 nights + $1,000 deposit",
+          "cta_text": "Review and pay",
+          "image_url": "https://a0.muscache.com/im/pictures/2abeb172-5487-448f-8436-f11b47139848.jpg?aki_policy=large",
+          "action": {
+            "type": "reservation",
+            "id":"HM8SF8YW3R",
+            "url": ""
+          }
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 6,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "text",
+        "content": {
+          "body": "This is sick!"
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 7,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "action_button",
+        "content": {
+          "body": "Tap on this action button",
+          "title": "Chat participants",
+          "subtitle": "Manage chat members",
+          "cta_text": "Invite",
+          "action": {
+            "type": "view_participants",
+            "id": "",
+            "url": ""
+          }
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 8,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "event_description",
+        "content": {
+          "airmoji": "status_accepted",
+          "body": "Michael just booked a property.",
+          "cta_text": "Connect to a Trip Designer who is available now",
+          "action": {
+            "id": 1558,
+            "type": "live_chat_support"
+          }
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 9,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "reference_card",
+        "content": {
+          "body": "Reference card",
+          "image_url": "https://a0.muscache.com/im/pictures/2abeb172-5487-448f-8436-f11b47139848.jpg?aki_policy=large",
+          "title": "Immersion experience",
+          "primary_subtitle": "$9999-$10,000 for 3 days",
+          "secondary_subtitle_type": "text",
+          "secondary_subtitle_obj": {
+            "text": "that last for multiple days"
+          },
+          "action": {
+            "type": "immersion",
+            "id": "775",
+            "url": ""
+          }
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 10,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "reference_card",
+        "content": {
+          "body": "Reference card",
+          "image_url": "https://a0.muscache.com/im/pictures/2abeb172-5487-448f-8436-f11b47139848.jpg?aki_policy=large",
+          "title": "lux experience",
+          "primary_subtitle": "$9999-$10,000",
+          "secondary_subtitle_type": "text",
+          "secondary_subtitle_obj": {
+            "text": "lux experience"
+          },
+          "action": {
+            "type": "luxury_experience",
+            "id": "0",
+            "url": ""
+          }
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 11,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "action_button",
+        "content": {
+          "body": "Add billing info",
+          "title": "You need money",
+          "subtitle": "to pay for the stuff",
+          "cta_text": "Add Billing",
+          "action": {
+            "type": "add_billing_info",
+            "id": "",
+            "url": ""
+          }
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 12,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "action_button",
+        "content": {
+          "body": "Tap on this action button",
+          "title": "View Itinerary",
+          "subtitle": "View itinerary",
+          "cta_text": "View",
+          "action": {
+            "type": "view_itinerary",
+            "id": "",
+            "url": ""
+          }
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 13,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "reference_card",
+        "content": {
+          "body": "Reference card",
+          "image_url": "https://a0.muscache.com/im/pictures/2abeb172-5487-448f-8436-f11b47139848.jpg?aki_policy=large",
+          "title": "Regular experience",
+          "primary_subtitle": "$9999-$10,000",
+          "secondary_subtitle_type": "text",
+          "secondary_subtitle_obj": {
+            "text": "regular expeirence"
+          },
+          "action": {
+            "type": "experience",
+            "id": "99992",
+            "url": ""
+          }
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 14,
+        "account_type": "system",
+        "account_id": 3,
+        "content_type": "invalidation",
+        "content": {
+          "invalidation_type": "refresh_some",
+          "invalidation_target_ids": [12, 34, 56]
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      }
+    ],
+    "message_updates": [
+      {
+        "id": 5,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "action_card",
+        "content": {
+          "body": "Tap on this action card",
+          "title": "Sugadeze",
+          "primary_subtitle": "EXPIRED",
+          "secondary_subtitle": "",
+          "image_url": "https://a0.muscache.com/im/pictures/2abeb172-5487-448f-8436-f11b47139848.jpg?aki_policy=large"
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      },
+      {
+        "id": 100,
+        "account_type": "user",
+        "account_id": 3,
+        "content_type": "event_description",
+        "content": {
+          "airmoji": "status_accepted",
+          "body": "This message id should not be recognized and not inserted into db"
+        },
+        "created_at_ts": 0.000000,
+        "updated_at_ts": 0.000000
+      }
+    ],
+    "participants": [
+      {
+        "created_at": "2008-03-02T06:20:00Z",
+        "first_name": "Mabelle",
+        "account_id": 3,
+        "picture_url": "https://eim1.muscache.com/im/users/81/profile_pic/1413837238/original.jpg?aki_policy=profile_x_medium"
+      }
+    ]
+  },
+  "metadata": {
+    "total_count": 3,
+    "limit": 20,
+    "cursor": "JDEkY3JlYXRlZF9hdCRkZXNjJDYkNA==",
+    "_support_contact_infos": [
+      {
+        "formatted_phone_number": "+1 (371) 352-6526",
+        "name": "Dimitry",
+        "picture_url": "https:\/\/a2.muscache.com\/im\/pictures\/5bb74300-720d-4803-910b-974a0d21ce21.jpg",
+        "phone_number": "14157696068"
+      }
+    ]
+  }
+}

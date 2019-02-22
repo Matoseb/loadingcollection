@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- https://www.flickr.com/groups -->
+    <title>flickr</title>
+    <style>
+    html,
+    body {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        margin: 0;
+        overflow: hidden;
+        width: 100%
+    }
+
+    #b {
+        height: 24px;
+        position: relative;
+        width: 24px
+    }
+
+    #b::after,
+    #b::before {
+        border-radius: 100%;
+        content: "";
+        padding-top: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%
+    }
+
+    #b::before {
+        animation: p 1.6s ease-in-out infinite;
+        background: #ff329c;
+        transform: translateX(-50%)
+    }
+
+    #b::after {
+        animation: b 1.6s ease-in-out infinite;
+        background: #0063dc;
+        transform: translateX(50%)
+    }
+
+    @keyframes p {
+        0% {
+            z-index: 1
+        }
+
+        50% {
+            transform: translateX(50%)
+        }
+    }
+
+    @keyframes b {
+        50% {
+            transform: translateX(-50%)
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="b"></div>
+</body>
+
+</html>

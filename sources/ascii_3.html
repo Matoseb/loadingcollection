@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://codepen.io/rileyjshaw/pen/ABzsc -->
+<head>
+    <meta charset="UTF-8">
+    <title>Ascii</title>
+    <style>
+    html,
+    body {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #l {
+        position: absolute;
+        height: 24vmin;
+        width: 24vmin;
+        max-width: 100px;
+        max-height: 100px;
+        font-family: monospace;
+        font-size: calc(10px + 2vmin);
+        overflow: hidden;
+    }
+
+    #l>* {
+    	display: flex;
+    	width: 400%;
+    	height: 100%;
+    	animation: a .5s steps(4) infinite;
+    }
+
+    a {
+    	text-align: center;
+    	flex: 1;
+    	height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes a {
+
+        to {
+            transform: translateX(-100%)
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="l">
+        <div>
+            <a>o</a>
+            <a>O</a>
+            <a>0</a>
+            <a>O</a>
+        </div>
+    </div>
+</body>
+
+</html>

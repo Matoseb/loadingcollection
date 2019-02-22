@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- https://www.youtube.com/watch? -->
+    <title>YOUTUBE NAVIGATION BAR</title>
+    <style>
+    html,
+    body {
+        margin: 0;
+        background: black;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        padding: 0 12px 0 12px;
+        box-sizing: border-box;
+    }
+
+    .v {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .z {
+        background-color: #f00
+    }
+
+    .s {
+        position: absolute;
+        top: -4px;
+        left: -6.5px;
+        z-index: 43
+    }
+
+    .u {
+        height: 13px;
+        width: 13px;
+        border-radius: 6.5px;
+        transition: transform .1s cubic-bezier(.4, 0, 1, 1);
+        transform: scale(0)
+    }
+
+    .r,
+    .p,
+    .h {
+        transform: scaleX(0);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: 0 0
+    }
+
+
+    .c:hover .u,
+    .c:hover .l,
+    .c.active .u,
+    .c.active .l {
+        transform: none;
+        transition: transform .1s cubic-bezier(0, 0, .2, 1)
+    }
+
+    .c {
+        cursor: pointer
+    }
+
+    .c {
+        position: absolute;
+        width: 100%;
+        bottom: 35px;
+        height: 5px
+    }
+
+    .a {
+        position: absolute;
+        width: 100%;
+        height: 16px;
+        bottom: 0;
+        z-index: 28
+    }
+
+    .c:hover .a {
+        height: 22px;
+        bottom: -6px
+    }
+
+    .o {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 31;
+        outline: none
+    }
+
+    .l {
+        z-index: 39;
+        background: rgba(255, 255, 255, .2);
+        height: 100%;
+        transform: scaleY(.6);
+        transition: transform .1s cubic-bezier(.4, 0, 1, 1);
+        position: relative
+    }
+
+    .p {
+        z-index: 34
+    }
+
+    .r {
+        z-index: 33;
+        background: rgba(255, 255, 255, .4)
+    }
+
+    .h {
+        z-index: 15;
+        background: rgba(0, 0, 0, .125);
+        opacity: 0;
+        transition: opacity .25s cubic-bezier(0, 0, .2, 1)
+    }
+
+    .x {
+        background: rgba(255, 255, 255, .5)
+    }
+    </style>
+    <script>
+    var a = {},
+        sp = .0002;
+
+    addEventListener('load', _ => {
+
+        ['c', 'a', 'h', 's', 'p', 'r'].forEach(e =>
+            a[e] = document.querySelector('.' + e));
+        a.t, a.i;
+        a.l = 0;
+        a.o = 0;
+
+        d();
+        i();
+
+        addEventListener('mousemove', f);
+        addEventListener('mouseup', e => {
+            if (a.c.classList.contains('active'))
+                d(), i(), u(), a.c.classList.remove('active');
+        });
+
+        a.c.addEventListener('mousedown', e => {
+            clearTimeout(a.t);
+            clearInterval(a.i);
+            a.c.classList.add('active');
+            f(e);
+        });
+
+        function d() {
+            a.d = Math.random();
+            a.t = setTimeout(_ => {
+                u(sp / .005 * a.d);
+                d();
+            }, a.d * (3000 - 500) + 500);
+        }
+
+        function i() {
+            a.i = setInterval(_ => {
+                if (a.l >= 1)
+                    a.o = a.l = 0;
+
+                a.s.style.transform = `translateX(${a.l * a.c.getBoundingClientRect().width}px)`;
+                a.p.style.transform = `scaleX(${a.l += sp})`;
+            }, 100);
+        }
+
+        function u(i = 0) {
+            a.o = m(a.o + i);
+            a.r.style.transform = `scaleX(${a.o})`;
+        }
+
+        function f(e) {
+            let r = a.c.getBoundingClientRect(),
+                o = m(e.clientX - r.left, r.width),
+                s = o / r.width,
+                b = e.buttons && a.c.classList.contains('active');
+
+            if (b) {
+                a.o = a.l = s;
+                a.s.style.transform = `translateX(${o}px)`;
+                a.p.style.transform = `scaleX(${s})`;
+            }
+
+            if (b || e.path.includes(a.c)) {
+                a.h.style.opacity = 1;
+                a.h.style.transform = `scaleX(${s})`;
+            } else {
+                a.h.style.opacity = 0;
+            }
+        }
+
+        function m(n, b = 1, s = 0) {
+            if (n < s)
+                n = s;
+            else if (n > b)
+                n = b;
+            return n;
+        }
+
+    }, { once: true });
+    </script>
+</head>
+
+<body>
+    <div class="v">
+        <div class="c">
+            <div class="o">
+                <div class="a"></div>
+                <div class="l">
+                    <div class="p z"></div>
+                    <div class="r"></div>
+                    <div class="h x"></div>
+                </div>
+                <div class="s">
+                    <div class="u z"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

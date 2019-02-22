@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>windows XP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    html,
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: #ECE9D8;
+        overflow: hidden;
+    }
+
+    canvas {
+        width: 50%;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+    }
+    </style>
+    <script>
+    var c, cv, v = 0,
+        o = 0,
+        i;
+
+    window.addEventListener('load', _ => {
+        cv = document.querySelector('canvas');
+        c = cv.getContext('2d', { alpha: true });
+        cv.height = 17;
+        draw();
+
+        let d = 0,
+            f = _ => {
+
+                if (i) {
+                    clearInterval(i);
+                    d = i = o = v = 0;
+                }
+
+                v = Math.min(1, v + d * .08);
+                draw();
+
+                d = Math.random();
+
+                if (v >= 1) {
+                    v = 0.3;
+                    setTimeout(_ => i = setInterval(_ => draw(true), 100), 100);
+                    d = 8.3;
+                }
+
+                setTimeout(f, d * 500 + 500);
+            };
+        f();
+
+
+
+        function draw(setOffset) {
+            cv.width = cv.offsetWidth / cv.dataset.ratio;
+            c.save();
+            let w = cv.width,
+                l = (w - 6) % 8;
+
+            if (setOffset)
+                o += cv.width / 100;
+
+            r(w - 2 - l);
+            u(v, (w - 6 - l) / 8);
+            c.restore();
+        }
+
+        function r(w) {
+            c.save();
+
+            c.translate(1, 0);
+            c.roundRect(0, 1, w, 15, 3);
+
+            c.trace("#686868", 2);
+
+            c.clip();
+
+            c.beginPath();
+
+            c.roundRect(0, 1, w, 16, 3);
+
+            c.flood("#fff");
+            c.trace("#EFEFEF", 4);
+            c.trace("#BEBEBE", 2);
+            c.restore();
+        }
+
+        function u(a, m) {
+
+            a = Math.floor(a * m);
+            o_ = Math.floor(o) - (o ? a : 0);
+
+            c.save();
+
+            var g = c.createLinearGradient(0, 0, 0, 11);
+            g.addColorStop(0, "#ABEDAC");
+            g.addColorStop(0.5, "#35D539");
+            g.addColorStop(1, "#ABEDAC");
+
+            c.fillStyle = '#fff';
+            c.fillRect(4, 3, m * 8 - 2, 11);
+            c.translate(4, 3);
+
+            c.fillStyle = g;
+            for (let j = 0; j < a; j++) {
+                if (j + o_ >= 0)
+                    c.fillRect((j + o_) % m * 8, 0, 6, 11);
+            }
+            c.restore();
+        }
+
+        window.addEventListener('resize', _ => draw());
+
+    }, { once: true });
+
+    var p = CanvasRenderingContext2D.prototype;
+    p.roundRect = function(x, y, w, h, r) {
+        if (w < 2 * r) r = w / 2;
+        if (h < 2 * r) r = h / 2;
+        this.moveTo(x + r, y);
+        this.arcTo(x + w, y, x + w, y + h, r);
+        this.arcTo(x + w, y + h, x, y + h, r);
+        this.arcTo(x, y + h, x, y, r);
+        this.arcTo(x, y, x + w, y, r);
+        this.closePath();
+        return;
+    }
+
+    p.trace = function(col, weight) {
+        if (col) this.strokeStyle = col;
+        if (weight) this.lineWidth = weight;
+
+        this.stroke();
+        return;
+    }
+
+    p.flood = function(col) {
+        if (col) this.fillStyle = col;
+        this.fill();
+        return;
+    }
+    </script>
+</head>
+
+<body>
+    <canvas data-ratio="2"></canvas>
+</body>
+
+</html>

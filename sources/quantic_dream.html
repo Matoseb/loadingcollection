@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>quantic dream</title>
+    <!-- http://www.quanticdream.com/fr/#!/fr/category/detroit -->
+    <style type="text/css">
+
+    body,
+    html {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+    }
+
+    #spinner {
+        display: inline-block;
+        width: 6vw;
+        height: 6vw;
+        margin-left: -3vw;
+        margin-top: -3vw;
+        position: absolute;
+        outline: 1vw solid #FBFBFB;
+        outline-offset: -1vw;
+        z-index: 10000;
+        top: 50%;
+        left: 50%;
+        animation: spinner 4s infinite ease;
+    }
+
+    .spinner-inner {
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+        background-color: #FBFBFB;
+        animation: spinner-inner 4s infinite ease-in;
+    }
+
+    @keyframes spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(180deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        75% {
+            transform: rotate(360deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spinner-inner {
+        0% {
+            height: 0%;
+        }
+
+        25% {
+            height: 0%;
+        }
+
+        50% {
+            height: 100%;
+        }
+
+        75% {
+            height: 100%;
+        }
+
+        100% {
+            height: 0%;
+        }
+    }
+
+    H
+    </style>
+</head>
+
+<body>
+    <div id="spinner">
+        <span class="spinner-inner"></span>
+    </div>
+</body>
+
+</html>

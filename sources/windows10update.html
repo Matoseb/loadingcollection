@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- http://fakeupdate.net/win10u/ -->
+<html>
+
+<head>
+    <title>Updating Windows 10</title>
+    <script type="text/javascript">
+    var count = 0,
+        stage = 1,
+        stage2 = 3,
+        ref = "Configuring updates",
+        counter = setInterval(_ => {
+
+            count++;
+            if (count <= 0) {
+                clearInterval(counter);
+                return;
+            }
+
+            document.getElementById("timer").innerText = count + '%';
+
+            if (count > 99) {
+                stage++;
+                count = 0;
+                return;
+            }
+
+            if (stage > 3) {
+                stage2 = 68;
+                ref = "Installing Updates";
+                document.getElementById("ref").innerText = ref + '';
+                return;
+            }
+
+        }, 14830);
+    </script>
+    <script type="text/javascript" data-scale="0.4" src="../resources/iframescaler.js"></script>
+    <style type="text/css">
+    @font-face {
+        font-family: "Segoe UI Light";
+        src: url(../resources/fonts/segoeuil.ttf);
+    }
+
+    :root {
+        font-family: "Segoe UI Light", Arial;
+    }
+
+    body,
+    html {
+        position: absolute;
+        overflow: hidden;
+        margin: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background: #006dae;
+    }
+
+    .CT {
+        display: block;
+        margin-top: -5%;
+        width: 500px;
+        height: 70px;
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .loader {
+        width: 50px;
+        margin: auto;
+        padding-top: 2px;
+    }
+
+    .loader .circle {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        opacity: 0;
+        transform: rotate(225deg);
+        animation: orbit 5.5s infinite;
+    }
+
+    .loader .circle:after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 5px;
+        background: #fff;
+    }
+
+    .loader .circle:nth-child(2) {
+        animation-delay: 240ms;
+    }
+
+    .loader .circle:nth-child(3) {
+        animation-delay: 480ms;
+    }
+
+    .loader .circle:nth-child(4) {
+        animation-delay: 720ms;
+    }
+
+    .loader .circle:nth-child(5) {
+        animation-delay: 960ms;
+    }
+
+    @keyframes orbit {
+        0% {
+            transform: rotate(225deg);
+            opacity: 1;
+            animation-timing-function: ease-out;
+        }
+
+        7% {
+            transform: rotate(345deg);
+            animation-timing-function: linear;
+        }
+
+        30% {
+            transform: rotate(455deg);
+            animation-timing-function: ease-in-out;
+        }
+
+        39% {
+            transform: rotate(690deg);
+            animation-timing-function: linear;
+        }
+
+        70% {
+            transform: rotate(815deg);
+            opacity: 1;
+            animation-timing-function: ease-out;
+        }
+
+        75% {
+            transform: rotate(945deg);
+            animation-timing-function: ease-out;
+        }
+
+        76% {
+            transform: rotate(945deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: rotate(945deg);
+            opacity: 0;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="CT">
+        <div class="FONT">
+            <div class="loader">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <br><br>
+            <a id="ref">Working on updates</a> &nbsp;<a id="timer">0%</a><span data-translate="_win7percent"></span><br><span>Don't turn off your PC. This will take a while.</span>
+        </div>
+    </div>
+</body>
+
+</html>

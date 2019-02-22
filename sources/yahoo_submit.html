@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- https://login.yahoo.com/account/ -->
+    <title>YAHOO SUBMIT</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        border-radius: 4.5vmin;
+        opacity: .4;
+        box-sizing: border-box;
+        background: #188fff;
+        border: 4.5vmin solid #188fff;
+    }
+    </style>
+</head>
+
+<body>
+    <svg viewBox="-25 -25 100 100">
+        <g>
+            <path id="p" d="M25,0 A25,25 0 0,0 25,50" stroke-dasharray="79" stroke="#b9bdc5" stroke-width="4" stroke-linecap="round" fill="none">
+                
+                <animate id="a1" attributeName="stroke-dashoffset" from="9" to="76" dur="625ms" begin="0s; a2.end" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+                <animate id="a2" attributeName="stroke-dashoffset" from="76" to="9" dur="625ms" begin="a1.end" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+                
+                <animate id="a3" attributeName="stroke-width" from="4" to="8" dur="625ms" begin="0s; a4.end" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+                <animate id="a4" attributeName="stroke-width" from="8" to="4" dur="625ms" begin="a3.end" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+                
+                <animateTransform id="a5" attributeName="transform" type="rotate" from="0 25 25" to="0 25 25" dur="625ms" begin="0; a8.end" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+                <animateTransform id="a6" attributeName="transform" type="rotate" from="0 25 25" to="180 25 25" dur="625ms" begin="a5.end" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+                <animateTransform id="a7" attributeName="transform" type="rotate" from="180 25 25" to="180 25 25" dur="625ms" begin="a6.end" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+                <animateTransform id="a8" attributeName="transform" type="rotate" from="180 25 25" to="360 25 25" dur="625ms" begin="a7.end" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+                
+                <animate id="a9" attributeName="opacity" from="0.7" to="1" dur="625ms" begin="0s; a10.end" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+                <animate id="a10" attributeName="opacity" from="1" to="0.7" dur="625ms" begin="a9.end" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.215, 0.61, 0.355, 1" />
+            </path>
+            <use href="#p" transform="rotate(180 25 25)"/>
+            <animateTransform id="a8" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="6625ms" repeatCount="indefinite" />
+        </g>
+    </svg>
+</body>
+
+</html>

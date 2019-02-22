@@ -1,0 +1,328 @@
+{
+  "lona": [
+    {
+      "type": "ComponentList",
+      "version": 1,
+      "children": [
+        {
+          "id": "0",
+          "type": "EditorialMarquee",
+          "content": {
+            "images": [
+              "https://airbnb-photos.s3.amazonaws.com/pictures/Airbnb/HostLandingPage/original/70b29acc-b57c-487b-9866-5ec9a2894fb3.jpg"
+            ],
+            "subtitle": "Share any space on Airbnb to build up your savings, fund your next trip, or simply meet interesting travelers. Listing your home is always free.",
+            "title": "Earn up to %{monthly_earning}/month*"
+          }
+        },
+        {
+          "id": "1",
+          "type": "LinkActionRow",
+          "content": {
+            "text": "Learn what you could earn"
+          },
+          "actions": {
+            "onPress": {
+              "case": "deepLink",
+              "data": {
+                "url": "airbnb://d/hlp_wmpw"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ComponentList",
+      "version": 1,
+      "children": [
+        {
+          "id": "0",
+          "type": "EditorialMarquee",
+          "content": {
+            "images": [
+              "https://airbnb-photos.s3.amazonaws.com/pictures/Airbnb/HostLandingPage/original/5402ad44-5833-4605-a32c-08a4d32422f4.jpg"
+            ],
+            "subtitle": "You get to choose your own schedule and prices, and you can add extra controls over who can book with you. We’re there to help along the way.",
+            "title": "Host when and how you want"
+          }
+        },
+        {
+          "id": "1",
+          "type": "LinkActionRow",
+          "content": {
+            "text": "Check out FAQs about hosting"
+          },
+          "actions": {
+            "onPress": {
+              "data": {
+                "file": {
+                  "navbar": {
+                    "id": "navbar",
+                    "type": "BasicNavbar",
+                    "content": {
+                      "backIndicator": "dismiss"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "0",
+                      "type": "DocumentMarquee",
+                      "content": {
+                        "title": "Frequently asked hosting questions"
+                      }
+                    },
+                    {
+                      "id": "1",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "Who can be an Airbnb host?",
+                        "answer": "It’s easy to become an Airbnb host in most areas, and it’s always free to create a listing. Entire apartments and homes, private rooms, treehouses, and castles are just a few of the properties hosts have shared on Airbnb.\n\nFor more details on what’s expected of hosts, check out Airbnb’s community standards, which revolve around safety, security, and reliability, and hospitality standards, which help hosts earn great guest reviews.\n\nLearn more about Airbnb’s community standards\nhttps://www.airbnb.com/trust/standards\n\nLearn more about Airbnb’s hospitality standards\nhttps://www.airbnb.com/hospitality"
+                      }
+                    },
+                    {
+                      "id": "2",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "What is required of guests before booking?",
+                        "answer": "We ask everyone who uses Airbnb for a few pieces of information before they travel with us. Guests need to have this info completely filled out before they can make a reservation request. This info helps make sure you know who to expect, and how to contact the guest.\n\nAirbnb’s requirements for guests include:\n\n- Full name\n- Email address\n- Confirmed phone number\n- Introductory message\n- Agreement to your House Rules\n- Payment information\n\nGuests are expected, but not required, to have a profile picture. You may also require guests to provide ID before booking your space."
+                      }
+                    },
+                    {
+                      "id": "3",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "How much does it cost to list my space?",
+                        "answer": "Signing up for Airbnb and listing your home is completely free.\n\nOnce you receive a reservation, we charge an Airbnb service fee for hosts, generally 3%, to help cover the cost of running of the business."
+                      }
+                    },
+                    {
+                      "id": "4",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "What protection do I have against property damage?",
+                        "answer": "The Airbnb Host Guarantee provides protection for up to $1,000,000 to a host for damages to covered property in the rare event of guest damages above the security deposit or if no security deposit is in place.\n\nThe Host Guarantee program doesn’t cover cash and securities, collectibles, rare artwork, jewelry, pets or personal liability. We recommend that hosts secure or remove valuables when renting their place. The program also doesn’t cover loss or damage to property due to wear and tear.\n\nLearn more about the Host Guarantee at http://airbnb.com/guarantee"
+                      }
+                    },
+                    {
+                      "id": "5",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "How should I choose my listing’s price?",
+                        "answer": "The price you charge for your listing is completely up to you. To help you decide, you can search for comparable listings in your city or neighborhood to get an idea of market prices.\n\nAdditional Fees\n- Cleaning fee: You can either incorporate a cleaning fee into your nightly price or you can add a cleaning fee in your pricing settings.\n\n- Other fees: To charge extra fees outside of your rates (like a late check-in or pet fee), you must first disclose these potential charges to guests prior to booking and then use our Resolution Center to securely request payment for additional fees."
+                      }
+                    },
+                    {
+                      "id": "6",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "How can Airbnb help me with setting prices?",
+                        "answer": "Airbnb’s Smart Pricing tool lets you set your prices to automatically go up or down based on changes in demand for listings like yours.\n\nYou’re always responsible for your price, so Smart Pricing is controlled by other pricing settings you choose, and you can adjust nightly prices any time.\n\nSmart Pricing is based on the type and location of your listing, the season, demand, and other factors (like events in your area)."
+                      }
+                    }
+                  ],
+                  "type": "Page",
+                  "version": 1
+                },
+                "presentationMethod": "modal"
+              },
+              "case": "openFile"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ComponentList",
+      "version": 1,
+      "children": [
+        {
+          "id": "0",
+          "type": "EditorialMarquee",
+          "content": {
+            "images": [
+              "https://airbnb-photos.s3.amazonaws.com/pictures/Airbnb/HostLandingPage/original/f27df53d-308a-46d6-86bc-19cba004e07b.jpg"
+            ],
+            "subtitle": "From our $1M protection for property damage to 24/7 global service, you’re always supported as a host. And we always offer the chance to get to know guests before their stay.",
+            "title": "We’ve got you covered"
+          }
+        },
+        {
+          "id": "1",
+          "type": "LinkActionRow",
+          "content": {
+            "text": "Check out FAQs about safety"
+          },
+          "actions": {
+            "onPress": {
+              "data": {
+                "file": {
+                  "navbar": {
+                    "id": "navbar",
+                    "type": "BasicNavbar",
+                    "content": {
+                      "backIndicator": "dismiss"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "0",
+                      "type": "DocumentMarquee",
+                      "content": {
+                        "title": "Frequently asked safety questions"
+                      }
+                    },
+                    {
+                      "id": "1",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "What is required of guests before booking?",
+                        "answer": "We ask everyone who uses Airbnb for a few pieces of information before they travel with us. Guests need to have this info completely filled out before they can make a reservation request. This info helps make sure you know who to expect, and how to contact the guest.\n\nAirbnb’s requirements for guests include:\n\n- Full name\n- Email address\n- Confirmed phone number\n- Introductory message\n- Agreement to your House Rules\n- Payment information\n\nGuests are expected, but not required, to have a profile picture. You may also require guests to provide ID before booking your space."
+                      }
+                    },
+                    {
+                      "id": "2",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "How do reviews work?",
+                        "answer": "All the reviews on Airbnb are written by hosts and travelers from our community, so any review you see is based on a stay that a guest had in a host’s listing.\n\nYou have 14 days after checkout to write a review for a stay and you can edit your review for up to 48 hours after submitting, unless your guest completes their review. Once you both complete your reviews, or 14 days goes by, the reviews are published.\n\nYou can find your reviews from guests at any time and when you get booked by a guest, you can check out their reviews from past hosts."
+                      }
+                    },
+                    {
+                      "id": "3",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "What do I do if a guest breaks something in my place?",
+                        "answer": "If a guest breaks something and you need to make a claim, you can do so in our Resolution Center within 14 days of your guest’s checkout date or before the next guest checks in, whichever is earlier.\n\nIf your guest agrees to the amount you requested, we’ll release your payout in 5-7 business days.\n\nIf your guest declines or doesn’t respond within 72 hours, you can involve Airbnb in the case. If we require additional documentation, you’ll have 72 hours to provide this documentation.\n\nMost claims will be resolved within one week. We’ll make sure you and your guest are represented fairly, and if we determine you’re owed money, we’ll send it to you in a separate payout."
+                      }
+                    },
+                    {
+                      "id": "4",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "What should I do if I’m uncomfortable hosting someone?",
+                        "answer": "If a guest is breaking one of the House Rules you’ve set or has made you feel unsafe through their actions, you can decline their reservation request or cancel the reservation.\n\nBefore you’ve accepted a reservation\n\nYou can decline an individual reservation request and it won’t negatively impact your listing’s placement in search results. If you decline many or most reservation requests, your search result placement may be negatively impacted.\n\nAfter you’ve accepted a reservation\n\nIf you’ve already accepted the reservation, you can cancel it. You may be subject to cancellation penalties if the guest hasn’t broken any House Rules."
+                      }
+                    },
+                    {
+                      "id": "5",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "What’s the difference between Airbnb’s Host Guarantee and Host Protection Insurance?",
+                        "answer": "The Host Guarantee is designed to protect you in rare instances of property damage to your own possessions, unit, or home by a guest staying in the space. Host Protection Insurance is designed to protect you in the event that someone else (for example, a guest) claims bodily injury or property damage.\n\nThe Host Guarantee isn’t insurance and doesn’t replace your homeowner’s or renter’s insurance. Host Protection Insurance is insurance and is available to you regardless of your other insurance arrangements. It will only act as primary insurance coverage for incidents related to an Airbnb stay.\n\nLearn more about our Host Guarantee:\nhttps://www.airbnb.com/guarantee\n\nLearn more about Host Protection Insurance:\nhttps://www.airbnb.com/host-protection-insurance"
+                      }
+                    }
+                  ],
+                  "type": "Page",
+                  "version": 1
+                },
+                "presentationMethod": "modal"
+              },
+              "case": "openFile"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ComponentList",
+      "version": 1,
+      "children": [
+        {
+          "id": "0",
+          "type": "EditorialMarquee",
+          "content": {
+            "images": [
+              "https://airbnb-photos.s3.amazonaws.com/pictures/Airbnb/HostLandingPage/original/c478a447-3b60-43b8-88ba-84cb8dff6761.jpg"
+            ],
+            "subtitle": "You have the freedom to charge what you want and we have tools to help you choose. Airbnb also generally charges 3% per reservation, one of the lowest fees in the industry.",
+            "title": "Earning made simple"
+          }
+        },
+        {
+          "id": "1",
+          "type": "LinkActionRow",
+          "content": {
+            "text": "Check out FAQs about financials"
+          },
+          "actions": {
+            "onPress": {
+              "data": {
+                "file": {
+                  "navbar": {
+                    "id": "navbar",
+                    "type": "BasicNavbar",
+                    "content": {
+                      "backIndicator": "dismiss"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "0",
+                      "type": "DocumentMarquee",
+                      "content": {
+                        "title": "Frequently asked payments questions"
+                      }
+                    },
+                    {
+                      "id": "1",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "How much does it cost to list my space?",
+                        "answer": "Signing up for Airbnb and listing your home is completely free.\n\nOnce you receive a reservation, we charge an Airbnb service fee for hosts, generally 3%, to help cover the cost of running of the business."
+                      }
+                    },
+                    {
+                      "id": "2",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "How do I figure out how much I’ll get paid?",
+                        "answer": "The payout you’ll receive is your nightly rate minus the host service fee, which is generally 3%.\n\nGuests pay a service fee to Airbnb in addition to the cost of your listing, which is why the total price guests see is higher than your payout.\n\nHere are some things that can impact your payout:\n\n- Your weekly discount or monthly discount may have been applied to the reservation\n- Weekend pricing or custom pricing may have been applied to the reservation\n- Where applicable, Value-added tax (VAT) may be added on top of the Airbnb service fee"
+                      }
+                    },
+                    {
+                      "id": "3",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "How can Airbnb help me with setting prices?",
+                        "answer": "Airbnb’s Smart Pricing tool lets you set your prices to automatically go up or down based on changes in demand for listings like yours.\n\nYou’re always responsible for your price, so Smart Pricing is controlled by other pricing settings you choose, and you can adjust nightly prices any time.\n\nSmart Pricing is based on the type and location of your listing, the season, demand, and other factors (like events in your area)."
+                      }
+                    },
+                    {
+                      "id": "4",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "When can I expect to get paid?",
+                        "answer": "Airbnb typically releases your payout about 24 hours after your guest’s scheduled check-in time. The time it takes for the funds to arrive in your account depends on the method you choose to get paid.\n\nIf your guest is staying for 28 or more nights, Airbnb typically releases the payout for the first month about 24 hours after your guest’s scheduled check-in time. Additional payouts for that reservation are released monthly.\n\nIf you’re a new host, we may hold your payouts for 30 days after your first reservation is confirmed. If your first reservation is more than 30 days away, your payout will be released 24 hours after your guest’s scheduled check-in. This will apply to any payouts scheduled to be released during those 30 days."
+                      }
+                    },
+                    {
+                      "id": "5",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "How should I choose my listing’s price?",
+                        "answer": "The price you charge for your listing is completely up to you. To help you decide, you can search for comparable listings in your city or neighborhood to get an idea of market prices.\n\nAdditional Fees\n- Cleaning fee: You can either incorporate a cleaning fee into your nightly price or you can add a cleaning fee in your pricing settings.\n\n- Other fees: To charge extra fees outside of your rates (like a late check-in or pet fee), you must first disclose these potential charges to guests prior to booking and then use our Resolution Center to securely request payment for additional fees."
+                      }
+                    },
+                    {
+                      "id": "6",
+                      "type": "ExpandableQuestionRow",
+                      "content": {
+                        "question": "How do taxes work for hosts?",
+                        "answer": "You’ll want to check with your local government about whether or not taxes needs to be collected from guests. If you determine that you need to collect a tax, you can usually either add it within a Special Offer when guests book or ask your guests to pay it in person. In each case, it’s important that guests are informed of the exact tax amount prior to booking. If you choose to collect tax outside of your listing’s rates, it should be collected only upon arrival. We aren’t able to assist with or ensure collection.\n\nIn some locations, Airbnb hosts may have a collect and remit feature available to handle occupancy tax. Hosts should not collect occupancy taxes separately for those jurisdictions.\n\nAlso, in some locations, Value Added Tax (VAT) may apply. Learn about VAT\nhttps://www.airbnb.ie/help/article/436/what-is-vat-and-how-does-it-apply-to-me"
+                      }
+                    }
+                  ],
+                  "type": "Page",
+                  "version": 1
+                },
+                "presentationMethod": "modal"
+              },
+              "case": "openFile"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

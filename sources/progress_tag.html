@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- https://www.w3schools.com/tags/tag_progress.asp -->
+    <title>Progress tag</title>
+    <meta charset="utf-8">
+    <style>
+    html,
+    body {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+    }
+    </style>
+    <script>
+    addEventListener('load', _ => {
+        var p = document.querySelector('progress'),
+            d = 0,
+            v = 0,
+            f = _ => {
+                v = (v | 0) + d * 10;
+
+                if (d > 1)
+                    v = p.value = 0;
+
+                p.value = Math.ceil(v);
+                d = Math.random();
+
+                if (p.value >= p.max)
+                    p.removeAttribute('value'), d = 4;
+
+                setTimeout(f, d * 500 + 500);
+            };
+        f();
+    });
+    </script>
+</head>
+
+<body>
+    <progress value="0" max="100">
+    </progress>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<html>
+
+<head>
+    <title>CFF</title>
+    <style type="text/css">
+    .mod_loading_animation_canvas {
+        width: 16.86667em;
+        height: 1.8em;
+        margin: 0 auto;
+        -webkit-perspective: 16.66667em;
+        perspective: 16.66667em;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: translate3d(-3em, 0, 0);
+        transform: translate3d(-3em, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden
+    }
+
+    .mod_loading_animation_transformed_container {
+        position: relative;
+        -webkit-transform: rotateY(50deg) translateZ(1em);
+        transform: rotateY(50deg) translateZ(1em);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden
+    }
+
+    .mod_loading_animation_container {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: loading_container .23s linear infinite;
+        animation: loading_container .23s linear infinite
+    }
+
+    .var_big .mod_loading_animation_container {
+        -webkit-animation: loading_container_big .23s linear infinite;
+        animation: loading_container_big .23s linear infinite
+    }
+
+    .mod_loading_animation_rect {
+        width: 3em;
+        height: 1.8em;
+        margin-right: .46667em;
+        background: #eb0000;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        outline: 1px solid transparent
+    }
+
+    .mod_loading_animation_rect:first-child {
+        -webkit-animation: loading_rectangle1 .23s linear infinite;
+        animation: loading_rectangle1 .23s linear infinite
+    }
+
+    .mod_loading_animation_rect:nth-child(2) {
+        -webkit-animation: loading_rectangle2 .23s linear infinite;
+        animation: loading_rectangle2 .23s linear infinite
+    }
+
+    .mod_loading_animation_rect:nth-child(3) {
+        -webkit-animation: loading_rectangle3 .23s linear infinite;
+        animation: loading_rectangle3 .23s linear infinite
+    }
+
+    .mod_loading_animation_rect:nth-child(4) {
+        -webkit-animation: loading_rectangle4 .23s linear infinite;
+        animation: loading_rectangle4 .23s linear infinite
+    }
+
+    .mod_loading_animation_rect:nth-child(5) {
+        -webkit-animation: loading_rectangle5 .23s linear infinite;
+        animation: loading_rectangle5 .23s linear infinite
+    }
+
+    .mod_loading_animation_rect:last-child {
+        margin-right: 0
+    }
+
+    @media screen and (-ms-high-contrast:active) {
+        .mod_loading_animation_rect {
+            background: windowText
+        }
+    }
+
+    @-webkit-keyframes loading_container {
+        0% {
+            -webkit-transform: translateX(2.33333em);
+            transform: translateX(2.33333em)
+        }
+
+        to {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+    }
+
+    @keyframes loading_container {
+        0% {
+            -webkit-transform: translateX(2.33333em);
+            transform: translateX(2.33333em)
+        }
+
+        to {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+    }
+
+    @-webkit-keyframes loading_container_tiny {
+        0% {
+            -webkit-transform: translateX(.73333em);
+            transform: translateX(.73333em)
+        }
+
+        to {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+    }
+
+    @keyframes loading_container_tiny {
+        0% {
+            -webkit-transform: translateX(.73333em);
+            transform: translateX(.73333em)
+        }
+
+        to {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+    }
+
+    @-webkit-keyframes loading_container_small {
+        0% {
+            -webkit-transform: translateX(1.2em);
+            transform: translateX(1.2em)
+        }
+
+        to {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+    }
+
+    @keyframes loading_container_small {
+        0% {
+            -webkit-transform: translateX(1.2em);
+            transform: translateX(1.2em)
+        }
+
+        to {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+    }
+
+    @-webkit-keyframes loading_container_big {
+        0% {
+            -webkit-transform: translateX(3.46667em);
+            transform: translateX(3.46667em)
+        }
+
+        to {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+    }
+
+    @keyframes loading_container_big {
+        0% {
+            -webkit-transform: translateX(3.46667em);
+            transform: translateX(3.46667em)
+        }
+
+        to {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+    }
+
+    @-webkit-keyframes loading_rectangle1 {
+        0% {
+            opacity: .5
+        }
+
+        to {
+            opacity: 0
+        }
+    }
+
+    @keyframes loading_rectangle1 {
+        0% {
+            opacity: .5
+        }
+
+        to {
+            opacity: 0
+        }
+    }
+
+    @-webkit-keyframes loading_rectangle2 {
+        0% {
+            opacity: 1
+        }
+
+        to {
+            opacity: .5
+        }
+    }
+
+    @keyframes loading_rectangle2 {
+        0% {
+            opacity: 1
+        }
+
+        to {
+            opacity: .5
+        }
+    }
+
+    @-webkit-keyframes loading_rectangle3 {
+        0% {
+            opacity: .5
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes loading_rectangle3 {
+        0% {
+            opacity: .5
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes loading_rectangle4 {
+        0% {
+            opacity: .25
+        }
+
+        to {
+            opacity: .5
+        }
+    }
+
+    @keyframes loading_rectangle4 {
+        0% {
+            opacity: .25
+        }
+
+        to {
+            opacity: .5
+        }
+    }
+
+    @-webkit-keyframes loading_rectangle5 {
+        0% {
+            opacity: 0
+        }
+
+        to {
+            opacity: .25
+        }
+    }
+
+    @keyframes loading_rectangle5 {
+        0% {
+            opacity: 0
+        }
+
+        to {
+            opacity: .25
+        }
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background: white;
+    }
+
+    .rescale {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        transform: scale(0.3);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="rescale">
+        <div class="mod_loading_animation_canvas var_big">
+            <div class="mod_loading_animation_transformed_container">
+                <div class="mod_loading_animation_container">
+                    <div class="mod_loading_animation_rect"></div>
+                    <div class="mod_loading_animation_rect"></div>
+                    <div class="mod_loading_animation_rect"></div>
+                    <div class="mod_loading_animation_rect"></div>
+                    <div class="mod_loading_animation_rect"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

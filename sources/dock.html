@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MAC OS DOCK</title>
+    <style type="text/css">
+    html,
+    body {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    #d {
+
+        background: rgba(0, 0, 0, .4);
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        border-radius: 5px 5px 0 0;
+        border: 1px solid rgba(0, 0, 0, .61);
+        border-bottom: 0;
+        padding: .5% .5% 1.5% .5%;
+        box-shadow: 0 0 100px rgba(0, 0, 0, .25);
+        box-sizing: border-box;
+
+    }
+
+    .a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .b {
+        animation: bounce .45s alternate cubic-bezier(.5, .05, .8, .5) infinite;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translate3d(0, -50%, 0);
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+
+        }
+    }
+
+    .a.y:after {
+        content: '';
+        position: fixed;
+        bottom: 3px;
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    img {
+        height: 20vmin;
+        min-height: 50px;
+        max-height: 100px;
+        flex: 0;
+        user-select: none;
+        -webkit-user-drag: none;
+        -moz-user-drag: none;
+        user-drag: none;
+        filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .2));
+    }
+
+    img:active {
+        filter: brightness(60%) drop-shadow(0 1px 1px rgba(0, 0, 0, .2));
+    }
+
+    #s {
+        width: 5vmin;
+        min-width: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #s::after {
+        content: '';
+        width: 1px;
+        top: 2vmin;
+        height: 19vmin;
+        min-height: calc(50px - 3vmin);
+        max-height: calc(100px - 3vmin);
+        position: relative;
+        background-color: rgba(255, 255, 255, .49);
+    }
+    </style>
+</head>
+
+<body>
+    <div id="d">
+        <div class="a y"><img src="../resources/dock/f.png"></div>
+        <div class="a b"><img src="../resources/dock/c.png"></div>
+        <div id="s"></div>
+        <div class="a"><img src="../resources/dock/t.png"></div>
+    </div>
+</body>
+
+</html>

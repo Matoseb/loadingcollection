@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- https://console.firebase.google.com/ -->
+    <title>FIREBASE</title>
+    <style type="text/css">
+    body {
+        background-color: #f5f7f9;
+        --fire-focus-outline-color: rgba($GMP_COLOR_PRIMARY_DEFAULT, .5);
+    }
+
+    #bootanim {
+        align-items: center;
+        background-color: #f5f7f9;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateZ(0);
+        z-index: 999;
+    }
+
+    #bootanim__filmstrip {
+        --fs-frames: 51;
+        --fs-width: 90px;
+        display: flex;
+        height: 130px;
+        width: var(--fs-width);
+        overflow: hidden;
+    }
+
+    #bootanim__filmstrip img {
+        height: 100%;
+        width: calc(var(--fs-width) * var(--fs-frames));
+    }
+
+    #bootanim.is-loaded #bootanim__filmstrip img {
+        animation: bootanim__filmstrip .85s steps(calc(var(--fs-frames) - 1)) forwards;
+    }
+
+    @keyframes bootanim__filmstrip {
+        from {
+            transform: translate3d(0, 0, 0);
+        }
+
+        to {
+            transform: translate3d(calc(-1 * var(--fs-width) * (var(--fs-frames) - 1)), 0, 0);
+        }
+    }
+
+    #bootanim__spinner {
+        margin-top: 0;
+        opacity: 0;
+    }
+
+    #bootanim.is-loaded #bootanim__spinner {
+        animation: bootanim__spinner-fade .6s ease 1.5s forwards, bootanim__spinner-rotate 1s linear infinite;
+    }
+
+    @keyframes bootanim__spinner-fade {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes bootanim__spinner-rotate {
+        from {
+            transform: translateZ(0) rotate(0deg);
+        }
+
+        to {
+            transform: translateZ(0) rotate(360deg);
+        }
+    }
+    </style>
+
+<body>
+    <div id="bootanim" class="is-loaded">
+        <div id="bootanim__filmstrip">
+            <img alt="" aria-hidden="true" src="../resources/firebase/bootanim-sprite.png" srcset="../resources/firebase/bootanim-sprite.png, ../resources/firebase/bootanim-sprite@2x.png 2x">
+        </div>
+            <svg id="bootanim__spinner" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21a9 9 0 1 0-9-9" fill="none" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+        </div>
+</body>
+
+</html>

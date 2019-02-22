@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- http://creativecruise.nl/ -->
+    <title>http://creativecruise.nl/</title>
+    <style>
+    @font-face {
+        font-family: cubano;
+        src: url(../resources/fonts/cubano-regular-webfont.woff);
+    }
+
+    @font-face {
+        font-family: source-regular;
+        src: url(../resources/fonts/SourceSansPro-Regular.woff);
+    }
+
+    @keyframes a {
+        to {
+            transform: translateY(-100%)
+        }
+    }
+
+
+    html,
+    body {
+        overflow: hidden;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(ellipse at center, #85d7ea 7%, #6bcbe1 63%, #5bb8dc 100%);
+        font-size: 2vmin
+    }
+
+    .a {
+        flex-direction: column;
+        width: 100%;
+        height: 100%
+    }
+
+    .t {
+        font-family: cubano;
+        font-weight: 400;
+        font-size: 18vmin;
+        color: #fff;
+        letter-spacing: .03em;
+        margin-bottom: -12vmin
+    }
+
+    .c div {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 10
+    }
+
+    .c {
+        left: -1.6vmin;
+        height: 16vmin
+    }
+
+    img {
+        height: calc(100% * 12);
+        animation: a .45s steps(12) infinite
+    }
+
+    .c::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 200%;
+        height: 100%;
+        background: url(../resources/creativecruise/shadow.png) no-repeat;
+        background-size: 80% 30%;
+        background-position: 80% bottom
+    }
+
+    .f {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .d {
+        position: relative;
+        top: 5vmin;
+        height: 1.5em;
+        width: 0px
+    }
+
+    .d::before {
+        content: var(--c, '') var(--d, '0') "%";
+        font-size: 0.8em;
+        font-family: source-regular;
+        font-size: 2vmin;
+        color: #fff;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 0;
+        animation: 5s b infinite, .5s c infinite
+    }
+
+    @keyframes b {
+
+        10% {
+        	--c: '1'
+        }
+
+        20% {
+            --c: '2'
+        }
+
+        30% {
+            --c: '3'
+        }
+
+        40% {
+            --c: '4'
+        }
+
+        50% {
+            --c: '5'
+        }
+
+        60% {
+        	--c: '6'
+        }
+
+        70% {
+        	--c: '7'
+        }
+
+        80% {
+        	--c: '8'
+        }
+
+        90% {
+        	--c: '9'
+        }
+    }
+
+    @keyframes c {
+
+        10% {
+        	--d: '1'
+        }
+
+        20% {
+            --d: '2'
+        }
+
+        30% {
+            --d: '3'
+        }
+
+        40% {
+            --d: '4'
+        }
+
+        50% {
+            --d: '5'
+        }
+
+        60% {
+        	--d: '6'
+        }
+
+        70% {
+        	--d: '7'
+        }
+
+        80% {
+        	--d: '8'
+        }
+
+        90% {
+        	--d: '9'
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="a f">
+        <span class="t">loading</span>
+        <div class="c f">
+            <div>
+                <img src="../resources/creativecruise/bjorn.png">
+        	</div>
+            </div>
+            <progress class="d" max="100" value="20"></progress>
+        </div>
+</body>
+
+</html>
