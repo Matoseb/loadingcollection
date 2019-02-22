@@ -7,10 +7,10 @@
     <style type="text/css">
     body {
         background-color: #f5f7f9;
-        --fire-focus-outline-color: rgba($GMP_COLOR_PRIMARY_DEFAULT, .5);
+        --fire-focus-outline-color: rgba($GMP_COLOR_PRIMARY_DEFAULT, .5)
     }
 
-    #bootanim {
+    #a {
         align-items: center;
         background-color: #f5f7f9;
         bottom: 0;
@@ -23,76 +23,84 @@
         right: 0;
         top: 0;
         transform: translateZ(0);
-        z-index: 999;
+        z-index: 999
     }
 
-    #bootanim__filmstrip {
+    #b {
         --fs-frames: 51;
         --fs-width: 90px;
         display: flex;
         height: 130px;
         width: var(--fs-width);
-        overflow: hidden;
+        overflow: hidden
     }
 
-    #bootanim__filmstrip img {
+    #b img {
         height: 100%;
         width: calc(var(--fs-width) * var(--fs-frames));
+        animation: b 4.25s steps(calc(var(--fs-frames) - 1)) infinite
     }
 
-    #bootanim.is-loaded #bootanim__filmstrip img {
-        animation: bootanim__filmstrip .85s steps(calc(var(--fs-frames) - 1)) forwards;
-    }
+    @keyframes b {
 
-    @keyframes bootanim__filmstrip {
-        from {
-            transform: translate3d(0, 0, 0);
+        14.45%,
+        70% {
+            opacity: 1;
+            transform: translateX(calc(-1 * var(--fs-width) * (var(--fs-frames) - 1)))
         }
 
+        75%,
         to {
-            transform: translate3d(calc(-1 * var(--fs-width) * (var(--fs-frames) - 1)), 0, 0);
+            opacity: 0;
+            transform: none
         }
     }
 
-    #bootanim__spinner {
+    svg {
         margin-top: 0;
         opacity: 0;
+        animation: f 4.25s ease infinite, r 1s linear infinite
     }
 
-    #bootanim.is-loaded #bootanim__spinner {
-        animation: bootanim__spinner-fade .6s ease 1.5s forwards, bootanim__spinner-rotate 1s linear infinite;
+    @keyframes f {
+
+        0%,
+        35.3% {
+            opacity: 0
+        }
+
+        50%,
+        70% {
+            opacity: 1
+        }
+
+        75%,
+        to {
+            opacity: 0
+        }
     }
 
-    @keyframes bootanim__spinner-fade {
-        from {
-            opacity: 0;
+    @keyframes r {
+        0% {
+            transform: rotateZ(0)
         }
 
         to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes bootanim__spinner-rotate {
-        from {
-            transform: translateZ(0) rotate(0deg);
-        }
-
-        to {
-            transform: translateZ(0) rotate(360deg);
+            transform: rotateZ(1turn)
         }
     }
     </style>
 
 <body>
-    <div id="bootanim" class="is-loaded">
-        <div id="bootanim__filmstrip">
-            <img alt="" aria-hidden="true" src="../resources/firebase/bootanim-sprite.png" srcset="../resources/firebase/bootanim-sprite.png, ../resources/firebase/bootanim-sprite@2x.png 2x">
+    <div id="a">
+        <div id="b">
+            <img src="../resources/firebase/bootanim-sprite2.png">
+            <!-- <img alt="" aria-hidden="true" src="../resources/firebase/bootanim-sprite.png" srcset="../resources/firebase/bootanim-sprite.png, ../resources/firebase/bootanim-sprite@2x.png 2x"> -->
         </div>
-            <svg id="bootanim__spinner" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 21a9 9 0 1 0-9-9" fill="none" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"></path>
-            </svg>
-        </div>
+        <svg width="24" height="24">
+            <path d="M12 21a9 9 0 1 0-9-9" fill="none" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+    </div>
 </body>
 
 </html>

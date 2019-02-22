@@ -2,7 +2,6 @@
 <html lang="en">
 <title>Loading Collection</title>
 <meta charset="utf-8">
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -11,20 +10,44 @@
 <meta name="msapplication-TileColor" content="#603cba">
 <meta name="theme-color" content="#ffffff">
 <style>
+:root {
+    --clicked: 0;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
 
-	html, body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-	iframe {
-		width: 100%;
-		height: 100%;
-		    border: none;
-	}
+.item {
+    width: 100%;
+    height: 100%;
+}
+
+.area {}
 </style>
+<script>
+window.addEventListener('load', _ => {
+    document.querySelector('iframe').contentWindow.addEventListener('click', () => {
+        console.log('nani');
+    }, false);
+
+});
+</script>
+
 <body>
-<iframe src="sources/mac_boot.html"></iframe>
+    <div class="item">
+        <iframe src="sources/mac_boot.html"></iframe>
+    </div>
 </body>
+
 </html>
