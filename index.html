@@ -1,53 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
-<title>Loading Collection</title>
-<meta charset="utf-8">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#444444">
-<meta name="msapplication-TileColor" content="#603cba">
-<meta name="theme-color" content="#ffffff">
-<style>
-:root {
-    --clicked: 0;
-}
+<html>
 
-html,
-body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
+<head>
+    <title>DIV TEST</title>
+    <style>
+    :root {
+        --ratio: 0.75;
+        --cols: 2;
+        --rows: 2;
+        --mobile: 0;
+        --width: calc(100vw / var(--cols));
+        --height: calc(var(--width) * var(--ratio));
+    }
 
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
+    html,
+    body {
+        background: white;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    iframe {
+        border: none;
+    }
+
+    #scroller {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: calc(var(--rows) * var(--height));
+        /*height: 10000px;*/
+    }
+
+    .item,
+    #control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--width);
+        height: var(--height);
+        /*outline: 1px solid blue;*/
+    }
+
+     @media screen and (max-width:700px), screen and (max-device-width:700px)  {
+        :root {
+            --mobile: 1;
+        }
+    }
+
+    .item .info {
+        will-change: transform;
+        top: 0;
+        transform: translate(0, -100%);
+        height: 3em;
+        width: 100%;
+        position: absolute;
+        background: white;
+        transition: transform 0.1s ease-out;
+        transition-delay: .2s;
+        padding: 10px;
+        box-sizing: border-box;
+    }
 
 
-.item {
-    width: 100%;
-    height: 100%;
-}
 
-.area {}
-</style>
-<script>
-window.addEventListener('load', _ => {
-    document.querySelector('iframe').contentWindow.addEventListener('click', () => {
-        console.log('nani');
-    }, false);
+    .item:hover .info {
+        transform: translate(0, 0);
+        transition-delay: 0s;
+    }
 
-});
-</script>
+    .item .content {
+        opacity: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .item .content.a {
+        animation: appear 0.5s ease-out forwards;
+    }
+
+    .item img.content {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    @keyframes appear {
+        to {
+            opacity: 1;
+        }
+    }
+
+    #control {
+        visibility: hidden;
+    }
+    </style>
+</head>
 
 <body>
-    <div class="item">
-        <iframe src="sources/mac_boot.html"></iframe>
-    </div>
+    <div id="scroller"></div>
+    <div id="control"></div>
+    <script src="main.js"></script>
 </body>
 
 </html>

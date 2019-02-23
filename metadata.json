@@ -1,0 +1,405 @@
+[
+{
+    "src": "jsfiddle.html",
+    "name": "Jsfiddle"
+},
+{
+    "src": "airbnb_intro.html",
+    "name": "Airbnb app intro"
+},
+{
+    "src": "airbnb_intro2.html",
+    "name": "Airbnb app loading"
+},
+{
+    "src": "justorbit.gif",
+    "name": "JustOrbit",
+    "_style": "background: #010101"
+},
+{
+    "src": "airbnb_logo.html",
+    "name": "Airbnb logo"
+},
+{
+    "src": "khan_academy.html",
+    "name": "Khan Academy"
+},
+{
+    "src": "airbnb_old.gif",
+    "name": "Airbnb Concept",
+    "_style": "background: #F6F5F3"
+},
+{
+    "src": "lazyeyesdotcool.gif",
+    "name": "Lazy Eyes",
+    "style": "max-width: 50%; max-height: 50%;"
+},
+{
+    "src": "android_marshmallow.mp4",
+    "name": "Android Marshmallow Boot",
+    "_style": "background: #000000"
+},
+{
+    "src": "letemps.html",
+    "name": "Le Temps dossier"
+},
+{
+    "src": "arena.html",
+    "name": "Are.na"
+},
+{
+    "src": "linux_fedora.html",
+    "name": "Linux fedora animation"
+},
+{
+    "src": "ascii_1.html",
+    "name": "Ascii concept 1"
+},
+{
+    "src": "mac_beach_ball.html",
+    "name": "Spinning pinwheel wait cursor, Mac OS X El Capitan"
+},
+{
+    "src": "ascii_2.html",
+    "name": "Ascii concept 2"
+},
+{
+    "src": "mac_boot.html",
+    "name": "Boot screen, Mac OS X El Capitan"
+},
+{
+    "src": "ascii_3.html",
+    "name": "Ascii concept 3"
+},
+{
+    "src": "mac_hand.html",
+    "name": "Hand cursor, Mac OS X El Capitan"
+},
+{
+    "src": "ascii_4.html",
+    "name": "Ascii concept 4"
+},
+{
+    "src": "mac_wait.html",
+    "name": "Wait cursor, Mac OS X El Capitan"
+},
+{
+    "src": "ascii_5.html",
+    "name": "Ascii concept 5"
+},
+{
+    "src": "mobility.gif",
+    "name": "Mobility.ch app",
+    "style": "max-width: 20%; max-height: 20%"
+},
+{
+    "src": "bandcamp.gif",
+    "name": "Bandcamp",
+    "style": "image-rendering: initial"
+},
+{
+    "src": "msn_1.gif",
+    "name": "MSN 1"
+},
+{
+    "src": "bike.html",
+    "name": "Bike"
+},
+{
+    "src": "msn_2.gif",
+    "name": "MSN 2"
+},
+{
+    "src": "bird_loader.gif",
+    "name": "Bird Loader, by Roy Veldkamp",
+    "href": "https://dribbble.com/shots/2030551-Bird-Loader",
+    "_style": "background: #19243F"
+},
+{
+    "src": "msn_3.gif",
+    "name": "MSN 3"
+},
+{
+    "src": "bleep.html",
+    "name": "Bleep"
+},
+{
+    "src": "netscape.html",
+    "name": "Netscape 4.04"
+},
+{
+    "src": "nextstep.gif",
+    "name": "Boot screen, NextStep 0.8",
+    "style": "max-width: 95%; max-height: 95%",
+    "_style": "background: #525552"
+},
+{
+    "src": "cff.html",
+    "name": "CFF App"
+},
+{
+    "src": "github.gif",
+    "name": "Octocat Spinner, Github",
+    "style": "transform: scale3d(0.5,0.5,1)"
+},
+{
+    "src": "checketry.gif",
+    "name": "Checketry"
+},
+{
+    "src": "octopus.gif",
+    "name": "\"Octopus-ish-guy Swim Cycle\", by Joshua Schaeffer",
+    "href": "https://dribbble.com/shots/1808172-Octopus-ish-guy-Swim-Cycle",
+    "_style": "background: #00AEEF"
+},
+{
+    "src": "circling_head_reddit.gif",
+    "name": "\"Circling Big Head\", by RoseTylerI-",
+    "href": "https://www.reddit.com/r/loadingicon/comments/3e5drb/circling_big_head/",
+    "style": "max-width: 50%; max-height: 50%"
+},
+{
+    "src": "open_processing.html",
+    "name": "Open Processing"
+},
+{
+    "src": "filling_water.html",
+    "name": "CSS Text filling with water, by Lucas Bebber",
+    "href": "https://codepen.io/lbebber/pen/xrwja"
+},
+{
+    "src": "openload.html",
+    "name": "Video buffering, Openload"
+},
+{
+    "src": "creativecruise.html",
+    "name": "Creative Cruise",
+    "href": "http://creativecruise.nl/"
+},
+{
+    "src": "openloadchat.html",
+    "name": "Chat loader, Openload"
+},
+{
+    "src": "detroit_become_human.gif",
+    "name": "Detroit: Become Human",
+    "style": "max-height: none; max-width: none; width: 100%; height: auto;"
+},
+{
+    "src": "pitchfork.html",
+    "name": "Pitchfork"
+},
+{
+    "src": "digitaldesigner.html",
+    "name": "Digital Designer",
+    "href": "digitaldesigner.cool/"
+},
+{
+    "src": "progress_tag.html",
+    "name": "Default progress bar"
+},
+{
+    "src": "djeco.html",
+    "name": "Djeco"
+},
+{
+    "src": "quantic_dream.html",
+    "name": "Quantic Dream"
+},
+{
+    "src": "do_you_speak_human.gif",
+    "name": ""
+},
+{
+    "src": "reddit_skeleton.html",
+    "name": "Reddit skeleton"
+},
+{
+    "src": "dock.html",
+    "name": "Dock launching animation, Mac OS X El Capitan"
+},
+{
+    "src": "reddit_app.gif",
+    "name": "Reddit app refresh"
+},
+{
+    "src": "dribbble.html",
+    "name": "Dribbble"
+},
+{
+    "src": "reddit_login.html",
+    "name": "Reddit login"
+},
+{
+    "src": "ezgif.gif",
+    "name": "ezGIF",
+    "style": "image-rendering: initial"
+},
+{
+    "src": "reddit_video.gif",
+    "name": "Reddit video player buffering",
+    "style": "image-rendering: initial; transform: scale3d(0.25, 0.25, 1)"
+},
+{
+    "src": "facebook.html",
+    "name": "Facebook"
+},
+{
+    "src": "reddit_app_alt.html",
+    "name": "Reddit app"
+},
+{
+    "src": "romsmania.gif",
+    "name": "Romsmania"
+},
+{
+    "src": "firebase.html",
+    "name": "Firebase"
+},
+{
+    "src": "skype.html",
+    "name": "Skype"
+},
+{
+    "src": "flickr.html",
+    "name": "Flickr"
+},
+{
+    "src": "slack.html",
+    "name": "Slack"
+},
+{
+    "src": "giphy.html",
+    "name": "Giphy (old)"
+},
+{
+    "src": "swiss.html",
+    "name": "Swiss"
+},
+{
+    "src": "giphy_2.html",
+    "name": "Giphy"
+},
+{
+    "src": "tick_tock.gif",
+    "name": "Tick Tock, by nakilon",
+    "href": "https://www.reddit.com/r/loadingicon/comments/79p54f/tick_tock_tick_tock_xpost_rperfectloops/",
+    "style": "transform: scale3d(0.5, 0.5, 1); image-rendering: initial"
+},
+{
+    "src": "gmail.html",
+    "name": "Gmail"
+},
+{
+    "src": "trello.html",
+    "name": "Trello"
+},
+{
+    "src": "google_images.gif",
+    "name": "Google Images",
+    "style": "image-rendering: initial"
+},
+{
+    "src": "ufl.gif",
+    "name": "University of Florida"
+},
+{
+    "src": "google_docs.html",
+    "name": "Google docs"
+},
+{
+    "src": "vimeo.html",
+    "name": "Vimeo"
+},
+{
+    "src": "google_drive.html",
+    "name": "Google drive"
+},
+{
+    "src": "warp.html",
+    "name": "Warp"
+},
+{
+    "src": "google_home_loader.html",
+    "name": "Loader, Google Home"
+},
+{
+    "src": "windows10update.html",
+    "name": "Update screen, Windows 10"
+},
+{
+    "src": "google_home_wifi.html",
+    "name": "Home Wifi, Google Home"
+},
+{
+    "src": "windows_10_file_transfer.html",
+    "name": "File transfer, Windows 10"
+},
+{
+    "src": "gt_america.gif",
+    "name": "GT America",
+    "href": "http://www.gt-america.com/",
+    "style": "image-rendering: initial"
+},
+{
+    "src": "windows_98_bar.html",
+    "name": "Loading bar, Windows 98"
+},
+{
+    "src": "imgur.gif",
+    "name": "Imgur",
+    "_style": "background: #191919"
+},
+{
+    "src": "windows_98_file_transfer.gif",
+    "name": "File transfer, Windows 98",
+    "_style": "background: #C0C0C0"
+},
+{
+    "src": "instagram_bar.html",
+    "name": "Loading bar, Instagram"
+},
+{
+    "src": "windows_xp_bar.html",
+    "name": "Loading bar, Windows XP"
+},
+{
+    "src": "instagram_post.html",
+    "name": "Post loading, Instagram"
+},
+{
+    "src": "xerox_star.html",
+    "name": "First loading spinner ever, Xerox Star, 1981"
+},
+{
+    "src": "instagram_search_small.html",
+    "name": "Search loading (small), Instagram"
+},
+{
+    "src": "yahoo_submit.html",
+    "name": "Submit button, Yahoo!"
+},
+{
+    "src": "instagram_search_medium.html",
+    "name": "Search loading (medium), Instagram"
+},
+{
+    "src": "youtube_spinner.html",
+    "name": "Video buffering icon, YouTube"
+},
+{
+    "src": "instagram_search_large.html",
+    "name": "Search loading (large), Instagram"
+},
+{
+    "src": "youtube_navbar.html",
+    "name": "Video navigation bar, YouTube"
+},
+{
+    "src": "instagram_storyring.html",
+    "name": "Storyring, Instagram"
+},
+{
+    "src": "youtube_bar.html",
+    "name": "Loading bar, YouTube"
+}]
