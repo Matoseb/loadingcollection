@@ -69,8 +69,6 @@
         box-sizing: border-box;
     }
 
-
-
     .item:hover .info {
         transform: translate(0, 0);
         transition-delay: 0s;
@@ -88,13 +86,15 @@
     }
 
     .item img.content {
-        image-rendering: pixelated;
-        image-rendering: crisp-edges;
-        image-rendering: -webkit-optimize-contrast;
         width: auto;
         height: auto;
         max-height: 100%;
         max-width: 100%;
+    }
+
+    .px {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
     }
 
     @keyframes appear {

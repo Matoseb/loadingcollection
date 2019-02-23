@@ -94,12 +94,12 @@
 },
 {
     "src": "bandcamp.gif",
-    "name": "Bandcamp",
-    "style": "image-rendering: initial"
+    "name": "Bandcamp"
 },
 {
     "src": "msn_1.gif",
-    "name": "MSN 1"
+    "name": "MSN 1",
+    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
 },
 {
     "src": "bike.html",
@@ -107,7 +107,8 @@
 },
 {
     "src": "msn_2.gif",
-    "name": "MSN 2"
+    "name": "MSN 2",
+    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
 },
 {
     "src": "bird_loader.gif",
@@ -117,7 +118,8 @@
 },
 {
     "src": "msn_3.gif",
-    "name": "MSN 3"
+    "name": "MSN 3",
+    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
 },
 {
     "src": "bleep.html",
@@ -130,7 +132,7 @@
 {
     "src": "nextstep.gif",
     "name": "Boot screen, NextStep 0.8",
-    "style": "max-width: 95%; max-height: 95%",
+    "style": "max-width: 95%; max-height: 95%; image-rendering: pixelated; image-rendering: crisp-edges",
     "_style": "background: #525552"
 },
 {
@@ -144,7 +146,8 @@
 },
 {
     "src": "checketry.gif",
-    "name": "Checketry"
+    "name": "Checketry",
+    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
 },
 {
     "src": "octopus.gif",
@@ -220,7 +223,8 @@
 },
 {
     "src": "reddit_app.gif",
-    "name": "Reddit app refresh"
+    "name": "Reddit app refresh",
+    "style": "transform: scale3d(0.5,0.5,1)"
 },
 {
     "src": "dribbble.html",
@@ -232,13 +236,12 @@
 },
 {
     "src": "ezgif.gif",
-    "name": "ezGIF",
-    "style": "image-rendering: initial"
+    "name": "ezGIF"
 },
 {
     "src": "reddit_video.gif",
     "name": "Reddit video player buffering",
-    "style": "image-rendering: initial; transform: scale3d(0.25, 0.25, 1)"
+    "style": "transform: scale3d(0.25, 0.25, 1)"
 },
 {
     "src": "facebook.html",
@@ -250,7 +253,8 @@
 },
 {
     "src": "romsmania.gif",
-    "name": "Romsmania"
+    "name": "Romsmania",
+    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
 },
 {
     "src": "firebase.html",
@@ -284,7 +288,7 @@
     "src": "tick_tock.gif",
     "name": "Tick Tock, by nakilon",
     "href": "https://www.reddit.com/r/loadingicon/comments/79p54f/tick_tock_tick_tock_xpost_rperfectloops/",
-    "style": "transform: scale3d(0.5, 0.5, 1); image-rendering: initial"
+    "style": "transform: scale3d(0.5, 0.5, 1);"
 },
 {
     "src": "gmail.html",
@@ -296,8 +300,7 @@
 },
 {
     "src": "google_images.gif",
-    "name": "Google Images",
-    "style": "image-rendering: initial"
+    "name": "Google Images"
 },
 {
     "src": "ufl.gif",
@@ -338,8 +341,7 @@
 {
     "src": "gt_america.gif",
     "name": "GT America",
-    "href": "http://www.gt-america.com/",
-    "style": "image-rendering: initial"
+    "href": "http://www.gt-america.com/"
 },
 {
     "src": "windows_98_bar.html",

@@ -8,7 +8,7 @@
 
 	html, body {
 		align-items: center;
-		animation: a 0.4s steps(2) infinite;
+		
 		display: flex;
 		height: 100%;
 		justify-content: center;
@@ -18,23 +18,33 @@
 	}
 
 	div {
+		animation: a 0.4s steps(2) infinite;
 		background: black;
 		height: 10vmin;
 		max-width: 10px;
 		max-height: 10px;
-		transform: translateY(var(--t));
-		width: 10vmin
+		width: 10vmin;
+		transform: translateY(-50%);
 	}
 
 	#a {
-		transform: translateY(calc(var(--t) * -1))
+		animation-name: b;
+		transform: translateY(50%);
 	}
 
 	@keyframes a {
 		to {
-			--t: -50%
+			transform: translateY(150%);
 		}
 	}
+
+	@keyframes b {
+		to {
+			transform: translateY(-150%);
+		}
+	}
+
+
 
 </style>
 <body>
