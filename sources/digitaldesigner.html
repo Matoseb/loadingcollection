@@ -147,9 +147,8 @@
     </div>
     <script type="text/javascript">
     if (typeof HTMLElement.prototype.animate === 'undefined') {
-        console.log('No web animation api, custom model added.')
+        // console.log('No web animation api, custom model added.');
         HTMLElement.prototype.animate = function(_keyframes, options) {
-            console.log('nani');
             if (typeof options !== 'object')
                 options = { duration: options };
 
