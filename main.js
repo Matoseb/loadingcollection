@@ -29,7 +29,6 @@ utils.gif = function(meta) {
     let e = new Image();
     e.src = '../sources/' + meta.src;
     return e;
-
 };
 utils.mp4 = function(meta) {
     let e = document.createElement('video');
@@ -71,11 +70,14 @@ window.addEventListener('load', async _ => {
     window.addEventListener('resize', resize, true);
 });
 
-document.body.addEventListener('canplay', show, true);
+document.body.addEventListener('canplay', e => {
+    e.target.play();
+    show(e);
+}, true);
 document.body.addEventListener('load', show, true);
 
 function show(e) {
-    if (e.target.parentElement.className === 'item') {
+    if (e.target.parentElement.className === 'item' && !e.target.classList.contains('a')) {
         e.target.classList.add('a');
     }
 }
@@ -169,18 +171,22 @@ function generate(number, row) {
             break;
         case 'mp4':
             content = document.createElement('video');
-            content.autoplay = content.muted = content.loop = true;
+            content.autoplay = content.muted = content.loop = content.disableRemotePlayback = true;
             break;
         default:
             content = document.createElement('iframe');
     }
 
     content.src = '../sources/' + meta.src;
+    content.className = 'content';
 
     if (meta.style) content.style.cssText += meta.style;
     if (meta._style) el.style.cssText += meta._style;
+    if (meta.class)
+        content.className += ' ' + meta.class;
 
-    content.className = 'content';
+
+
     el.appendChild(content);
 
 

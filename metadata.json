@@ -99,7 +99,7 @@
 {
     "src": "msn_1.gif",
     "name": "MSN 1",
-    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
+    "class": "px"
 },
 {
     "src": "bike.html",
@@ -108,7 +108,7 @@
 {
     "src": "msn_2.gif",
     "name": "MSN 2",
-    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
+    "class": "px"
 },
 {
     "src": "bird_loader.gif",
@@ -119,7 +119,7 @@
 {
     "src": "msn_3.gif",
     "name": "MSN 3",
-    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
+    "class": "px"
 },
 {
     "src": "bleep.html",
@@ -132,8 +132,9 @@
 {
     "src": "nextstep.gif",
     "name": "Boot screen, NextStep 0.8",
-    "style": "max-width: 95%; max-height: 95%; image-rendering: pixelated; image-rendering: crisp-edges",
-    "_style": "background: #525552"
+    "style": "max-width: 95%; max-height: 95%;",
+    "_style": "background: #525552",
+    "class": "px"
 },
 {
     "src": "cff.html",
@@ -147,7 +148,7 @@
 {
     "src": "checketry.gif",
     "name": "Checketry",
-    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
+    "class": "px"
 },
 {
     "src": "octopus.gif",
@@ -254,7 +255,7 @@
 {
     "src": "romsmania.gif",
     "name": "Romsmania",
-    "style": "image-rendering: pixelated; image-rendering: crisp-edges"
+    "class": "px"
 },
 {
     "src": "firebase.html",
@@ -355,7 +356,8 @@
 {
     "src": "windows_98_file_transfer.gif",
     "name": "File transfer, Windows 98",
-    "_style": "background: #C0C0C0"
+    "_style": "background: #C0C0C0",
+    "class": "px"
 },
 {
     "src": "instagram_bar.html",

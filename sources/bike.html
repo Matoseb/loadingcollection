@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>BIKE</title>
+    <meta charset="utf-8">
+    <title>Bike</title>
+    <!-- /*http://www.wholeearth.com/issue-electronic-edition.php?iss=1010"*/ -->
     <style type="text/css">
     html,
     body {
@@ -13,26 +15,31 @@
         justify-content: center;
         height: 100%;
         width: 100%;
+        overflow: hidden;
     }
 
     div {
+        display: flex;
         position: relative;
         width: 60vmin;
         height: 60vmin;
     }
 
-    div::before {
-        content: 'Saving trees...';
+    #t {
         z-index: 0;
         top: 80%;
         font-family: arial;
         font-size: 11vmin;
-        text-align: left;
         color: #BBBBBB;
         white-space: nowrap;
-
         position: absolute;
-        width: 100%;
+        width: 150%;
+        height: 1.1em;
+        line-height: 1.1em;
+        overflow: hidden;
+    }
+
+    span {
         animation: text 10s steps(1, end) infinite;
     }
 
@@ -43,44 +50,32 @@
         height: 100%;
     }
 
-    .rotate {
-        animation: rotate 0.8s steps(12, end) infinite;
-    }
-
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
-        }
-
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
     @keyframes text {
-        0% {
-            content: 'Saving trees...';
+
+        33.3% {
+            transform: translateY(-100%);
         }
 
-        33% {
-            content: 'Typesetting...';
-        }
-
-        66%, 100% {
-            content: 'Rendering...';
+        66.7% {
+            transform: translateY(-200%);
         }
     }
     </style>
 </head>
 
 <body>
-	<a href="http://www.wholeearth.com/issue-electronic-edition.php?iss=1010"></a>
     <div>
+        <div id="t">
+            <span>
+                Saving trees...<br>
+                Typesetting...<br>
+                Rendering...
+            </span>
+        </div>
         <svg viewBox="0 0 55 55" version="1.1">
             <g transform="translate(27.5, 27.5)">
-                <use href="#wheel" transform="translate(-14,0)" />
-                <use href="#wheel" transform="translate(16,0)" />
+                <use xlink:href="#wheel" transform="translate(-14,0)" />
+                <use xlink:href="#wheel" transform="translate(16,0)" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M -14 0 L 0 0 L 12 -13 L -2 -11 L -14 0 M 0,0 L -2 -11 M -4 -14 L 2 -14 M 16 0 L 12 -13 L 12 -15 M 10 -16 L 16 -16 L 16 -14
         " fill="none" stroke="#AAAAAA" />
             </g>
@@ -89,15 +84,16 @@
                     <rect x="-1" y="4" width="2" height="6" rx="12" ry="12" fill-opacity="0.6" fill="black" stroke="none" />
                 </g>
                 <g id="spoke">
-                    <use transform="rotate(0 0 0)" opacity="calc(1 / 12 * 10)" href="#slice" />
-                    <use transform="rotate(30 0 0)" opacity="calc(1 / 12 * 11)" href="#slice" />
-                    <use transform="rotate(60 0 0)" href="#slice" />
+                    <use transform="rotate(0)" opacity="0.85" xlink:href="#slice" />
+                    <use transform="rotate(30)" opacity="0.92" xlink:href="#slice" />
+                    <use transform="rotate(60)" xlink:href="#slice" />
                 </g>
-                <g id="wheel" class="rotate">
-                    <use transform="rotate(0 0 0)" opacity="calc(1 / 4)" href="#spoke" />
-                    <use transform="rotate(90 0 0)" opacity="calc(1 / 4 * 2)" href="#spoke" />
-                    <use transform="rotate(180 0 0)" opacity="calc(1 / 4 * 3)" href="#spoke" />
-                    <use transform="rotate(270 0 0)" href="#spoke" />
+                <g id="wheel">
+                    <use transform="rotate(0)" opacity="0.25" xlink:href="#spoke" />
+                    <use transform="rotate(90)" opacity="0.5" xlink:href="#spoke" />
+                    <use transform="rotate(180)" opacity="0.75" xlink:href="#spoke" />
+                    <use transform="rotate(270)" xlink:href="#spoke" />
+                    <animateTransform attributeName="transform" calcMode="discrete" type="rotate" values="0;30;60;90;120;150;180;210;240;270;300;330" dur="0.8s" repeatCount="indefinite" />
                 </g>
             </defs>
         </svg>
