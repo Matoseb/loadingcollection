@@ -2,8 +2,12 @@
 <html lang="en">
 
 <head>
+    <meta name="google" content="notranslate">
     <meta charset="utf-8">
     <title>Loading Collection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="main.js"></script>
+
     <style>
     :root {
         --ratio: 0.75;
@@ -20,6 +24,14 @@
         margin: 0;
         width: 100%;
         height: 100%;
+    }
+
+    * {
+        scrollbar-width: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
     }
 
     iframe {
@@ -50,7 +62,8 @@
         /*outline: 1px solid blue;*/
     }
 
-     @media screen and (max-width:700px), screen and (max-device-width:700px)  {
+    @media screen and (max-width:700px),
+    screen and (max-device-width:700px) {
         :root {
             --mobile: 1;
         }
@@ -107,13 +120,13 @@
     #control {
         visibility: hidden;
     }
+
     </style>
 </head>
 
 <body>
     <div id="scroller"></div>
     <div id="control"></div>
-    <script src="main.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,8 @@
-const utils = {};
-utils.readJson = function(url) {
+'use strict';
+
+function Utils() {}
+
+Utils.readJson = url => {
     return new Promise((resolve, reject) => {
         const x = new XMLHttpRequest();
 
@@ -10,9 +13,8 @@ utils.readJson = function(url) {
                 reject(url);
             }
 
-            if (x.readyState == 4 && x.status == 200) {
+            if (x.readyState == 4 && x.status == 200)
                 resolve(JSON.parse(x.responseText));
-            }
         };
 
         x.open("GET", url, true);
@@ -20,46 +22,48 @@ utils.readJson = function(url) {
     });
 }
 
-utils.html = function(meta) {
+Utils.html = meta => {
     let e = document.createElement('iframe');
     e.src = '../sources/' + meta.src;
     return e;
-};
-utils.gif = function(meta) {
+}
+Utils.gif = meta => {
     let e = new Image();
     e.src = '../sources/' + meta.src;
     return e;
-};
-utils.mp4 = function(meta) {
+}
+Utils.mp4 = meta => {
     let e = document.createElement('video');
     e.src = '../sources/' + meta.src;
     e.autoplay = e.muted = e.loop = true;
     return e;
-};
+}
 
-let metas = utils.readJson('metadata.json').then(m => metas = m);
+let metas = Utils.readJson('metadata.json').then(m => metas = m);
 let amt = 0;
 
-let ratio = 0.75;
-let cols = 1;
-let rows;
-let grid;
-
+let ratio = 0.75,
+    cols = 1,
+    rows, grid;
 let offscreenRows = 1;
-
 let itemHeight = 0;
 
-let controlEl;
+let $ctrl;
+let $scroller;
 
 let first, last;
+
+let totalheight;
 
 
 window.addEventListener('load', async _ => {
 
-    controlEl = document.querySelector('#control');
+    $ctrl = document.querySelector('#control');
+    $scroller = document.querySelector('#scroller');
+
     await metas;
     amt = metas.length;
-    console.log(metas);
+    // console.log(metas);
     resize();
 
     window.addEventListener('scroll', scroll, {
@@ -74,6 +78,7 @@ document.body.addEventListener('canplay', e => {
     e.target.play();
     show(e);
 }, true);
+
 document.body.addEventListener('load', show, true);
 
 function show(e) {
@@ -142,7 +147,7 @@ function resize(e) {
         e.parentNode.removeChild(e);
     });
 
-    itemHeight = controlEl.getBoundingClientRect().height;
+    itemHeight = $ctrl.getBoundingClientRect().height;
     last = first = 0;
 
     render();
