@@ -136,7 +136,7 @@ function resize(e) {
 
     }
 
-    rows = ~~(amt / cols);
+    rows = Math.ceil(amt / cols);
 
     const t = document.documentElement.style;
     t.setProperty('--ratio', ratio);

@@ -17,6 +17,14 @@
         overflow: hidden;
     }
 
+    .preloader {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        z-index: -100;
+        background-image: url(../resources/netscape/s.png);
+    }
+
     * {
         -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
         -webkit-focus-ring-color: rgba(255, 255, 255, 0);
@@ -66,6 +74,7 @@
 </head>
 
 <body>
+    <div class="preloader"></div>
     <label class="container">
         <input type="checkbox">
         <div></div>
