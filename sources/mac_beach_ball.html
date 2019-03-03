@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Hand Mac</title>
-    <style type="text/css">
-    html,
+    <style>
+        html,
     body {
         margin: 0;
         display: flex;
@@ -17,14 +17,15 @@
     }
 
     svg {
-        width: 30px;
+        width: 28px;
         overflow: visible;
     }
 
-     .u {
+    .u {
         mix-blend-mode: overlay;
     }
     </style>
+    <script defer type="text/javascript" src="../resources/custom_cursor.js"></script>
 </head>
 
 <body>
@@ -50,7 +51,6 @@
                 <feBlend mode="overlay" in="SourceGraphic" in2="SourceGraphic" result="blend" />
             </filter>
         </defs>
-        
         <g style="isolation: isolate;" filter="url(#A)">
             <g class="u">
                 <use xlink:href="#p" fill="#FFD400"></use>
