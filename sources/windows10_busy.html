@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<title>Windows Aero Working Cursor</title>
+	<style>
+		html, body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			/*image-rendering: pixelated;*/
+			/*image-rendering: crisp-edges;*/
+		}
+
+		div {
+			width: 21px;
+			height: 21px;
+			background: url(../resources/windows_cursors/w10_busy.png);
+			background-size: cover;
+			animation: a 0.9s steps(17) infinite;
+			filter: drop-shadow(2px 1px 1px rgba(0,0,0,0.246));
+		}
+
+		@keyframes a {
+			to {
+				background-position-y: 100%;
+			}
+		}
+	</style>
+	<script defer type="text/javascript" src="../resources/custom_cursor.js"></script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

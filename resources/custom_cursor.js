@@ -5,5 +5,5 @@ addEventListener('load', _ => {
     addEventListener('mousemove', f);
     addEventListener('touchend', e => e.preventDefault());
     document.body.addEventListener('mouseleave', _ => s.removeAttribute('style'));
-    document.body.style = 'cursor: none;';
+    document.body.style = 'cursor:none';
 }, { once: true });
