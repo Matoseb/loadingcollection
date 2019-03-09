@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <!-- https://console.firebase.google.com/ -->
     <title>FIREBASE</title>
-    <style type="text/css">
+    <style>
+
     body {
         background-color: #f5f7f9;
-        --fire-focus-outline-color: rgba($GMP_COLOR_PRIMARY_DEFAULT, .5)
     }
 
     #a {
         align-items: center;
-        background-color: #f5f7f9;
         bottom: 0;
         display: flex;
         flex-direction: column;
@@ -27,33 +27,11 @@
     }
 
     #b {
-        --fs-frames: 51;
-        --fs-width: 90px;
-        display: flex;
         height: 130px;
-        width: var(--fs-width);
-        overflow: hidden
-    }
-
-    #b img {
-        height: 100%;
-        width: calc(var(--fs-width) * var(--fs-frames));
-        animation: b 4.25s steps(calc(var(--fs-frames) - 1)) infinite
-    }
-
-    @keyframes b {
-
-        14.45%,
-        70% {
-            opacity: 1;
-            transform: translateX(calc(-1 * var(--fs-width) * (var(--fs-frames) - 1)))
-        }
-
-        75%,
-        to {
-            opacity: 0;
-            transform: none
-        }
+        width: 90px;
+        background: url("../resources/firebase/bootanim-sprite2.png");
+        background-size: 4590px;
+        animation: b 4.25s steps(50) infinite;
     }
 
     svg {
@@ -61,6 +39,22 @@
         opacity: 0;
         animation: f 4.25s ease infinite, r 1s linear infinite
     }
+
+    @keyframes b {
+
+        14.45%,
+        70% {
+            opacity: 1;
+            background-position-x: 100%;
+        }
+
+        75%,
+        to {
+            opacity: 0;
+            background-position-x: 0;
+        }
+    }
+    
 
     @keyframes f {
 
@@ -94,8 +88,6 @@
 <body>
     <div id="a">
         <div id="b">
-            <img src="../resources/firebase/bootanim-sprite2.png">
-            <!-- <img alt="" aria-hidden="true" src="../resources/firebase/bootanim-sprite.png" srcset="../resources/firebase/bootanim-sprite.png, ../resources/firebase/bootanim-sprite@2x.png 2x"> -->
         </div>
         <svg width="24" height="24">
             <path d="M12 21a9 9 0 1 0-9-9" fill="none" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"></path>

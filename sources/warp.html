@@ -35,29 +35,17 @@
     }
 
     .h::before {
-        background-image: url("../resources/warp/logo-46.png")
+        background-image: url("../resources/warp/logo-46@2x.png")
     }
 
 
     .h::after {
-        background-image: url("../resources/warp/globe-46.png");
+        background-image: url("../resources/warp/globe-46@2x.png");
         background-size: 400% 100%;
         background-color: #6E32FF;
         opacity: 1;
         animation: globe 150ms steps(4) infinite, h 5s infinite;
         transition: opacity 175ms cubic-bezier(.425, 0, 0, 1);
-    }
-
-    @media (-webkit-min-device-pixel-ratio:2) {
-        .h::after {
-            background-image: url("../resources/warp/globe-46@2x.png")
-        }
-    }
-
-    @media (-webkit-min-device-pixel-ratio:2) {
-        .h::before {
-            background-image: url("../resources/warp/logo-46@2x.png")
-        }
     }
 
     @keyframes globe {
