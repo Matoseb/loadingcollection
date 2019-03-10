@@ -5,34 +5,39 @@
 },
 {
     "src": "airbnb_intro.html",
-    "name": "Airbnb app intro"
+    "name": "Airbnb phone app intro"
 },
 {
     "src": "airbnb_intro2.html",
-    "name": "Airbnb app loading"
+    "name": "Airbnb phone app loading"
 },
 {
     "src": "justorbit.gif",
     "name": "JustOrbit",
-    "_style": "background: #010101"
+    "_style": "background: #010101",
+    "href": "http://www.justorbit.com/"
 },
 {
     "src": "airbnb_logo.html",
-    "name": "Airbnb logo"
+    "name": "Airbnb phone app logo"
 },
 {
     "src": "khan_academy.html",
-    "name": "Khan Academy"
+    "name": "Khan Academy buggy spinner",
+    "href": "https://www.reddit.com/r/softwaregore/comments/9f81hk/the_loading_on_kahn_academy/"
 },
 {
     "src": "airbnb_old.gif",
-    "name": "Airbnb Concept",
-    "_style": "background: #F6F5F3"
+    "name": "Airbnb phone app 2014",
+    "_style": "background: #F6F5F3",
+    "href": "https://dribbble.com/shots/1655310-Airbnb-Loading-Animation-Icons"
 },
 {
     "src": "lazyeyesdotcool.gif",
     "name": "Lazy Eyes",
-    "style": "max-width: 50%; max-height: 50%;"
+    "style": "max-width: 150px; max-height: 50%;",
+    "_style": "background: #EBEBEB",
+    "href": "http://lazyeyes.cool/"
 },
 {
     "src": "android_marshmallow.mp4",
@@ -196,7 +201,7 @@
 {
     "src": "digitaldesigner.html",
     "name": "Digital Designer",
-    "href": "digitaldesigner.cool/"
+    "href": "http://www.digitaldesigner.cool/"
 },
 {
     "src": "fifa19.html",
