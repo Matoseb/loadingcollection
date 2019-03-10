@@ -264,6 +264,10 @@ a:visited {
 
 @media screen and (orientation:portrait) and (max-device-width:700px),
 screen and (orientation:landscape) and (max-device-height:700px) {
+    :root {
+        --mobile: 2;
+    }
+
     .item.full .info {
         transform: none;
     }

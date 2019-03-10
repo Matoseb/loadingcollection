@@ -57,6 +57,8 @@ let totalheight;
 
 let fullElem = -1;
 
+let w;
+
 window.addEventListener('load', async _ => {
 
     $ctrl = document.querySelector('#control');
@@ -84,13 +86,19 @@ window.addEventListener('click', e => {
 }, true);
 
 window.addEventListener('animationend', e => {
-    if (e.animationName === '_full') {
-        e.target.classList.replace('_full', 'full');
-    } else if (e.animationName === 'full_') {
-        e.target.classList.replace('full', 'full__');
-    } else if (e.animationName === 'full__') {
-        e.target.classList.remove('full__', 'full_');
+
+    switch (e.animationName) {
+        case '_full':
+            e.target.classList.replace('_full', 'full');
+            break;
+        case 'full_':
+            e.target.classList.replace('full', 'full__');
+            break;
+        case 'full__':
+            e.target.classList.remove('full__', 'full_');
+            break;
     }
+
 });
 
 window.addEventListener('keydown', e => {
@@ -177,16 +185,14 @@ function render() {
 }
 
 function resize(e) {
-    if (e && e.target !== window)
+
+    let ismobile = +window.getComputedStyle(document.documentElement).getPropertyValue('--mobile');
+
+    if ((e && e.target !== window) || (ismobile && w === window.innerWidth))
         return;
 
-    if (parseInt(window.getComputedStyle(document.documentElement).getPropertyValue('--mobile')) === 1) {
-        cols = 1;
-    } else {
-        cols = Math.ceil(window.innerWidth / 600);
-
-    }
-
+    w = window.innerWidth;
+    cols = ismobile === 1 ? 1 : Math.ceil(window.innerWidth / 600);
     rows = Math.ceil(amt / cols);
 
     const t = document.documentElement.style;
@@ -209,7 +215,7 @@ function scroll() {
 }
 
 function addInfo(el) {
-    if(el.querySelector('.info'))
+    if (el.querySelector('.info'))
         return;
 
     const meta = metas[el.dataset.n],
