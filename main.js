@@ -45,7 +45,7 @@ let amt = 0;
 let ratio = 0.75,
     cols = 1,
     rows, grid;
-let offscreenRows = 1;
+let offscreenRows = 1.5;
 let itemHeight = 0;
 
 let $ctrl;
