@@ -113,7 +113,12 @@ iframe {
 }
 
 .item.full .info a {
-    margin-left: 0.6em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 0;
+    overflow: hidden;
+    flex: 1;
+    margin: 0.4em 0.2em 0.4em 0.6em;
 }
 
 .item._full .info {
@@ -266,6 +271,10 @@ a:visited {
 screen and (orientation:landscape) and (max-device-height:700px) {
     :root {
         --mobile: 2;
+    }
+
+    html, body {
+        font-size: 12pt;
     }
 
     .item.full .info {
