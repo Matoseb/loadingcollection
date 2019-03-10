@@ -55,6 +55,7 @@ let first, last;
 
 let totalheight;
 
+let fullElem = -1;
 
 window.addEventListener('load', async _ => {
 
@@ -74,6 +75,29 @@ window.addEventListener('load', async _ => {
     window.addEventListener('resize', resize, true);
 });
 
+window.addEventListener('click', e => {
+    // if(e.target === )
+    if (e.target.className === 'close') {
+        e.preventDefault();
+        minimize();
+    }
+}, true);
+
+window.addEventListener('animationend', e => {
+    if (e.animationName === '_full') {
+        e.target.classList.replace('_full', 'full');
+    } else if (e.animationName === 'full_') {
+        e.target.classList.replace('full', 'full__');
+    } else if (e.animationName === 'full__') {
+        e.target.classList.remove('full__', 'full_');
+    }
+});
+
+window.addEventListener('keydown', e => {
+    if (e.key === 'Escape')
+        minimize();
+}, false);
+
 document.body.addEventListener('canplay', e => {
     e.target.play();
     show(e);
@@ -84,7 +108,34 @@ document.body.addEventListener('load', show, true);
 function show(e) {
     if (e.target.parentElement.className === 'item' && !e.target.classList.contains('a')) {
         e.target.classList.add('a');
+        addClick(e.target);
     }
+}
+
+function addClick(el) {
+    let c = el.contentWindow ? el.contentWindow : el.parentElement;
+
+    c.onmouseup = _ => fullScreen(el.parentElement, c);
+    c.onkeydown = e => window.dispatchEvent(new KeyboardEvent('keydown', { key: e.key }));
+}
+
+function fullScreen(el, c) {
+    if (fullElem < 0) {
+        el.classList.add('_full');
+        document.body.style.overflow = 'hidden';
+        addInfo(el);
+        fullElem = el.dataset.n;
+    }
+}
+
+function minimize() {
+    if (fullElem < 0)
+        return;
+
+    let el = document.querySelector(`.item[data-n='${fullElem}']`);
+    el.classList.add('full_');
+    document.body.style.removeProperty('overflow');
+    fullElem = -1;
 }
 
 function render() {
@@ -97,7 +148,7 @@ function render() {
     let _first = first;
 
     while (_first < i) {
-        const el = document.querySelector(`.item[data-n='${_first}']`);
+        const el = document.querySelector(`.item[data-n='${_first}']:not([data-n='${fullElem}'])`);
         if (el) el.parentNode.removeChild(el);
         _first++;
     }
@@ -106,7 +157,7 @@ function render() {
         const currRow = ~~(i / cols) + 1;
 
         if (window.innerHeight + window.scrollY + offscreenRows * itemHeight < currRow * itemHeight) {
-            const el = document.querySelector(`.item[data-n='${i}']`);
+            const el = document.querySelector(`.item[data-n='${i}']:not([data-n='${fullElem}'])`);
 
             if (el) el.parentNode.removeChild(el);
             else
@@ -143,7 +194,7 @@ function resize(e) {
     t.setProperty('--cols', cols);
     t.setProperty('--rows', rows);
 
-    document.querySelectorAll('.item').forEach(e => {
+    document.querySelectorAll(`.item:not([data-n='${fullElem}'])`).forEach(e => {
         e.parentNode.removeChild(e);
     });
 
@@ -155,6 +206,27 @@ function resize(e) {
 
 function scroll() {
     render();
+}
+
+function addInfo(el) {
+    if(el.querySelector('.info'))
+        return;
+
+    const meta = metas[el.dataset.n],
+        info = document.createElement('div'),
+        closeBtn = document.createElement('div'),
+        title = document.createElement('a');
+
+    closeBtn.className = 'close';
+
+    info.className = 'info';
+    title.innerText = meta.name;
+    title.target = '_blank';
+    if (meta.href) title.href = meta.href;
+
+    info.appendChild(title);
+    info.appendChild(closeBtn);
+    el.appendChild(info);
 }
 
 function generate(number, row) {
@@ -193,13 +265,6 @@ function generate(number, row) {
 
 
     el.appendChild(content);
-
-
-
-    // const info = document.createElement('div');
-    // info.className = 'info';
-    // info.innerText = meta.src;
-    // el.appendChild(info);
 
     return el;
 }

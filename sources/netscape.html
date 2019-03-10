@@ -17,21 +17,13 @@
         overflow: hidden;
     }
 
-    .preloader {
-        width: 1px;
-        height: 1px;
-        position: absolute;
-        z-index: -100;
-        background-image: url(../resources/netscape/s.png);
-    }
-
     * {
-        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-        -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-focus-ring-color: rgba(0, 0, 0, 0);
         outline: none;
     }
 
-    .container {
+    label {
         transform: scale(2);
         width: 40vmin;
         height: 40vmin;
@@ -41,8 +33,8 @@
         cursor: pointer;
 
         box-shadow:
-            inset -1px -1px var(--b, #808080),
-            inset 1px 1px var(--a, #fff);
+            inset -1px -1px #808080,
+            inset 1px 1px #fff;
         padding: 2px;
         box-sizing: border-box;
         outline: 1px solid black;
@@ -51,31 +43,49 @@
         overflow: hidden;
     }
 
-    .container:active {
-        --b: #fff;
-        --a: #808080;
+
+    label:active {
+        box-shadow:
+            inset -1px -1px #fff,
+            inset 1px 1px #808080;
     }
 
-    .container input {
+    label input {
         display: none;
     }
 
-    .container div {
+    label div {
+        width: 100%;
+        height: 100%;
+        background: url(../resources/netscape/s.png) no-repeat;
+        background-size: 100%;
+        position: relative;
+    }
+
+    label div::after {
+        content: '';
+        position: absolute;
         width: 100%;
         height: 100%;
         background: url(../resources/netscape/netscape.gif) no-repeat;
         background-size: 100%;
     }
 
-    .container input:checked+* {
-        background-image: url(../resources/netscape/s.png);
+    label input:checked+div::after {
+        z-index: -1;
     }
     </style>
+    <script>
+    addEventListener('mouseup', e => {
+        if (e.target !== document.body)
+            e.stopPropagation();
+    }, true);
+    </script>
 </head>
 
 <body>
-    <div class="preloader"></div>
-    <label class="container">
+    <!--  -->
+    <label>
         <input type="checkbox">
         <div></div>
     </label>

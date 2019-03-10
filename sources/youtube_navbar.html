@@ -149,8 +149,8 @@
         addEventListener('mousemove', f);
         addEventListener('mouseup', e => {
             if (a.c.classList.contains('active'))
-                d(), i(), u(), a.c.classList.remove('active');
-        });
+                d(), i(), u(), a.c.classList.remove('active'), e.stopPropagation();
+        }, true);
 
         a.c.addEventListener('mousedown', e => {
             clearTimeout(a.t);

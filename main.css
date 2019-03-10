@@ -1,0 +1,277 @@
+:root {
+    --ratio: 0.75;
+    --cols: 2;
+    --rows: 2;
+    --mobile: 0;
+    --width: calc(100vw / var(--cols));
+    --height: calc(var(--width) * var(--ratio));
+}
+
+@font-face {
+    font-family: a;
+    src: url(../resources/fonts/Avenir-Book.woff) format("woff");
+}
+
+html,
+body {
+    font-family: a, helvetica, arial;
+    font-size: 16pt;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+iframe {
+    border: none;
+}
+
+#scroller {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: calc(var(--rows) * var(--height));
+    /*height: 10000px;*/
+}
+
+.item,
+#control {
+    z-index: 10;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    height: var(--height);
+    /*outline: 1px solid blue;*/
+}
+
+.item .content {
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.item.full {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    left: 0 !important;
+    top: 0 !important;
+    animation: full 0.3s cubic-bezier(.3, .3, .4, 1) forwards;
+    box-shadow: 0 -4vh 10vh 14vh rgba(0, 0, 0, 0.2);
+}
+
+.item.full:not(.full_)~.item {
+    animation: hide 0.3s forwards;
+}
+
+.item._full {
+    z-index: 1;
+    animation: _full 0.15s cubic-bezier(.6, 0, .7, .7) forwards;
+}
+
+.item.full_ {
+    animation: full_ 0.3s cubic-bezier(.6, 0, .7, .7) forwards;
+}
+
+.item.full__ {
+    z-index: 1;
+    animation: full__ 0.15s cubic-bezier(.3, .3, .4, 1) forwards;
+}
+
+.item .info {
+    display: none;
+    align-items: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.2em;
+    color: white;
+    background: black;
+    transition: 0.5s 1s transform;
+    position: absolute;
+    background-clip: padding-box;
+    border-bottom: 6em solid transparent;
+    will-change: transform;
+}
+
+.item.full .info a {
+    margin-left: 0.6em;
+}
+
+.item._full .info {
+    visibility: hidden;
+    display: flex;
+    transform: none;
+}
+
+.item.full .info {
+    display: flex;
+    transform: translateY(-2.2em);
+}
+
+.item.full .info:hover {
+    transition-delay: 0s;
+    transform: none;
+}
+
+.item.full .info .close {
+    display: inline-block;
+    width: 2.2em;
+    height: 2.2em;
+    margin-left: auto;
+    position: relative;
+    overflow: hidden;
+    /*cursor: pointer;*/
+}
+
+.item.full .info .close::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '×';
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 106%;
+}
+
+.item.full .info .close::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    mix-blend-mode: difference;
+    transform: scaleY(0);
+    transform-origin: 0 100%;
+    transition: transform 0.15s ease-out;
+}
+
+.item.full .info .close:hover::after,
+.item.full .info .close:hover:active::after {
+    transform-origin: 0 0;
+    transition: transform 0.15s ease-in;
+    transform: scaleY(1);
+    /*transition: transform 0.18s;*/
+}
+
+.item.full .info .close:hover:active::before {
+    border-top: 1px solid white;
+}
+
+@keyframes hide {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes full {
+    0% {
+        transform: translateY(-120%);
+    }
+
+    to {
+
+        transform: none;
+    }
+}
+
+@keyframes full_ {
+    0% {
+        transform: none;
+    }
+
+    to {
+
+        transform: translateY(120%);
+    }
+}
+
+@keyframes _full {
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes full__ {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.item .content.a {
+    animation: appear 0.5s ease-out forwards;
+}
+
+.item img.content,
+.item video.content {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* fix image scaling issue in chrome */
+.item.full__ .content {
+    display: block;
+}
+
+.px {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+a,
+a:visited {
+    color: white;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+#control {
+    visibility: hidden;
+}
+
+@media screen and (orientation:portrait) and (max-device-width:700px),
+screen and (orientation:landscape) and (max-device-height:700px) {
+    .item.full .info {
+        transform: none;
+    }
+}
+
+
+@media screen and (orientation:portrait) and (max-device-width:700px) {
+    :root {
+        --mobile: 1;
+    }
+}

@@ -92,6 +92,12 @@
         background-color: rgba(255, 255, 255, .49);
     }
     </style>
+     <script>
+    addEventListener('mouseup', e => {
+        if (e.target !== document.documentElement)
+            e.stopPropagation();
+    }, true);
+    </script>
 </head>
 
 <body>
