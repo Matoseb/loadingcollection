@@ -109,7 +109,7 @@ iframe {
     position: absolute;
     background-clip: padding-box;
     border-bottom: 6em solid transparent;
-    will-change: transform;
+    /*will-change: transform;*/
 }
 
 .item.full .info a {
