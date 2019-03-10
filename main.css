@@ -15,7 +15,7 @@
 html,
 body {
     font-family: a, helvetica, arial;
-    font-size: 16pt;
+    font-size: 12pt;
     margin: 0;
     width: 100%;
     height: 100%;
@@ -75,10 +75,6 @@ iframe {
     top: 0 !important;
     animation: full 0.3s cubic-bezier(.3, .3, .4, 1) forwards;
     box-shadow: 0 -4vh 10vh 14vh rgba(0, 0, 0, 0.2);
-}
-
-.item.full:not(.full_)~.item {
-    animation: hide 0.3s forwards;
 }
 
 .item._full {
@@ -186,12 +182,6 @@ iframe {
     border-top: 1px solid white;
 }
 
-@keyframes hide {
-    to {
-        visibility: hidden;
-    }
-}
-
 @keyframes full {
     0% {
         transform: translateY(-120%);
@@ -271,10 +261,6 @@ a:visited {
 screen and (orientation:landscape) and (max-device-height:700px) {
     :root {
         --mobile: 2;
-    }
-
-    html, body {
-        font-size: 12pt;
     }
 
     .item.full .info {

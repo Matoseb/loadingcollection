@@ -17,12 +17,35 @@
     }
 
     div {
-        background: url(../resources/mac_hand/mac_hand.svg);
+        /*background: url(../resources/mac_hand/mac_hand.svg);*/
         background-size: 24px;
         width: 24px;
         height: 24px;
-        overflow: hidden;
+        position: relative;
+
+    }
+
+    div::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../resources/mac_hand/mac_hand.svg);
+        width: 24px;
+        height: 24px;
+        background-size: 24px;
         animation: a 1s steps(5) infinite;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+        div::after {
+            transform: scale(0.5);
+            transform-origin: 0 0;
+            width: 48px;
+            height: 48px;
+            background-size: 48px;
+        }
     }
 
     @keyframes a {
@@ -39,6 +62,7 @@
     </style>
     <script defer type="text/javascript" src="../resources/custom_cursor.js"></script>
 </head>
+
 <body>
     <div></div>
 </body>

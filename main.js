@@ -57,10 +57,9 @@ let totalheight;
 
 let fullElem = -1;
 
-let w;
+let width;
 
 window.addEventListener('load', async _ => {
-
     $ctrl = document.querySelector('#control');
     $scroller = document.querySelector('#scroller');
 
@@ -75,7 +74,11 @@ window.addEventListener('load', async _ => {
     });
 
     window.addEventListener('resize', resize, true);
+
+    openFullscreen();
 });
+
+window.addEventListener("beforeunload", e => {});
 
 window.addEventListener('click', e => {
     // if(e.target === )
@@ -84,6 +87,7 @@ window.addEventListener('click', e => {
         minimize();
     }
 }, true);
+
 
 window.addEventListener('animationend', e => {
 
@@ -95,10 +99,12 @@ window.addEventListener('animationend', e => {
             e.target.classList.replace('full', 'full__');
             break;
         case 'full__':
-            e.target.classList.remove('full__', 'full_');
+            e.target.classList.remove('full__', 'full_', 'full');
+            break;
+        case 'full':
+            hide(true);
             break;
     }
-
 });
 
 window.addEventListener('keydown', e => {
@@ -114,21 +120,54 @@ document.body.addEventListener('canplay', e => {
 document.body.addEventListener('load', show, true);
 
 function show(e) {
-    if (e.target.parentElement.className === 'item' && !e.target.classList.contains('a')) {
+    if (e.target.parentElement.classList.contains('item') && !e.target.classList.contains('a')) {
         e.target.classList.add('a');
         addClick(e.target);
     }
 }
 
+function openFullscreen() {
+    let h = window.location.hash.substring(1);
+
+    if (h) {
+        h += '.';
+        for (var i = metas.length; i--;) {
+            if (metas[i].src.includes(h)) {
+                h = '';
+                break;
+            }
+        }
+
+        if (!h) {
+            let el, b = (Math.floor(i / cols) * (Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) / rows));
+            window.scrollTo(0, b);
+            window.requestAnimationFrame(_ => {
+                el = document.querySelector(`.item[data-n='${i}']`);
+                if (el) fullScreen(el);
+            });
+        } else {
+            window.history.pushState(null, null, '/');
+        }
+    }
+}
+
+function hide(add) {
+    let p = document.querySelectorAll('.item:not(.full)'), i = p.length;
+    for (; i--;) p[i].style.display = add ?'none':'';
+}
+
 function addClick(el) {
     let c = el.contentWindow ? el.contentWindow : el.parentElement;
 
-    c.onmouseup = _ => fullScreen(el.parentElement, c);
+    c.onmouseup = _ => fullScreen(el.parentElement);
     c.onkeydown = e => window.dispatchEvent(new KeyboardEvent('keydown', { key: e.key }));
 }
 
-function fullScreen(el, c) {
+function fullScreen(el) {
     if (fullElem < 0) {
+
+        window.history.pushState(null, null, '#' + metas[el.dataset.n].src.split('.')[0]);
+
         el.classList.add('_full');
         document.body.style.overflow = 'hidden';
         addInfo(el);
@@ -140,14 +179,19 @@ function minimize() {
     if (fullElem < 0)
         return;
 
+
+    hide(false);
+
+    window.history.pushState(null, null, '/');
+
     let el = document.querySelector(`.item[data-n='${fullElem}']`);
+    el.classList.remove('_full');
     el.classList.add('full_');
     document.body.style.removeProperty('overflow');
     fullElem = -1;
 }
 
 function render() {
-
     const newItems = document.createDocumentFragment();
     let i = ~~(window.scrollY / itemHeight - offscreenRows) * cols;
     if (i < 0) i = 0;
@@ -188,10 +232,10 @@ function resize(e) {
 
     let ismobile = +window.getComputedStyle(document.documentElement).getPropertyValue('--mobile');
 
-    if ((e && e.target !== window) || (ismobile && w === window.innerWidth))
+    if ((e && e.target !== window) || (ismobile && width === window.innerWidth))
         return;
 
-    w = window.innerWidth;
+    width = window.innerWidth;
     cols = ismobile === 1 ? 1 : Math.ceil(window.innerWidth / 600);
     rows = Math.ceil(amt / cols);
 
@@ -210,7 +254,7 @@ function resize(e) {
     render();
 }
 
-function scroll() {
+function scroll(e) {
     render();
 }
 
